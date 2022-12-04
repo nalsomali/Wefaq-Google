@@ -34,11 +34,11 @@ class _PostAdviserState extends State<PostAdviser> {
     return Scaffold(
       appBar: AppBar(
           automaticallyImplyLeading: false,
-          backgroundColor: Color.fromARGB(255, 182, 168, 203),
+          backgroundColor: Color.fromARGB(255, 255, 255, 255),
           title: Text('اضافة مستشار',
               style: TextStyle(
                 fontWeight: FontWeight.normal,
-                color: Colors.white,
+                color: Color.fromARGB(255, 14, 10, 102),
               ))),
       bottomNavigationBar: AdminCustomNavigationBar(
         currentHomeScreen: 1,
@@ -126,7 +126,7 @@ class _PostAdviserState extends State<PostAdviser> {
                     return 'مطلوب';
                   }
                 }),
-            SizedBox(height: 50.0),
+            SizedBox(height: 25.0),
             TextFormField(
                 maxLength: 500,
                 maxLines: 3,

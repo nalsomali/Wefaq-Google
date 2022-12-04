@@ -17,7 +17,7 @@ class HomeScreenState extends State<adminHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         bottomNavigationBar: AdminCustomNavigationBar(
-          currentHomeScreen: 0,
+          currentHomeScreen: 2,
           updatePage: () {},
         ),
         backgroundColor: Color.fromARGB(255, 245, 244, 255),
@@ -35,9 +35,7 @@ class HomeScreenState extends State<adminHomeScreen> {
                     size: 30,
                     color: Color.fromARGB(255, 0, 0, 0),
                   ),
-                  onPressed: () {
-                    showDialogFunc(context);
-                  }),
+                  onPressed: () {}),
             ),
             SizedBox(
               height: 130,
@@ -156,17 +154,4 @@ class CategoryCard extends StatelessWidget {
       ),
     );
   }
-}
-
-showDialogFunc(context) {
-  CoolAlert.show(
-    context: context,
-    title: "",
-    confirmBtnColor: Color.fromARGB(144, 210, 2, 2),
-    confirmBtnText: 'تسجيل الخروج ',
-    onConfirmBtnTap: () {},
-    type: CoolAlertType.confirm,
-    backgroundColor: Color.fromARGB(221, 212, 189, 227),
-    text: "هل أنت متأكد تريد تسجيل الخروج ؟",
-  );
 }

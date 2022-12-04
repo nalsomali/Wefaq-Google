@@ -21,7 +21,7 @@ class _projectDetailScreenState extends State<adminprojectDetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         bottomNavigationBar: AdminCustomNavigationBar(
-          currentHomeScreen: 0,
+          currentHomeScreen: 2,
           updatePage: () {},
         ),
         body: Scrollbar(

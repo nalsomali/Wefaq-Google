@@ -41,7 +41,7 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                         MaterialPageRoute(
                             builder: (context) => adminHomeScreen()));
                   }),
-              backgroundColor: Color.fromARGB(255, 145, 124, 178),
+              backgroundColor: Color.fromARGB(255, 255, 255, 255),
               actions: <Widget>[
                 IconButton(
                     icon: Icon(
@@ -53,7 +53,7 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
               title: Text('المشاريع',
                   style: TextStyle(
                     fontWeight: FontWeight.normal,
-                    color: Colors.white,
+                    color: Color.fromARGB(255, 14, 10, 102),
                   )),
             ),
 
