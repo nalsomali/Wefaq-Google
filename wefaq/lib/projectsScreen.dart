@@ -337,7 +337,6 @@ class _ListViewPageState extends State<ProjectsListViewPage> {
               //itemCount: tokens.length,
 
               // Card Which Holds Layout Of ListView Item
-
               SizedBox(
                 height: 100,
                 child: GestureDetector(
@@ -425,8 +424,183 @@ class _ListViewPageState extends State<ProjectsListViewPage> {
                                     projecName: "Bloom",
                                   )));
                     }),
-              )
+              ),
+              SizedBox(
+                height: 100,
+                child: GestureDetector(
+                    child: Card(
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                      //shadowColor: Color.fromARGB(255, 255, 255, 255),
+                      //  elevation: 7,
 
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        child: Column(
+                          children: <Widget>[
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Column(
+                              children: [
+                                Row(children: <Widget>[
+                                  Text(
+                                    " ١١-١-٢٠٢",
+                                    style: const TextStyle(
+                                      fontSize: 16,
+                                      color: Color.fromARGB(255, 14, 10, 102),
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: SizedBox(
+                                      width: 240,
+                                    ),
+                                  ),
+                                  Text(
+                                    "  مشروع عوالم ",
+                                    style: const TextStyle(
+                                      fontSize: 19,
+                                      color: Color.fromARGB(255, 14, 10, 102),
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                  ),
+                                ]),
+                              ],
+                            ),
+                            Expanded(
+                              child: Row(
+                                children: <Widget>[
+                                  IconButton(
+                                      icon: Icon(
+                                        Icons.arrow_back_ios,
+                                        color:
+                                            Color.fromARGB(255, 170, 169, 179),
+                                      ),
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    projectDetailScreen(
+                                                      projecName: "Bloom",
+                                                    )));
+                                      }),
+                                  Expanded(
+                                      child: SizedBox(
+                                    width: 100,
+                                  )),
+                                  Text("كلية علوم الحاسب و المعلومات",
+                                      style: const TextStyle(
+                                        fontSize: 16,
+                                        color: Color.fromARGB(255, 38, 70, 138),
+                                      )),
+                                  const Text("     "),
+                                  const Icon(Icons.location_pin,
+                                      color: Color.fromARGB(255, 14, 10, 102)),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => projectDetailScreen(
+                                    projecName: "Bloom",
+                                  )));
+                    }),
+              ),
+              SizedBox(
+                height: 100,
+                child: GestureDetector(
+                    child: Card(
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                      //shadowColor: Color.fromARGB(255, 255, 255, 255),
+                      //  elevation: 7,
+
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        child: Column(
+                          children: <Widget>[
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Column(
+                              children: [
+                                Row(children: <Widget>[
+                                  Text(
+                                    "٢١-١٢-٢٠٢٢",
+                                    style: const TextStyle(
+                                      fontSize: 16,
+                                      color: Color.fromARGB(255, 14, 10, 102),
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: SizedBox(
+                                      width: 240,
+                                    ),
+                                  ),
+                                  Text(
+                                    " اخلاقيات زراعة الاسنان ",
+                                    style: const TextStyle(
+                                      fontSize: 19,
+                                      color: Color.fromARGB(255, 14, 10, 102),
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                  ),
+                                ]),
+                              ],
+                            ),
+                            Expanded(
+                              child: Row(
+                                children: <Widget>[
+                                  IconButton(
+                                      icon: Icon(
+                                        Icons.arrow_back_ios,
+                                        color:
+                                            Color.fromARGB(255, 170, 169, 179),
+                                      ),
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    projectDetailScreen(
+                                                      projecName: "Bloom",
+                                                    )));
+                                      }),
+                                  Expanded(
+                                      child: SizedBox(
+                                    width: 100,
+                                  )),
+                                  Text("كلية الاسنان",
+                                      style: const TextStyle(
+                                        fontSize: 16,
+                                        color: Color.fromARGB(255, 38, 70, 138),
+                                      )),
+                                  const Text("     "),
+                                  const Icon(Icons.location_pin,
+                                      color: Color.fromARGB(255, 14, 10, 102)),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => projectDetailScreen(
+                                    projecName: "Bloom",
+                                  )));
+                    }),
+              ),
               // itemCount:_textEditingController!.text.isNotEmpty? nameListsearch.length  : nameListsearch.length,
             ]),
           ),

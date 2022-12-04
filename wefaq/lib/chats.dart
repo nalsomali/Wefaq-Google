@@ -65,200 +65,184 @@ class _chatScreenState extends State<chatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          automaticallyImplyLeading: false,
-          backgroundColor: Color.fromARGB(255, 255, 255, 255),
-          title: Text("المحادثات",
-              style: TextStyle(
-                fontWeight: FontWeight.normal,
-                color: Color.fromARGB(255, 14, 10, 102),
-              )),
-          leading: Icon(
-            Icons.logout,
-            color: Color.fromARGB(255, 14, 10, 102),
-          )),
-      bottomNavigationBar: CustomNavigationBar(
-        currentHomeScreen: 4,
-        updatePage: () {},
-      ),
-      body: Scrollbar(
-        thumbVisibility: true,
-        child: ListView.builder(
-          itemCount: ProjectTitleList.length,
-          itemBuilder: (context, index) {
-            return SizedBox(
-              height: 85,
-              child: GestureDetector(
-                child: Card(
-                  color: const Color.fromARGB(255, 255, 255, 255),
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Row(children: <Widget>[
-                          IconButton(
-                            icon: const Icon(
-                              Icons.arrow_back_ios,
-                              color: Color.fromARGB(255, 14, 10, 102),
-                              size: 20,
-                            ),
-                            onPressed: () {
-                              // Navigator.push(
-                              //     context,
-                              //     MaterialPageRoute(
-                              //         builder: (context) => ChatScreen(
-                              //               projectName:
-                              //                   ProjectTitleList[index],
-                              //             )));
-                            },
+        appBar: AppBar(
+            automaticallyImplyLeading: false,
+            backgroundColor: Color.fromARGB(255, 255, 255, 255),
+            title: Text("المحادثات",
+                style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  color: Color.fromARGB(255, 14, 10, 102),
+                )),
+            leading: Icon(
+              Icons.logout,
+              color: Color.fromARGB(255, 14, 10, 102),
+            )),
+        bottomNavigationBar: CustomNavigationBar(
+          currentHomeScreen: 4,
+          updatePage: () {},
+        ),
+        body: ListView(children: [
+          SizedBox(
+            height: 85,
+            child: GestureDetector(
+              child: Card(
+                color: const Color.fromARGB(255, 255, 255, 255),
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Row(children: <Widget>[
+                        IconButton(
+                          icon: const Icon(
+                            Icons.arrow_back_ios,
+                            color: Color.fromARGB(255, 14, 10, 102),
+                            size: 20,
                           ),
-                          Expanded(child: SizedBox()),
+                          onPressed: () {
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => ChatScreen(
+                            //               projectName:
+                            //                   ProjectTitleList[index],
+                            //             )));
+                          },
+                        ),
+                        Expanded(child: SizedBox()),
+                        Text(
+                          " مشروع وفاق",
+                          style: const TextStyle(
+                            fontSize: 18,
+                            color: Color.fromARGB(159, 22, 35, 63),
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.all(10.0),
+                          width: 50,
+                          height: 50,
+                          margin: const EdgeInsets.only(right: 8.0),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/images/teamg.png'),
+                            ),
+                          ),
+                        ),
+                      ]),
+                      if (ProjectTitleList.length != 0)
+                        Row(children: [
+                          SizedBox(
+                            width: 240,
+                          ),
                           Text(
-                            " مشروع وفاق",
+                            "!" + "الهنوف: انا سعيده بانضمامي للفريق ",
                             style: const TextStyle(
-                              fontSize: 18,
-                              color: Color.fromARGB(159, 22, 35, 63),
+                              overflow: TextOverflow.ellipsis,
+                              fontSize: 12,
+                              color: Colors.grey,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          Container(
-                            padding: EdgeInsets.all(10.0),
-                            width: 50,
-                            height: 50,
-                            margin: const EdgeInsets.only(right: 8.0),
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Color.fromARGB(255, 255, 255, 255),
-                              image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage('assets/images/teamg.png'),
-                              ),
+                        ]),
+                    ],
+                  ),
+                ),
+              ),
+              onTap: () {
+                // Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //         builder: (context) => ChatScreen(
+                //               projectName: ProjectTitleList[index],
+                //             )));
+              },
+            ),
+          ),
+          SizedBox(
+            height: 85,
+            child: GestureDetector(
+              child: Card(
+                color: const Color.fromARGB(255, 255, 255, 255),
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Row(children: <Widget>[
+                        IconButton(
+                          icon: const Icon(
+                            Icons.arrow_back_ios,
+                            color: Color.fromARGB(255, 14, 10, 102),
+                            size: 20,
+                          ),
+                          onPressed: () {
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => ChatScreen(
+                            //               projectName:
+                            //                   ProjectTitleList[index],
+                            //             )));
+                          },
+                        ),
+                        Expanded(child: SizedBox()),
+                        Text(
+                          "بحث دراسة اثار الاضطراب الاجتماعي",
+                          style: const TextStyle(
+                            fontSize: 18,
+                            color: Color.fromARGB(159, 22, 35, 63),
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.all(10.0),
+                          width: 50,
+                          height: 50,
+                          margin: const EdgeInsets.only(right: 8.0),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/images/teamg.png'),
+                            ),
+                          ),
+                        ),
+                      ]),
+                      if (ProjectTitleList.length != 0)
+                        Row(children: [
+                          SizedBox(
+                            width: 350,
+                          ),
+                          Text(
+                            "!" + "عبدالله: أهلًا ",
+                            style: const TextStyle(
+                              overflow: TextOverflow.ellipsis,
+                              fontSize: 12,
+                              color: Colors.grey,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ]),
-                        if (ProjectTitleList.length != 0)
-                          if (index < senders.length)
-                            if (lastMessage[index]!.contains(
-                                'https://firebasestorage.googleapis.com/v0/b/wefaq-5f47b.appspot.com/o/images'))
-                              Row(children: [
-                                SizedBox(
-                                  width: 40,
-                                ),
-                                if (ProjectTitleList.length != 0)
-                                  if (index < senders.length)
-                                    if (senders[index] != " ")
-                                      Expanded(
-                                        child: Text(
-                                          "       " +
-                                              senders[index] +
-                                              ": " +
-                                              "Photo",
-                                          style: const TextStyle(
-                                            overflow: TextOverflow.ellipsis,
-                                            fontSize: 12,
-                                            color: Colors.grey,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                      ),
-                              ]),
-                        if (ProjectTitleList.length != 0)
-                          if (index < senders.length)
-                            if (lastMessage[index]!.contains(
-                                'https://firebasestorage.googleapis.com/v0/b/wefaq-5f47b.appspot.com/o/Recordings'))
-                              Row(children: [
-                                SizedBox(
-                                  width: 40,
-                                ),
-                                if (ProjectTitleList.length != 0)
-                                  if (index < senders.length)
-                                    if (senders[index] != " ")
-                                      Expanded(
-                                        child: Text(
-                                          "       " +
-                                              senders[index] +
-                                              ": " +
-                                              "VoiceNote",
-                                          style: const TextStyle(
-                                            overflow: TextOverflow.ellipsis,
-                                            fontSize: 12,
-                                            color: Colors.grey,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                      ),
-                              ]),
-                        if (ProjectTitleList.length != 0)
-                          if (index < senders.length)
-                            if (lastMessage[index]!.contains(
-                                'https://firebasestorage.googleapis.com/v0/b/wefaq-5f47b.appspot.com/o/files'))
-                              Row(children: [
-                                SizedBox(
-                                  width: 40,
-                                ),
-                                if (ProjectTitleList.length != 0)
-                                  if (index < senders.length)
-                                    if (senders[index] != " ")
-                                      Expanded(
-                                        child: Text(
-                                          "       " +
-                                              senders[index] +
-                                              ": " +
-                                              "File",
-                                          style: const TextStyle(
-                                            overflow: TextOverflow.ellipsis,
-                                            fontSize: 12,
-                                            color: Colors.grey,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                      ),
-                              ]),
-                        if (ProjectTitleList.length != 0)
-                          if (index < senders.length)
-                            if (senders[index] != " ")
-                              if (!lastMessage[index]!.contains('https:'))
-                                Row(children: [
-                                  SizedBox(
-                                    width: 40,
-                                  ),
-                                  if (ProjectTitleList.length != 0)
-                                    if (index < senders.length)
-                                      if (senders[index] != " ")
-                                        Expanded(
-                                          child: Text(
-                                            "       " +
-                                                senders[index] +
-                                                ": " +
-                                                lastMessage[index],
-                                            style: const TextStyle(
-                                              overflow: TextOverflow.ellipsis,
-                                              fontSize: 12,
-                                              color: Colors.grey,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                        ),
-                                ]),
-                      ],
-                    ),
+                    ],
                   ),
                 ),
-                onTap: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) => ChatScreen(
-                  //               projectName: ProjectTitleList[index],
-                  //             )));
-                },
               ),
-            );
-          },
-        ),
-      ),
-    );
+              onTap: () {
+                // Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //         builder: (context) => ChatScreen(
+                //               projectName: ProjectTitleList[index],
+                //             )));
+              },
+            ),
+          )
+        ]));
   }
 }
 
