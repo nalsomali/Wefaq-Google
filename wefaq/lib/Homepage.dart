@@ -1,5 +1,6 @@
 //import 'package:wefaq/favoriteProject.dart';
 import 'package:flutter/material.dart';
+import 'package:wefaq/myFav.dart';
 import 'backgroundHome.dart';
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
@@ -173,11 +174,10 @@ class HomeScreenState extends State<HomeScreen> {
                                     color: Color.fromARGB(255, 18, 15, 84),
                                   ),
                                   onTap: () {
-                                    // Navigator.push(
-                                    //     context,
-                                    //     MaterialPageRoute(
-                                    //         builder: (context) =>
-                                    //             favoritePage()));
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => FavScreen()));
                                   }),
                             ],
                           ),
