@@ -25,11 +25,14 @@ class _ListViewTabsState extends State<ProjectsTabs> {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            title: Text('البحوث و المشاريع',
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  color: Color.fromARGB(255, 14, 10, 102),
-                )),
+            title: Text(
+              'البحوث و المشاريع',
+              style: TextStyle(
+                fontWeight: FontWeight.normal,
+                color: Color.fromARGB(255, 14, 10, 102),
+              ),
+              textAlign: TextAlign.center,
+            ),
             leading: Icon(
               Icons.logout,
               color: Color.fromARGB(255, 14, 10, 102),
