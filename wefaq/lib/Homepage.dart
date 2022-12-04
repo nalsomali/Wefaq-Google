@@ -134,10 +134,10 @@ class HomeScreenState extends State<HomeScreen> {
                 }),
               ),
               SizedBox(
-                height: 200,
+                height: 400,
               ),
               Padding(
-                padding: EdgeInsets.only(top: 290),
+                padding: EdgeInsets.only(top: 430),
                 child: SafeArea(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -152,11 +152,11 @@ class HomeScreenState extends State<HomeScreen> {
                             mainAxisSpacing: 20,
                             children: <Widget>[
                               CategoryCard(
-                                  title: "My Projects",
+                                  title: "مشاركاتي",
                                   icon: Icon(
                                     Icons.lightbulb,
                                     size: 45,
-                                    color: Color.fromARGB(221, 73, 105, 119),
+                                    color: Color.fromARGB(255, 18, 15, 84),
                                   ),
                                   onTap: () {
                                     // Navigator.push(
@@ -166,38 +166,11 @@ class HomeScreenState extends State<HomeScreen> {
                                     //             myProjects()));
                                   }),
                               CategoryCard(
-                                  title: "Sent Request",
-                                  icon: Icon(
-                                    Icons.send_outlined,
-                                    size: 45,
-                                    color: Color.fromARGB(221, 73, 105, 119),
-                                  ),
-                                  onTap: () {
-                                    // Navigator.push(
-                                    //     context,
-                                    //     MaterialPageRoute(
-                                    //         builder: (context) => Tabs()));
-                                  }),
-                              CategoryCard(
-                                  title: "Received Request",
-                                  icon: Icon(
-                                    Icons.add_to_home_screen,
-                                    size: 45,
-                                    color: Color.fromARGB(221, 73, 105, 119),
-                                  ),
-                                  onTap: () {
-                                    // Navigator.push(
-                                    //     context,
-                                    //     MaterialPageRoute(
-                                    //         builder: (context) =>
-                                    //             RequestListViewPageProject()));
-                                  }),
-                              CategoryCard(
-                                  title: "My Favorites",
+                                  title: "مفضلتي",
                                   icon: Icon(
                                     Icons.star,
                                     size: 45,
-                                    color: Color.fromARGB(221, 73, 105, 119),
+                                    color: Color.fromARGB(255, 18, 15, 84),
                                   ),
                                   onTap: () {
                                     // Navigator.push(
@@ -261,7 +234,7 @@ class CategoryCard extends StatelessWidget {
                 Text("$title",
                     style: TextStyle(
                         fontSize: 15,
-                        color: Color.fromARGB(221, 73, 105, 119),
+                        color: Color.fromARGB(255, 18, 15, 84),
                         fontWeight: FontWeight.bold)),
               ],
             ),
