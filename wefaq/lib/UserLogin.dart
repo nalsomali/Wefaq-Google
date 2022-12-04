@@ -1,4 +1,4 @@
-//import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:flutter/material.dart';
 import 'package:wefaq/resetPassword.dart';
 //import 'package:wefaq/AdminHomePage.dart';
@@ -6,11 +6,9 @@ import 'Homepage.dart';
 //import 'package:wefaq/HomeScreen.dart';
 import 'package:wefaq/UserRegisteration.dart';
 import 'package:wefaq/backgroundLogin.dart';
-//import 'package:firebase_auth/firebase_auth.dart';
 import 'Homepage.dart';
 //import 'package:form_field_validator/form_field_validator.dart';
 import 'package:cool_alert/cool_alert.dart';
-//import 'package:wefaq/resetPassword.dart';
 import 'package:wefaq/Homepage.dart';
 import 'SessionScreen.dart';
 

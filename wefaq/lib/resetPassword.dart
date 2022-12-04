@@ -60,7 +60,7 @@ class _ResetScreenState extends State<ResetScreen> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Text(
-                  'Enter your email and we will send you a password reset link ',
+                  'الرجاء ادخال البريد الالكتروني الخاص بك، سيتم ارسال رابط لاعادة تعيين كلمةالمرور',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 17),
                 ),
@@ -74,7 +74,7 @@ class _ResetScreenState extends State<ResetScreen> {
                 child: TextField(
                   controller: _emailController,
                   decoration: InputDecoration(
-                      labelText: "Email",
+                      labelText: "البريد الالكتروني",
                       hintText: "example@email.com",
                       hintStyle:
                           TextStyle(color: Color.fromARGB(255, 202, 198, 198)),
@@ -113,7 +113,7 @@ class _ResetScreenState extends State<ResetScreen> {
                         ])),
                     padding: const EdgeInsets.all(0),
                     child: Text(
-                      "Reset Password ",
+                      "اعادة تعيين",
                       style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
