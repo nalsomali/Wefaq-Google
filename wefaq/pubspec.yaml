@@ -31,13 +31,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cool_alert: ^1.1.0
+  full_screen_menu: ^1.0.0
+
+  
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   velocity_x: ^3.6.0
-  cool_alert: ^1.1.0
-  full_screen_menu: ^1.0.0
+  
+  
   geolocator: ^9.0.2
   google_maps_flutter: ^2.2.1
   google_place: ^0.4.7
@@ -69,9 +73,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - images/
     - assets/images/
-  #   - images/a_dot_ham.jpeg
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

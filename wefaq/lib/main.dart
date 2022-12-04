@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'Homepage.dart';
+import 'AdminHomePage.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
   runApp(const MyApp());
 }
 
@@ -16,10 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorSchemeSeed: Color.fromARGB(178, 0, 13, 255),
-        //  useMaterial3: true,
-      ),
-      home: HomeScreen(),
+          colorSchemeSeed: const Color.fromARGB(255, 215, 189, 226),
+          useMaterial3: true,
+          brightness: Brightness.light),
+      home: adminHomeScreen(),
     );
   }
 }
