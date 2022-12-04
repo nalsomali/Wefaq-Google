@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unnecessary_new
 import 'package:cool_alert/cool_alert.dart';
 import 'package:wefaq/AdminBackground.dart';
 import 'package:wefaq/AdminNavBar.dart';
@@ -13,7 +13,6 @@ class adminHomeScreen extends StatefulWidget {
 
 class HomeScreenState extends State<adminHomeScreen> {
   @override
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
         bottomNavigationBar: AdminCustomNavigationBar(
@@ -24,29 +23,6 @@ class HomeScreenState extends State<adminHomeScreen> {
         body: adminBackgroundHome(
             child: Stack(
           children: <Widget>[
-            SizedBox(
-              height: 33,
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 310, top: 40),
-              child: IconButton(
-                  icon: Icon(
-                    Icons.logout,
-                    size: 30,
-                    color: Color.fromARGB(255, 0, 0, 0),
-                  ),
-                  onPressed: () {}),
-            ),
-            SizedBox(
-              height: 130,
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 10, top: 125),
-              alignment: Alignment.topCenter,
-            ),
-            SizedBox(
-              height: 200,
-            ),
             Padding(
               padding: EdgeInsets.only(top: 290),
               child: SafeArea(
@@ -119,7 +95,7 @@ class CategoryCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               offset: Offset(40, 20),
               blurRadius: 30,

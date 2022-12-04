@@ -25,139 +25,303 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
       children: [
         Expanded(
           child: Scaffold(
-            bottomNavigationBar: AdminCustomNavigationBar(
-              currentHomeScreen: 2,
-              updatePage: () {},
-            ),
-            appBar: AppBar(
-              leading: IconButton(
-                  icon: Icon(
-                    Icons.arrow_back_ios,
-                    color: Color.fromARGB(255, 255, 255, 255),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => adminHomeScreen()));
-                  }),
-              backgroundColor: Color.fromARGB(255, 255, 255, 255),
-              actions: <Widget>[
-                IconButton(
+              bottomNavigationBar: AdminCustomNavigationBar(
+                currentHomeScreen: 2,
+                updatePage: () {},
+              ),
+              appBar: AppBar(
+                leading: IconButton(
                     icon: Icon(
-                      Icons.logout,
-                      color: Color.fromARGB(255, 255, 255, 255),
+                      Icons.arrow_back_ios,
+                      color: Color.fromARGB(255, 14, 10, 102),
                     ),
-                    onPressed: () {}),
-              ],
-              title: Text('المشاريع',
-                  style: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    color: Color.fromARGB(255, 14, 10, 102),
-                  )),
-            ),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => adminHomeScreen()));
+                    }),
+                backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                actions: <Widget>[
+                  IconButton(
+                      icon: Icon(
+                        Icons.logout,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                      ),
+                      onPressed: () {}),
+                ],
+                title: Text('المشاريع',
+                    style: TextStyle(
+                      fontWeight: FontWeight.normal,
+                      color: Color.fromARGB(255, 14, 10, 102),
+                    )),
+              ),
 
-            //Main List View With Builder
-            body: Scrollbar(
-              thumbVisibility: true,
-              child: ListView.builder(
-                //itemCount: tokens.length,
+              //Main List View With Builder
+              body: ListView(children: [
+                // Card Which Holds Layout Of ListView Item
+                SizedBox(
+                  height: 100,
+                  child: GestureDetector(
+                      child: Card(
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                        //shadowColor: Color.fromARGB(255, 255, 255, 255),
+                        //  elevation: 7,
 
-                itemBuilder: (context, index) {
-                  // Card Which Holds Layout Of ListView Item
-
-                  return SizedBox(
-                    height: 100,
-                    child: GestureDetector(
-                        child: Card(
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Column(
-                                  children: [
-                                    Row(children: const <Widget>[
-                                      Text(
-                                        "      تطوير موقع الكتروني ",
-                                        style: TextStyle(
-                                          fontSize: 19,
-                                          color:
-                                              Color.fromARGB(212, 82, 10, 111),
-                                          fontWeight: FontWeight.w700,
-                                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                          child: Column(
+                            children: <Widget>[
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Column(
+                                children: [
+                                  Row(children: const <Widget>[
+                                    Text(
+                                      "١١-١٢-٢٠١٩",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        color: Color.fromARGB(255, 14, 10, 102),
+                                        fontWeight: FontWeight.normal,
                                       ),
-                                      Expanded(
-                                        child: SizedBox(
-                                          width: 240,
-                                        ),
+                                    ),
+                                    Expanded(
+                                      child: SizedBox(
+                                        width: 240,
                                       ),
-                                      Text(
-                                        "١٢/٢/١٤٤٣",
-                                        style: TextStyle(
-                                          fontSize: 16,
+                                    ),
+                                    Text(
+                                      "  دراسة اثار الاضطراب الاجتماعي ",
+                                      style: TextStyle(
+                                        fontSize: 19,
+                                        color: Color.fromARGB(255, 14, 10, 102),
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                  ]),
+                                ],
+                              ),
+                              Expanded(
+                                child: Row(
+                                  children: <Widget>[
+                                    IconButton(
+                                        icon: Icon(
+                                          Icons.arrow_back_ios,
                                           color: Color.fromARGB(
                                               255, 170, 169, 179),
-                                          fontWeight: FontWeight.normal,
                                         ),
-                                      ),
-                                    ]),
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      adminprojectDetailScreen()));
+                                        }),
+                                    Expanded(
+                                        child: SizedBox(
+                                      width: 100,
+                                    )),
+                                    Text("كلية الاداب",
+                                        style: const TextStyle(
+                                          fontSize: 16,
+                                          color:
+                                              Color.fromARGB(255, 38, 70, 138),
+                                        )),
+                                    const Text("     "),
+                                    const Icon(Icons.location_pin,
+                                        color:
+                                            Color.fromARGB(255, 14, 10, 102)),
                                   ],
                                 ),
-                                Expanded(
-                                  child: Row(
-                                    children: <Widget>[
-                                      const Text("     "),
-                                      const Icon(Icons.location_pin,
-                                          color:
-                                              Color.fromARGB(173, 64, 7, 87)),
-                                      Text("جامعةالملك سعود",
-                                          style: const TextStyle(
-                                            fontSize: 16,
-                                            color: Color.fromARGB(
-                                                255, 34, 94, 120),
-                                          )),
-                                      Expanded(
-                                          child: SizedBox(
-                                        width: 100,
-                                      )),
-                                      IconButton(
-                                          icon: Icon(
-                                            Icons.arrow_forward_ios,
-                                            color: Color.fromARGB(
-                                                255, 170, 169, 179),
-                                          ),
-                                          onPressed: () {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        adminprojectDetailScreen()));
-                                          }),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      adminprojectDetailScreen()));
-                        }),
-                  );
-                },
-                itemCount: 3,
-              ),
-            ),
-          ),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    adminprojectDetailScreen()));
+                      }),
+                ),
+                SizedBox(
+                  height: 100,
+                  child: GestureDetector(
+                      child: Card(
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                        //shadowColor: Color.fromARGB(255, 255, 255, 255),
+                        //  elevation: 7,
+
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                          child: Column(
+                            children: <Widget>[
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Column(
+                                children: [
+                                  Row(children: const <Widget>[
+                                    Text(
+                                      " ١١-١-٢٠٢",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        color: Color.fromARGB(255, 14, 10, 102),
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: SizedBox(
+                                        width: 240,
+                                      ),
+                                    ),
+                                    Text(
+                                      "  مشروع عوالم ",
+                                      style: TextStyle(
+                                        fontSize: 19,
+                                        color: Color.fromARGB(255, 14, 10, 102),
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                  ]),
+                                ],
+                              ),
+                              Expanded(
+                                child: Row(
+                                  children: <Widget>[
+                                    IconButton(
+                                        icon: Icon(
+                                          Icons.arrow_back_ios,
+                                          color: Color.fromARGB(
+                                              255, 170, 169, 179),
+                                        ),
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      adminprojectDetailScreen()));
+                                        }),
+                                    Expanded(
+                                        child: SizedBox(
+                                      width: 100,
+                                    )),
+                                    Text("كلية علوم الحاسب و المعلومات",
+                                        style: const TextStyle(
+                                          fontSize: 16,
+                                          color:
+                                              Color.fromARGB(255, 38, 70, 138),
+                                        )),
+                                    const Text("     "),
+                                    const Icon(Icons.location_pin,
+                                        color:
+                                            Color.fromARGB(255, 14, 10, 102)),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    adminprojectDetailScreen()));
+                      }),
+                ),
+                SizedBox(
+                  height: 100,
+                  child: GestureDetector(
+                      child: Card(
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                        //shadowColor: Color.fromARGB(255, 255, 255, 255),
+                        //  elevation: 7,
+
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                          child: Column(
+                            children: <Widget>[
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Column(
+                                children: [
+                                  Row(children: const <Widget>[
+                                    Text(
+                                      "٢١-١٢-٢٠٢٢",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        color: Color.fromARGB(255, 14, 10, 102),
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: SizedBox(
+                                        width: 240,
+                                      ),
+                                    ),
+                                    Text(
+                                      " اخلاقيات زراعة الاسنان ",
+                                      style: TextStyle(
+                                        fontSize: 19,
+                                        color: Color.fromARGB(255, 14, 10, 102),
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                  ]),
+                                ],
+                              ),
+                              Expanded(
+                                child: Row(
+                                  children: <Widget>[
+                                    IconButton(
+                                        icon: Icon(
+                                          Icons.arrow_back_ios,
+                                          color: Color.fromARGB(
+                                              255, 170, 169, 179),
+                                        ),
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      adminprojectDetailScreen()));
+                                        }),
+                                    Expanded(
+                                        child: SizedBox(
+                                      width: 100,
+                                    )),
+                                    Text("كلية الاسنان",
+                                        style: const TextStyle(
+                                          fontSize: 16,
+                                          color:
+                                              Color.fromARGB(255, 38, 70, 138),
+                                        )),
+                                    const Text("     "),
+                                    const Icon(Icons.location_pin,
+                                        color:
+                                            Color.fromARGB(255, 14, 10, 102)),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    adminprojectDetailScreen()));
+                      }),
+                ),
+              ])),
         ),
       ],
     );

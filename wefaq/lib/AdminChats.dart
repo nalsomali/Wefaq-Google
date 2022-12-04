@@ -23,7 +23,7 @@ class _chatScreenState extends State<AdminChatScreen> {
     return Scaffold(
         appBar: AppBar(
             automaticallyImplyLeading: false,
-            backgroundColor: Color.fromARGB(255, 255, 255, 255),
+            backgroundColor: const Color.fromARGB(255, 255, 255, 255),
             title: const Text("المحادثات",
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
@@ -57,7 +57,7 @@ class _chatScreenState extends State<AdminChatScreen> {
                           ),
                           onPressed: () {},
                         ),
-                        Expanded(child: SizedBox()),
+                        const Expanded(child: SizedBox()),
                         const Text(
                           " مشروع وفاق",
                           style: TextStyle(
@@ -67,11 +67,11 @@ class _chatScreenState extends State<AdminChatScreen> {
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.all(10.0),
+                          padding: const EdgeInsets.all(10.0),
                           width: 50,
                           height: 50,
                           margin: const EdgeInsets.only(right: 8.0),
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: Color.fromARGB(255, 255, 255, 255),
                             image: DecorationImage(
@@ -123,19 +123,17 @@ class _chatScreenState extends State<AdminChatScreen> {
                           ),
                           onPressed: () {},
                         ),
-                        Expanded(child: SizedBox()),
-                        const Expanded(
-                          child: Text(
-                            "مشروع دلني",
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Color.fromARGB(159, 22, 35, 63),
-                              fontWeight: FontWeight.w500,
-                            ),
+                        const Expanded(child: SizedBox()),
+                        const Text(
+                          " مشروع دلني",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Color.fromARGB(159, 22, 35, 63),
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.all(10.0),
+                          padding: const EdgeInsets.all(10.0),
                           width: 50,
                           height: 50,
                           margin: const EdgeInsets.only(right: 8.0),
@@ -151,7 +149,7 @@ class _chatScreenState extends State<AdminChatScreen> {
                       ]),
                       Row(children: const [
                         SizedBox(
-                          width: 250,
+                          width: 270,
                         ),
                         Text(
                           "عبدالله: أهلًا ",
@@ -178,7 +176,7 @@ showDialogFunc(context) {
   CoolAlert.show(
     context: context,
     title: "",
-    confirmBtnColor: Color.fromARGB(144, 210, 2, 2),
+    confirmBtnColor: const Color.fromARGB(144, 210, 2, 2),
 
     confirmBtnText: 'log out ',
     //cancelBtnText: 'Delete' ,
@@ -187,7 +185,7 @@ showDialogFunc(context) {
     },
 
     type: CoolAlertType.confirm,
-    backgroundColor: Color.fromARGB(221, 212, 189, 227),
+    backgroundColor: const Color.fromARGB(221, 212, 189, 227),
     text: "Are you sure you want to log out?",
   );
 }

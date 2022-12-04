@@ -27,25 +27,23 @@ class _RequestListProject extends State<RequestListViewPageProject> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
-            color: Color.fromARGB(255, 255, 255, 255),
+            color: Color.fromARGB(255, 14, 10, 102),
           ),
           onPressed: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => adminHomeScreen()));
           },
         ),
-        backgroundColor: const Color.fromARGB(255, 145, 124, 178),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         title: const Text('طلبات الانضمام',
             style: TextStyle(
               fontWeight: FontWeight.normal,
-              color: Colors.white,
+              color: Color.fromARGB(255, 14, 10, 102),
             )),
         actions: <Widget>[
           IconButton(
@@ -60,88 +58,150 @@ class _RequestListProject extends State<RequestListViewPageProject> {
         currentHomeScreen: 2,
         updatePage: () {},
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: Scrollbar(
-              thumbVisibility: true,
-              child: ListView.builder(
-                itemCount: 3,
-                itemBuilder: (context, index) {
-                  return SizedBox(
-                    height: 120,
-                    child: GestureDetector(
-                        child: Card(
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Row(children: const <Widget>[
-                                  Text(
-                                    " مشروع تطوير الويب",
-                                    style: TextStyle(
-                                      fontSize: 24,
-                                      color: Color.fromARGB(159, 35, 86, 84),
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                ]),
-                                Row(children: <Widget>[
-                                  TextButton(
-                                    onPressed: () {},
-                                    child: CircleAvatar(
-                                      radius: 15,
-                                    ),
-                                  ),
-                                  const Text(
-                                    "محمد احمد",
-                                    style: TextStyle(
-                                      fontSize: 22,
-                                      color: Color.fromARGB(159, 32, 3, 43),
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                  const Expanded(
-                                      child: SizedBox(
-                                    width: 210,
-                                  )),
-                                  IconButton(
-                                      icon: const Icon(
-                                        Icons.arrow_forward_ios,
-                                        color:
-                                            Color.fromARGB(255, 170, 169, 179),
-                                      ),
-                                      onPressed: () {
-                                        showDialogFunc(
-                                          context,
-                                          index,
-                                        );
-                                      }),
-                                ]),
-                              ],
+      body: ListView(children: [
+        // Card Which Holds Layout Of ListView Item
+        SizedBox(
+          height: 100,
+          child: GestureDetector(
+              child: Card(
+                color: const Color.fromARGB(255, 255, 255, 255),
+                //shadowColor: Color.fromARGB(255, 255, 255, 255),
+                //  elevation: 7,
+
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  child: Column(
+                    children: <Widget>[
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Column(
+                        children: [
+                          Row(children: const <Widget>[
+                            Expanded(
+                              child: SizedBox(
+                                width: 240,
+                              ),
                             ),
-                          ),
+                            Text(
+                              "  دراسة اثار الاضطراب الاجتماعي ",
+                              style: TextStyle(
+                                fontSize: 19,
+                                color: Color.fromARGB(255, 14, 10, 102),
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ]),
+                        ],
+                      ),
+                      Expanded(
+                        child: Row(
+                          children: <Widget>[
+                            IconButton(
+                                icon: const Icon(
+                                  Icons.arrow_back_ios,
+                                  color: Color.fromARGB(255, 170, 169, 179),
+                                ),
+                                onPressed: () {
+                                  showDialogFunc(context);
+                                }),
+                            const Expanded(
+                                child: SizedBox(
+                              width: 100,
+                            )),
+                            const Text("عبد الله محمد",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Color.fromARGB(255, 38, 70, 138),
+                                )),
+                            const Text("     "),
+                            const Icon(Icons.person,
+                                color: Color.fromARGB(255, 14, 10, 102)),
+                          ],
                         ),
-                        onTap: () {
-                          showDialogFunc(
-                            context,
-                            index,
-                          );
-                        }),
-                  );
-                },
+                      ),
+                    ],
+                  ),
+                ),
               ),
-            ),
-          ),
-        ],
-      ),
+              onTap: () {
+                showDialogFunc(context);
+              }),
+        ),
+        SizedBox(
+          height: 100,
+          child: GestureDetector(
+              child: Card(
+                color: const Color.fromARGB(255, 255, 255, 255),
+                //shadowColor: Color.fromARGB(255, 255, 255, 255),
+                //  elevation: 7,
+
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  child: Column(
+                    children: <Widget>[
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Column(
+                        children: [
+                          Row(children: const <Widget>[
+                            Expanded(
+                              child: SizedBox(
+                                width: 240,
+                              ),
+                            ),
+                            Text(
+                              "  مشروع عوالم ",
+                              style: TextStyle(
+                                fontSize: 19,
+                                color: Color.fromARGB(255, 14, 10, 102),
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ]),
+                        ],
+                      ),
+                      Expanded(
+                        child: Row(
+                          children: <Widget>[
+                            IconButton(
+                                icon: const Icon(
+                                  Icons.arrow_back_ios,
+                                  color: Color.fromARGB(255, 170, 169, 179),
+                                ),
+                                onPressed: () {
+                                  showDialogFunc(context);
+                                }),
+                            const Expanded(
+                                child: SizedBox(
+                              width: 100,
+                            )),
+                            const Text("سارة فهد",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Color.fromARGB(255, 38, 70, 138),
+                                )),
+                            const Text("     "),
+                            const Icon(Icons.person,
+                                color: Color.fromARGB(255, 14, 10, 102)),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              onTap: () {
+                showDialogFunc(context);
+              }),
+        ),
+      ]),
     );
   }
 }
 
-showDialogFunc(context, index) {
+showDialogFunc(context) {
   return showDialog(
     context: context,
     builder: (context) {
@@ -177,13 +237,13 @@ showDialogFunc(context, index) {
                           }))
                 ]),
                 const SizedBox(height: 30),
-                Row(children: <Widget>[
+                Row(children: const <Widget>[
                   Expanded(
                     flex: 5,
                     child: Center(
                       child: Text(
-                        "هل تود رفض ام قبول الطلب ؟",
-                        style: const TextStyle(
+                        "هل تود رفض أم قبول الطلب ؟",
+                        style: TextStyle(
                           fontSize: 20,
                           color: Color.fromARGB(159, 30, 27, 31),
                           fontWeight: FontWeight.bold,
