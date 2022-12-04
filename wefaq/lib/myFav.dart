@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:wefaq/HomePage.dart';
 import 'package:wefaq/navBar.dart';
 
-class SessionScreen extends StatefulWidget {
+class FavScreen extends StatefulWidget {
   @override
-  SessionScreensState createState() => SessionScreensState();
+  FavScreenState createState() => FavScreenState();
 }
 
-class SessionScreensState extends State<SessionScreen> {
+class FavScreenState extends State<FavScreen> {
   @override
   void initState() {
     super.initState();
@@ -43,53 +43,7 @@ class SessionScreensState extends State<SessionScreen> {
               SizedBox(
                 height: 10,
               ),
-              SizedBox(
-                height: 100,
-                child: GestureDetector(
-                  child: Card(
-                    margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                    shadowColor: Color.fromARGB(145, 202, 202, 202),
-                    elevation: 8,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                      child: Column(
-                        children: <Widget>[
-                          const ListTile(
-                            leading: CircleAvatar(
-                              radius: 30.0,
-                              backgroundImage:
-                                  AssetImage('assets/images/hassan.jpeg'),
-                            ),
-                            title: Text(
-                              "  د.عبير النجار ",
-                              style: const TextStyle(
-                                fontSize: 19,
-                                color: Color.fromARGB(255, 14, 10, 102),
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            subtitle: Text(" دكتوراة هندسة برمجيات ",
-                                style: const TextStyle(
-                                  fontSize: 16,
-                                  color: Color.fromARGB(255, 38, 70, 138),
-                                )),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 3,
-              ),
+
               SizedBox(
                 height: 130,
                 child: GestureDetector(
