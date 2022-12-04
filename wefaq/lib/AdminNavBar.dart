@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:full_screen_menu/full_screen_menu.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:wefaq/AdminHomePage.dart';
-import 'package:wefaq/chats.dart';
+
 import 'package:wefaq/postAdviser.dart';
 import 'package:wefaq/postProject.dart';
+
+import 'AdminChats.dart';
 
 class AdminCustomNavigationBar extends StatefulWidget {
   const AdminCustomNavigationBar(
@@ -34,10 +36,10 @@ class _CustomNavigationBarState extends State<AdminCustomNavigationBar> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                BottomBarButton(widget.currentHomeScreen, 2, Icons.home_filled,
-                    widget.updatePage),
                 BottomBarButton(widget.currentHomeScreen, 0,
                     CupertinoIcons.chat_bubble, widget.updatePage),
+                BottomBarButton(widget.currentHomeScreen, 2, Icons.home_filled,
+                    widget.updatePage),
               ],
             ),
           ),
@@ -161,8 +163,10 @@ class BottomBarButton extends StatelessWidget {
           onPressed: () => {
                 if (index == 0)
                   {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => chatScreen()))
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => AdminChatScreen()))
                   }
                 else if (index == 2)
                   {
