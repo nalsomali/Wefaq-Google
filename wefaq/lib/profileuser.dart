@@ -34,22 +34,23 @@ class _viewprofileState extends State<viewprofile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 238, 237, 240),
-      // appBar: AppBar(
-      //   automaticallyImplyLeading: false,
-      //   title: Text('Profile', style: TextStyle(color: Colors.white)),
-      //   actions: <Widget>[
-      //     IconButton(
-      //         icon: Icon(
-      //           Icons.logout,
-      //           color: Color.fromARGB(255, 255, 255, 255),
-      //         ),
-      //         onPressed: () {
-      //           showDialogFunc2(context);
-      //         }),
-      //   ],
-      //   backgroundColor: Color.fromARGB(255, 145, 124, 178),
-      // ),
+      backgroundColor: Color.fromARGB(255, 237, 238, 240),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Text('الملف الشخصي',
+            style: TextStyle(
+              color: Color.fromARGB(255, 16, 41, 92),
+            )),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(
+                Icons.logout,
+                color: Color.fromARGB(255, 16, 41, 92),
+              ),
+              onPressed: () {}),
+        ],
+        backgroundColor: Color.fromARGB(255, 242, 241, 241),
+      ),
       bottomNavigationBar: CustomNavigationBar(
         currentHomeScreen: 5,
         updatePage: () {},
@@ -58,7 +59,7 @@ class _viewprofileState extends State<viewprofile> {
         child: Stack(
           children: <Widget>[
             SizedBox(
-              height: 280,
+              height: 160,
               width: double.infinity,
               child: Image(
                 image: AssetImage(
@@ -73,7 +74,7 @@ class _viewprofileState extends State<viewprofile> {
                   children: <Widget>[
                     Container(
                       padding: EdgeInsets.all(15),
-                      margin: EdgeInsets.only(top: 220),
+                      margin: EdgeInsets.only(top: 160),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5.0),
@@ -85,19 +86,21 @@ class _viewprofileState extends State<viewprofile> {
                             height: 24,
                           ),
                           Container(
-                            margin: EdgeInsets.only(left: 95),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Row(children: <Widget>[
                                   SizedBox(
-                                    width: 74,
+                                    width: 20,
                                   ),
                                   Expanded(
                                       child: Column(children: <Widget>[
                                     Text("الهنوف العواد",
                                         style: TextStyle(fontSize: 18)),
                                   ])),
+                                  SizedBox(
+                                    width: 60,
+                                  ),
                                   Expanded(
                                       child: Column(children: <Widget>[
                                     GestureDetector(
@@ -110,8 +113,6 @@ class _viewprofileState extends State<viewprofile> {
                                           );
                                         },
                                         child: Container(
-                                          margin: const EdgeInsets.only(
-                                              right: 40.0),
                                           alignment: Alignment.center,
                                           height: 30,
                                           width: 100,
@@ -142,7 +143,7 @@ class _viewprofileState extends State<viewprofile> {
                     Container(
                       width: 60,
                       height: 60,
-                      margin: EdgeInsets.only(left: 18, top: 235),
+                      margin: EdgeInsets.only(left: 18, top: 170),
                       decoration: new BoxDecoration(
                         boxShadow: [
                           BoxShadow(
@@ -214,15 +215,7 @@ class _viewprofileState extends State<viewprofile> {
                     children: <Widget>[
                       Positioned.fill(
                         child: Container(
-                          decoration: const BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: <Color>[
-                                Color.fromARGB(255, 14, 10, 102),
-                                Color.fromARGB(255, 129, 127, 131),
-                                Color.fromARGB(255, 204, 203, 206),
-                              ],
-                            ),
-                          ),
+                          decoration: const BoxDecoration(),
                         ),
                       ),
                       Container(
@@ -266,8 +259,8 @@ class _viewprofileState extends State<viewprofile> {
                             decoration: new BoxDecoration(
                                 borderRadius: BorderRadius.circular(80.0),
                                 gradient: new LinearGradient(colors: [
-                                  Color.fromARGB(255, 14, 10, 102),
-                                  Color.fromARGB(255, 14, 10, 102),
+                                  Color.fromARGB(255, 65, 134, 190),
+                                  Color.fromARGB(255, 79, 134, 196),
                                 ])),
                             padding: const EdgeInsets.all(0),
                             child: Text(
@@ -318,7 +311,7 @@ class _viewprofileState extends State<viewprofile> {
                                 "هل تريد تسجيل الخروج؟",
                                 style: const TextStyle(
                                   fontSize: 18,
-                                  color: Color.fromARGB(159, 28, 27, 29),
+                                  color: Color.fromARGB(159, 64, 7, 87),
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -391,11 +384,8 @@ class _viewprofileState extends State<viewprofile> {
                                   height: 40.0,
                                   width: 100,
                                   decoration: new BoxDecoration(
-                                      borderRadius: BorderRadius.circular(9.0),
-                                      gradient: new LinearGradient(colors: [
-                                        Color.fromARGB(144, 210, 2, 2),
-                                        Color.fromARGB(144, 210, 2, 2)
-                                      ])),
+                                    borderRadius: BorderRadius.circular(9.0),
+                                  ),
                                   padding: const EdgeInsets.all(0),
                                   child: Text(
                                     "تسجيل الخروج",

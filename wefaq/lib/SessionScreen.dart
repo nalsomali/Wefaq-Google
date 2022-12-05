@@ -69,7 +69,17 @@ class SessionScreensState extends State<SessionScreen> {
                         fontSize: 16,
                         color: Color.fromARGB(255, 38, 70, 138),
                       )),
-                  trailing: Icon(Icons.arrow_forward_ios),
+                  trailing: IconButton(
+                      icon: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => viewotherprofile()));
+                      }),
                   isThreeLine: true,
                 ),
               ),
@@ -84,7 +94,7 @@ class SessionScreensState extends State<SessionScreen> {
                 child: ListTile(
                   leading: CircleAvatar(
                     radius: 30.0,
-                    backgroundImage: AssetImage('assets/images/hassan.jpeg'),
+                    backgroundImage: AssetImage('assets/images/abdualaziz.jpg'),
                   ),
                   title: Text(
                     "  د.عبدالعزيز العريج  ",
@@ -124,7 +134,8 @@ class SessionScreensState extends State<SessionScreen> {
                 child: ListTile(
                   leading: CircleAvatar(
                     radius: 30.0,
-                    backgroundImage: AssetImage('assets/images/hassan.jpeg'),
+                    backgroundImage: AssetImage(
+                        'assets/images/blank-profile-picture-973460_640.png'),
                   ),
                   title: Text(
                     "  د.عبير النجار ",
@@ -139,7 +150,17 @@ class SessionScreensState extends State<SessionScreen> {
                         fontSize: 16,
                         color: Color.fromARGB(255, 38, 70, 138),
                       )),
-                  trailing: Icon(Icons.arrow_forward_ios),
+                  trailing: IconButton(
+                      icon: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => viewotherprofile()));
+                      }),
                   isThreeLine: true,
                 ),
               ),
@@ -154,7 +175,7 @@ class SessionScreensState extends State<SessionScreen> {
                 child: ListTile(
                   leading: CircleAvatar(
                     radius: 30.0,
-                    backgroundImage: AssetImage('assets/images/hassan.jpeg'),
+                    backgroundImage: AssetImage('assets/images/amal.PNG'),
                   ),
                   title: Text(
                     "  م.امل عيسى  ",
@@ -169,7 +190,17 @@ class SessionScreensState extends State<SessionScreen> {
                         fontSize: 16,
                         color: Color.fromARGB(255, 38, 70, 138),
                       )),
-                  trailing: Icon(Icons.arrow_forward_ios),
+                  trailing: IconButton(
+                      icon: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => viewotherprofile()));
+                      }),
                   isThreeLine: true,
                 ),
               ),
@@ -199,7 +230,17 @@ class SessionScreensState extends State<SessionScreen> {
                         fontSize: 16,
                         color: Color.fromARGB(255, 38, 70, 138),
                       )),
-                  trailing: Icon(Icons.arrow_forward_ios),
+                  trailing: IconButton(
+                      icon: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => viewotherprofile()));
+                      }),
                   isThreeLine: true,
                 ),
               ),
@@ -214,7 +255,7 @@ class SessionScreensState extends State<SessionScreen> {
                 child: ListTile(
                   leading: CircleAvatar(
                     radius: 30.0,
-                    backgroundImage: AssetImage('assets/images/hassan.jpeg'),
+                    backgroundImage: AssetImage('assets/images/nahedh.PNG'),
                   ),
                   title: Text(
                     "  د. ناهض الحربي ",
@@ -229,7 +270,17 @@ class SessionScreensState extends State<SessionScreen> {
                         fontSize: 16,
                         color: Color.fromARGB(255, 38, 70, 138),
                       )),
-                  trailing: Icon(Icons.arrow_forward_ios),
+                  trailing: IconButton(
+                      icon: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => viewotherprofile()));
+                      }),
                   isThreeLine: true,
                 ),
               ),
@@ -244,7 +295,8 @@ class SessionScreensState extends State<SessionScreen> {
                 child: ListTile(
                   leading: CircleAvatar(
                     radius: 30.0,
-                    backgroundImage: AssetImage('assets/images/hassan.jpeg'),
+                    backgroundImage:
+                        AssetImage('assets/images/Abonrar7_400x400.jpg'),
                   ),
                   title: Text(
                     "  م.لؤي لبني ",
@@ -259,569 +311,18 @@ class SessionScreensState extends State<SessionScreen> {
                         fontSize: 16,
                         color: Color.fromARGB(255, 38, 70, 138),
                       )),
-                  trailing: Icon(Icons.arrow_forward_ios),
+                  trailing: IconButton(
+                      icon: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Color.fromARGB(255, 151, 151, 151),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => viewotherprofile()));
+                      }),
                   isThreeLine: true,
-                ),
-              ),
-
-              SizedBox(
-                height: 3,
-              ),
-              SizedBox(
-                height: 130,
-                child: GestureDetector(
-                  child: Card(
-                    margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                    shadowColor: Color.fromARGB(145, 202, 202, 202),
-                    elevation: 6,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Column(
-                            children: [
-                              Row(children: <Widget>[
-                                const Text("     "),
-                                Icon(
-                                  Icons.favorite,
-                                  color: Color.fromARGB(202, 204, 21, 21),
-                                ),
-                                Expanded(
-                                  child: SizedBox(),
-                                ),
-                                Text(
-                                  "  د.عبدالعزيز العريج  ",
-                                  style: const TextStyle(
-                                    fontSize: 19,
-                                    color: Color.fromARGB(255, 14, 10, 102),
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                                const Text("     "),
-                              ]),
-                            ],
-                          ),
-                          Expanded(
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                    child: SizedBox(
-                                  width: 100,
-                                )),
-                                Text(" دكتوراه علم بيانات ",
-                                    style: const TextStyle(
-                                      fontSize: 16,
-                                      color: Color.fromARGB(255, 38, 70, 138),
-                                    )),
-                                const Text("     "),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                    child: SizedBox(
-                                  width: 100,
-                                )),
-                                ElevatedButton(
-                                  child: Text('حجز الان'),
-                                  onPressed: () {},
-                                  style: ElevatedButton.styleFrom(
-                                      primary:
-                                          Color.fromARGB(255, 72, 119, 194),
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal: 8, vertical: 3),
-                                      textStyle: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.normal)),
-                                ),
-                                Text("     "),
-                              ],
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 8,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 130,
-                child: GestureDetector(
-                  child: Card(
-                    margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                    shadowColor: Color.fromARGB(145, 202, 202, 202),
-                    elevation: 6,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Column(
-                            children: [
-                              Row(children: <Widget>[
-                                const Text("     "),
-                                Icon(
-                                  Icons.favorite,
-                                  color: Colors.black38,
-                                ),
-                                Expanded(
-                                  child: SizedBox(),
-                                ),
-                                Text(
-                                  "  م.حسان المالكي  ",
-                                  style: const TextStyle(
-                                    fontSize: 19,
-                                    color: Color.fromARGB(255, 14, 10, 102),
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                                const Text("     "),
-                              ]),
-                            ],
-                          ),
-                          Expanded(
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                    child: SizedBox(
-                                  width: 100,
-                                )),
-                                Text(" مهندس برمجيات ",
-                                    style: const TextStyle(
-                                      fontSize: 16,
-                                      color: Color.fromARGB(255, 38, 70, 138),
-                                    )),
-                                const Text("     "),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                    child: SizedBox(
-                                  width: 100,
-                                )),
-                                ElevatedButton(
-                                  child: Text('حجز الان'),
-                                  onPressed: () {},
-                                  style: ElevatedButton.styleFrom(
-                                      primary:
-                                          Color.fromARGB(255, 72, 119, 194),
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal: 8, vertical: 3),
-                                      textStyle: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.normal)),
-                                ),
-                                Text("     "),
-                              ],
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 8,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 130,
-                child: GestureDetector(
-                  child: Card(
-                    margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                    shadowColor: Color.fromARGB(145, 202, 202, 202),
-                    elevation: 6,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Column(
-                            children: [
-                              Row(children: <Widget>[
-                                const Text("     "),
-                                Icon(
-                                  Icons.favorite,
-                                  color: Color.fromARGB(202, 204, 21, 21),
-                                ),
-                                Expanded(
-                                  child: SizedBox(),
-                                ),
-                                Text(
-                                  "  م.امل عيسى  ",
-                                  style: const TextStyle(
-                                    fontSize: 19,
-                                    color: Color.fromARGB(255, 14, 10, 102),
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                                const Text("     "),
-                              ]),
-                            ],
-                          ),
-                          Expanded(
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                    child: SizedBox(
-                                  width: 100,
-                                )),
-                                Text(" خبيرة ذكاء اصطناعي وتعلم الالة ",
-                                    style: const TextStyle(
-                                      fontSize: 16,
-                                      color: Color.fromARGB(255, 38, 70, 138),
-                                    )),
-                                const Text("     "),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                  child: SizedBox(),
-                                ),
-                                ElevatedButton(
-                                  child: Text('حجز الان'),
-                                  onPressed: () {},
-                                  style: ElevatedButton.styleFrom(
-                                      primary:
-                                          Color.fromARGB(255, 72, 119, 194),
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal: 8, vertical: 3),
-                                      textStyle: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.normal)),
-                                ),
-                                Text("     "),
-                              ],
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 8,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 130,
-                child: GestureDetector(
-                  child: Card(
-                    margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                    shadowColor: Color.fromARGB(145, 202, 202, 202),
-                    elevation: 6,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Column(
-                            children: [
-                              Row(children: <Widget>[
-                                const Text("     "),
-                                Icon(
-                                  Icons.favorite,
-                                  color: Color.fromARGB(202, 204, 21, 21),
-                                ),
-                                Expanded(
-                                  child: SizedBox(),
-                                ),
-                                Text(
-                                  "  د.ماجد السلمي ",
-                                  style: const TextStyle(
-                                    fontSize: 19,
-                                    color: Color.fromARGB(255, 14, 10, 102),
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                                const Text("     "),
-                              ]),
-                            ],
-                          ),
-                          Expanded(
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                    child: SizedBox(
-                                  width: 100,
-                                )),
-                                Text(" دكتوراة علوم حاسب ",
-                                    style: const TextStyle(
-                                      fontSize: 16,
-                                      color: Color.fromARGB(255, 38, 70, 138),
-                                    )),
-                                const Text("     "),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                    child: SizedBox(
-                                  width: 100,
-                                )),
-                                ElevatedButton(
-                                  child: Text('حجز الان'),
-                                  onPressed: () {},
-                                  style: ElevatedButton.styleFrom(
-                                      primary:
-                                          Color.fromARGB(255, 72, 119, 194),
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal: 8, vertical: 3),
-                                      textStyle: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.normal)),
-                                ),
-                                Text("     "),
-                              ],
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 8,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 130,
-                child: GestureDetector(
-                  child: Card(
-                    margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                    shadowColor: Color.fromARGB(145, 202, 202, 202),
-                    elevation: 6,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Column(
-                            children: [
-                              Row(children: <Widget>[
-                                const Text("     "),
-                                Icon(
-                                  Icons.favorite,
-                                  color: Colors.black38,
-                                ),
-                                Expanded(
-                                  child: SizedBox(),
-                                ),
-                                Text(
-                                  "  د. ناهض الحربي ",
-                                  style: const TextStyle(
-                                    fontSize: 19,
-                                    color: Color.fromARGB(255, 14, 10, 102),
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                                const Text("     "),
-                              ]),
-                            ],
-                          ),
-                          Expanded(
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                    child: SizedBox(
-                                  width: 100,
-                                )),
-                                Text(" خبير اداري وتقني ",
-                                    style: const TextStyle(
-                                      fontSize: 16,
-                                      color: Color.fromARGB(255, 38, 70, 138),
-                                    )),
-                                const Text("     "),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                    child: SizedBox(
-                                  width: 100,
-                                )),
-                                ElevatedButton(
-                                  child: Text('حجز الان'),
-                                  onPressed: () {},
-                                  style: ElevatedButton.styleFrom(
-                                      primary:
-                                          Color.fromARGB(255, 72, 119, 194),
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal: 8, vertical: 3),
-                                      textStyle: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.normal)),
-                                ),
-                                Text("     "),
-                              ],
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 8,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 130,
-                child: GestureDetector(
-                  child: Card(
-                    margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                    shadowColor: Color.fromARGB(145, 202, 202, 202),
-                    elevation: 6,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Column(
-                            children: [
-                              Row(children: <Widget>[
-                                const Text("     "),
-                                Icon(
-                                  Icons.favorite,
-                                  color: Colors.black38,
-                                ),
-                                Expanded(
-                                  child: SizedBox(),
-                                ),
-                                Text(
-                                  "  م.لؤي لبني ",
-                                  style: const TextStyle(
-                                    fontSize: 19,
-                                    color: Color.fromARGB(255, 14, 10, 102),
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                                const Text("     "),
-                              ]),
-                            ],
-                          ),
-                          Expanded(
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                    child: SizedBox(
-                                  width: 100,
-                                )),
-                                Text(" ماجستير هندسة برمجيات ",
-                                    style: const TextStyle(
-                                      fontSize: 16,
-                                      color: Color.fromARGB(255, 38, 70, 138),
-                                    )),
-                                const Text("     "),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                    child: SizedBox(
-                                  width: 100,
-                                )),
-                                ElevatedButton(
-                                  child: Text('حجز الان'),
-                                  onPressed: () {},
-                                  style: ElevatedButton.styleFrom(
-                                      primary:
-                                          Color.fromARGB(255, 72, 119, 194),
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal: 8, vertical: 3),
-                                      textStyle: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.normal)),
-                                ),
-                                Text("     "),
-                              ],
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 8,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
                 ),
               ),
 
