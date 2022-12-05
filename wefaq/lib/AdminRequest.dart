@@ -41,8 +41,8 @@ class _RequestListProject extends State<RequestListViewPageProject> {
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         title: const Text('طلبات الانضمام',
             style: TextStyle(
-              fontWeight: FontWeight.normal,
-              color: Color.fromARGB(255, 14, 10, 102),
+              fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(206, 0, 0, 0),
             )),
       ),
       bottomNavigationBar: AdminCustomNavigationBar(

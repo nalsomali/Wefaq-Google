@@ -44,8 +44,8 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                 backgroundColor: Color.fromARGB(255, 255, 255, 255),
                 title: Text('البحوث والمشاريع',
                     style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      color: Color.fromARGB(255, 14, 10, 102),
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(206, 0, 0, 0),
                     )),
               ),
 
