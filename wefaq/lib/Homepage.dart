@@ -94,6 +94,7 @@ class HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Color.fromARGB(255, 241, 246, 253),
         bottomNavigationBar: CustomNavigationBar(
           currentHomeScreen: 0,
           updatePage: () {},
@@ -103,37 +104,6 @@ class HomeScreenState extends State<HomeScreen> {
             children: <Widget>[
               SizedBox(
                 height: 33,
-              ),
-              GestureDetector(
-                child: Container(
-                  width: 50,
-                  height: 50,
-                  margin: EdgeInsets.only(left: 350, top: 60),
-                  decoration: new BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        offset: Offset(0, 0),
-                        blurRadius: 10,
-                        color: Colors.black.withOpacity(0.15),
-                      ),
-                    ],
-                    borderRadius: BorderRadius.circular(30),
-                    image: new DecorationImage(
-                      fit: BoxFit.cover,
-                      image: NetworkImage(
-                        "https://firebasestorage.googleapis.com/v0/b/wefaq-5f47b.appspot.com/o/images%2Fprivate%2Fvar%2Fmobile%2FContainers%2FData%2FApplication%2FC908E9E7-E3D6-48F8-BD9C-5D0BEDCD799D%2Ftmp%2Fimage_picker_8D66EA46-E0D8-49D0-9ABC-F60A3E6DEF4B-720-00000072D1339A8C.png?alt=media&token=01f9fc26-3478-4833-8532-9ed16012a716",
-                      ),
-                    ),
-                  ),
-                ),
-                onTap: (() {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) => viewprofile(
-                  //             userEmail:
-                  //                 FirebaseAuth.instance.currentUser!.email!)));
-                }),
               ),
               SizedBox(
                 height: 400,
@@ -156,7 +126,7 @@ class HomeScreenState extends State<HomeScreen> {
                               CategoryCard(
                                   title: "مفضلتي",
                                   icon: Icon(
-                                    Icons.star,
+                                    Icons.star_border,
                                     size: 45,
                                     color: Color.fromARGB(255, 18, 15, 84),
                                   ),

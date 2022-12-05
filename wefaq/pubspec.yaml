@@ -53,6 +53,8 @@ dependencies:
   form_field_validator: ^1.1.0
   image_picker: ^0.8.6
   file_picker: ^5.2.3
+  voice_message_package: ^0.0.74
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:
