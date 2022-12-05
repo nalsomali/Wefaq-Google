@@ -200,7 +200,7 @@ showDialogFunc(context) {
                       child: IconButton(
                           icon: const Icon(
                             Icons.close,
-                            color: Color.fromARGB(255, 112, 82, 149),
+                            color: Color.fromARGB(255, 61, 74, 119),
                             size: 26,
                           ),
                           onPressed: () {
@@ -217,7 +217,7 @@ showDialogFunc(context) {
                     flex: 5,
                     child: Center(
                       child: Text(
-                        "هل تود رفض أم قبول الطلب ؟",
+                        "هل تود قبول أم رفض الطلب ؟",
                         style: TextStyle(
                           fontSize: 20,
                           color: Color.fromARGB(159, 30, 27, 31),
@@ -240,11 +240,10 @@ showDialogFunc(context) {
                           CoolAlert.show(
                               context: context,
                               title: "نجاح!",
-                              confirmBtnColor:
-                                  const Color.fromARGB(144, 64, 6, 87),
+                              confirmBtnColor: Color.fromARGB(255, 14, 10, 102),
                               type: CoolAlertType.success,
                               backgroundColor:
-                                  const Color.fromARGB(221, 212, 189, 227),
+                                  Color.fromARGB(221, 255, 255, 255),
                               text: " تم قبول المتقدم بنجاح ",
                               confirmBtnText: 'تم',
                               onConfirmBtnTap: () {
@@ -289,10 +288,9 @@ showDialogFunc(context) {
                             context: context,
                             title: "نجاح!",
                             confirmBtnColor:
-                                const Color.fromARGB(144, 64, 6, 87),
+                                const Color.fromARGB(255, 14, 10, 102),
                             type: CoolAlertType.success,
-                            backgroundColor:
-                                const Color.fromARGB(221, 212, 189, 227),
+                            backgroundColor: Color.fromARGB(221, 255, 255, 255),
                             text: " تم رفض المتقدم بنجاح ",
                             confirmBtnText: 'تم',
                             onConfirmBtnTap: () {
