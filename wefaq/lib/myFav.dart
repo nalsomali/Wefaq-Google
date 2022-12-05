@@ -27,7 +27,7 @@ class FavScreenState extends State<FavScreen> {
               elevation: 0.8,
               backgroundColor: Color.fromARGB(255, 255, 255, 255),
               actions: <Widget>[],
-              title: Text(' مفضلاتي ',
+              title: Text(' المفضلة',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(206, 0, 0, 0),

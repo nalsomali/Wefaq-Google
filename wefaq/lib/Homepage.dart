@@ -25,72 +25,6 @@ class HomeScreenState extends State<HomeScreen> {
     super.initState();
   }
 
-  // static List<String> ProjectTitleList = [];
-  // String? Email;
-  // final _firestore = FirebaseFirestore.instance;
-  // var name = '${FirebaseAuth.instance.currentUser!.displayName}'.split(' ');
-  // get FName => name.first;
-  // void getCurrentUser() {
-  //   try {
-  //     final user = auth.currentUser;
-  //     if (user != null) {
-  //       signedInUser = user;
-  //       Email = signedInUser.email;
-  //       print(signedInUser.email);
-  //     }
-  //   } catch (e) {
-  //     print(e);
-  //   }
-  // }
-
-  // Future getProjectTitleOwner() async {
-  //   if (Email != null) {
-  //     var fillterd = _firestore
-  //         .collection('AllJoinRequests')
-  //         .where('owner_email', isEqualTo: Email)
-  //         .snapshots();
-  //     await for (var snapshot in fillterd)
-  //       for (var Request in snapshot.docs) {
-  //         setState(() {
-  //           if (!ProjectTitleList.contains(Request['project_title'].toString()))
-  //             ProjectTitleList.add(Request['project_title'].toString());
-  //         });
-  //       }
-  //   }
-  // }
-
-  // Future getProjectTitle() async {
-  //   if (Email != null) {
-  //     var fillterd = _firestore
-  //         .collection('AllJoinRequests')
-  //         .where('participant_email', isEqualTo: Email)
-  //         .where('Status', isEqualTo: 'Accepted')
-  //         .snapshots();
-  //     await for (var snapshot in fillterd)
-  //       for (var Request in snapshot.docs) {
-  //         setState(() {
-  //           if (!ProjectTitleList.contains(Request['project_title'].toString()))
-  //             ProjectTitleList.add(Request['project_title'].toString());
-  //         });
-  //       }
-  //   }
-  // }
-
-  // Future getPhoto() async {
-  //   if (Email != null) {
-  //     var fillterd = _firestore
-  //         .collection('users')
-  //         .where('Email', isEqualTo: Email)
-  //         .snapshots();
-  //     await for (var snapshot in fillterd)
-  //       for (var user in snapshot.docs) {
-  //         setState(() {
-  //           profilepic = user["Profile"].toString();
-  //         });
-  //       }
-  //   }
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -124,9 +58,9 @@ class HomeScreenState extends State<HomeScreen> {
                             mainAxisSpacing: 20,
                             children: <Widget>[
                               CategoryCard(
-                                  title: "مفضلتي",
+                                  title: "المفضلة",
                                   icon: Icon(
-                                    Icons.star_border,
+                                    Icons.favorite_border,
                                     size: 45,
                                     color: Color.fromARGB(255, 18, 15, 84),
                                   ),
@@ -137,9 +71,9 @@ class HomeScreenState extends State<HomeScreen> {
                                             builder: (context) => FavScreen()));
                                   }),
                               CategoryCard(
-                                  title: "مشاركاتي",
+                                  title: "المشاركات",
                                   icon: Icon(
-                                    Icons.lightbulb,
+                                    Icons.lightbulb_outlined,
                                     size: 45,
                                     color: Color.fromARGB(255, 18, 15, 84),
                                   ),
