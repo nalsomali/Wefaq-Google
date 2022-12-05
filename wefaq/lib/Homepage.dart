@@ -4,6 +4,7 @@ import 'package:wefaq/myFav.dart';
 import 'backgroundHome.dart';
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
+import 'myProject.dart';
 import 'navBar.dart';
 import 'package:cool_alert/cool_alert.dart';
 
@@ -153,20 +154,6 @@ class HomeScreenState extends State<HomeScreen> {
                             mainAxisSpacing: 20,
                             children: <Widget>[
                               CategoryCard(
-                                  title: "مشاركاتي",
-                                  icon: Icon(
-                                    Icons.lightbulb,
-                                    size: 45,
-                                    color: Color.fromARGB(255, 18, 15, 84),
-                                  ),
-                                  onTap: () {
-                                    // Navigator.push(
-                                    //     context,
-                                    //     MaterialPageRoute(
-                                    //         builder: (context) =>
-                                    //             myProjects()));
-                                  }),
-                              CategoryCard(
                                   title: "مفضلتي",
                                   icon: Icon(
                                     Icons.star,
@@ -178,6 +165,20 @@ class HomeScreenState extends State<HomeScreen> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) => FavScreen()));
+                                  }),
+                              CategoryCard(
+                                  title: "مشاركاتي",
+                                  icon: Icon(
+                                    Icons.lightbulb,
+                                    size: 45,
+                                    color: Color.fromARGB(255, 18, 15, 84),
+                                  ),
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                userProjects()));
                                   }),
                             ],
                           ),

@@ -36,10 +36,10 @@ class _CustomNavigationBarState extends State<AdminCustomNavigationBar> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                BottomBarButton(widget.currentHomeScreen, 0,
-                    CupertinoIcons.chat_bubble, widget.updatePage),
                 BottomBarButton(widget.currentHomeScreen, 2, Icons.home_filled,
                     widget.updatePage),
+                BottomBarButton(widget.currentHomeScreen, 0,
+                    CupertinoIcons.chat_bubble, widget.updatePage),
               ],
             ),
           ),

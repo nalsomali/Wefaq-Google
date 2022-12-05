@@ -6,6 +6,7 @@ import 'package:wefaq/Homepage.dart';
 import 'SessionScreen.dart';
 import 'ProjectsTapScreen.dart';
 import 'chats.dart';
+import 'profileuser.dart';
 
 class CustomNavigationBar extends StatefulWidget {
   const CustomNavigationBar(
@@ -33,14 +34,16 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                BottomBarButton(widget.currentHomeScreen, 4,
-                    CupertinoIcons.chat_bubble, widget.updatePage),
-                BottomBarButton(widget.currentHomeScreen, 3,
-                    CupertinoIcons.collections, widget.updatePage),
-                BottomBarButton(widget.currentHomeScreen, 1,
-                    Icons.list_alt_outlined, widget.updatePage),
                 BottomBarButton(widget.currentHomeScreen, 0, Icons.home_filled,
                     widget.updatePage),
+                BottomBarButton(widget.currentHomeScreen, 1,
+                    Icons.list_alt_outlined, widget.updatePage),
+                BottomBarButton(widget.currentHomeScreen, 3,
+                    CupertinoIcons.collections, widget.updatePage),
+                BottomBarButton(widget.currentHomeScreen, 4,
+                    CupertinoIcons.chat_bubble, widget.updatePage),
+                BottomBarButton(widget.currentHomeScreen, 5,
+                    CupertinoIcons.profile_circled, widget.updatePage),
               ],
             ),
           ),
@@ -152,14 +155,19 @@ class BottomBarButton extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => SessionScreen()))
                   }
+                else if (index == 5)
+                  {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => viewprofile()))
+                  }
               },
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 500),
             child: Icon(
               icon,
               color: index == currentPage
-                  ? Theme.of(context).colorScheme.onSurface
-                  : Color.fromARGB(255, 14, 10, 102),
+                  ? Color.fromARGB(255, 14, 10, 102)
+                  : Color.fromARGB(255, 134, 134, 136),
             ),
           )),
     );
