@@ -52,7 +52,7 @@ class adminDetailAppBar extends StatelessWidget {
       ),
       leadingWidth: 80.0,
       leading: Container(
-        margin: const EdgeInsets.only(left: 24.0),
+        margin: const EdgeInsets.only(left: 20),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(56.0),
           child: BackdropFilter(
@@ -60,14 +60,14 @@ class adminDetailAppBar extends StatelessWidget {
             child: Container(
               height: 56.0,
               width: 56.0,
-              alignment: Alignment.center,
+              alignment: Alignment.topLeft,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 //   color: Colors.white.withOpacity(0.30),
               ),
               child: IconButton(
                   icon: Icon(
-                    Icons.arrow_back_ios,
+                    Icons.arrow_forward_ios,
                     color: Color.fromARGB(255, 112, 71, 168),
                     size: 30,
                   ),

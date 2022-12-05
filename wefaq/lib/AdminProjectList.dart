@@ -30,25 +30,19 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                 updatePage: () {},
               ),
               appBar: AppBar(
-                leading: IconButton(
-                    icon: Icon(
-                      Icons.arrow_back_ios,
-                      color: Color.fromARGB(255, 14, 10, 102),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => adminHomeScreen()));
-                    }),
                 backgroundColor: Color.fromARGB(255, 255, 255, 255),
                 actions: <Widget>[
                   IconButton(
                       icon: Icon(
-                        Icons.logout,
-                        color: Color.fromARGB(255, 255, 255, 255),
+                        Icons.arrow_forward_ios,
+                        color: Color.fromARGB(255, 14, 10, 102),
                       ),
-                      onPressed: () {}),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => adminHomeScreen()));
+                      }),
                 ],
                 title: Text('المشاريع',
                     style: TextStyle(
@@ -64,10 +58,14 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                   height: 100,
                   child: GestureDetector(
                       child: Card(
+                        margin:
+                            EdgeInsets.symmetric(vertical: 1, horizontal: 11),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
                         color: const Color.fromARGB(255, 255, 255, 255),
-                        //shadowColor: Color.fromARGB(255, 255, 255, 255),
-                        //  elevation: 7,
-
+                        shadowColor: Color.fromARGB(145, 202, 202, 202),
+                        elevation: 8,
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                           child: Column(
@@ -79,11 +77,11 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                                 children: [
                                   Row(children: const <Widget>[
                                     Text(
-                                      "١١-١٢-٢٠١٩",
+                                      "  مشروع عوالم",
                                       style: TextStyle(
-                                        fontSize: 16,
+                                        fontSize: 19,
                                         color: Color.fromARGB(255, 14, 10, 102),
-                                        fontWeight: FontWeight.normal,
+                                        fontWeight: FontWeight.w700,
                                       ),
                                     ),
                                     Expanded(
@@ -92,11 +90,11 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                                       ),
                                     ),
                                     Text(
-                                      "  دراسة اثار الاضطراب الاجتماعي ",
+                                      "٨-٨-٢٠٢٢ ",
                                       style: TextStyle(
-                                        fontSize: 19,
+                                        fontSize: 16,
                                         color: Color.fromARGB(255, 14, 10, 102),
-                                        fontWeight: FontWeight.w700,
+                                        fontWeight: FontWeight.normal,
                                       ),
                                     ),
                                   ]),
@@ -105,9 +103,23 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                               Expanded(
                                 child: Row(
                                   children: <Widget>[
+                                    const Icon(Icons.location_pin,
+                                        color:
+                                            Color.fromARGB(255, 14, 10, 102)),
+                                    const Text("     "),
+                                    Text("كلية علوم الحاسب و المعلومات ",
+                                        style: const TextStyle(
+                                          fontSize: 16,
+                                          color:
+                                              Color.fromARGB(255, 38, 70, 138),
+                                        )),
+                                    Expanded(
+                                        child: SizedBox(
+                                      width: 100,
+                                    )),
                                     IconButton(
                                         icon: Icon(
-                                          Icons.arrow_back_ios,
+                                          Icons.arrow_forward_ios_outlined,
                                           color: Color.fromARGB(
                                               255, 170, 169, 179),
                                         ),
@@ -118,20 +130,6 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                                                   builder: (context) =>
                                                       adminprojectDetailScreen()));
                                         }),
-                                    Expanded(
-                                        child: SizedBox(
-                                      width: 100,
-                                    )),
-                                    Text("كلية الاداب",
-                                        style: const TextStyle(
-                                          fontSize: 16,
-                                          color:
-                                              Color.fromARGB(255, 38, 70, 138),
-                                        )),
-                                    const Text("     "),
-                                    const Icon(Icons.location_pin,
-                                        color:
-                                            Color.fromARGB(255, 14, 10, 102)),
                                   ],
                                 ),
                               ),
@@ -148,10 +146,117 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                       }),
                 ),
                 SizedBox(
+                  height: 6,
+                ),
+                SizedBox(
                   height: 100,
                   child: GestureDetector(
                       child: Card(
+                        margin:
+                            EdgeInsets.symmetric(vertical: 1, horizontal: 11),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
                         color: const Color.fromARGB(255, 255, 255, 255),
+                        shadowColor: Color.fromARGB(145, 202, 202, 202),
+                        elevation:
+                            8, //shadowColor: Color.fromARGB(255, 255, 255, 255),
+                        //  elevation: 7,
+
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                          child: Column(
+                            children: <Widget>[
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Column(
+                                children: [
+                                  Row(children: const <Widget>[
+                                    Text(
+                                      " دراسة مدى انتشار بكتيريا السالمونيلا ",
+                                      style: TextStyle(
+                                        fontSize: 19,
+                                        color: Color.fromARGB(255, 14, 10, 102),
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: SizedBox(
+                                        width: 240,
+                                      ),
+                                    ),
+                                    Text(
+                                      "١١-٧-٢٠٢٢",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        color: Color.fromARGB(255, 14, 10, 102),
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                    ),
+                                  ]),
+                                ],
+                              ),
+                              Expanded(
+                                child: Row(
+                                  children: <Widget>[
+                                    const Icon(Icons.location_pin,
+                                        color:
+                                            Color.fromARGB(255, 14, 10, 102)),
+                                    const Text("     "),
+                                    Text("كلية العلوم الطبية التطبيقية",
+                                        style: const TextStyle(
+                                          fontSize: 16,
+                                          color:
+                                              Color.fromARGB(255, 38, 70, 138),
+                                        )),
+                                    Expanded(
+                                        child: SizedBox(
+                                      width: 100,
+                                    )),
+                                    IconButton(
+                                        icon: Icon(
+                                          Icons.arrow_forward_ios_outlined,
+                                          color: Color.fromARGB(
+                                              255, 170, 169, 179),
+                                        ),
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      adminprojectDetailScreen()));
+                                        }),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    adminprojectDetailScreen()));
+                      }),
+                ),
+                SizedBox(
+                  height: 6,
+                ),
+                SizedBox(
+                  height: 100,
+                  child: GestureDetector(
+                      child: Card(
+                        margin:
+                            EdgeInsets.symmetric(vertical: 1, horizontal: 11),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                        shadowColor: Color.fromARGB(145, 202, 202, 202),
+                        elevation: 8,
                         //shadowColor: Color.fromARGB(255, 255, 255, 255),
                         //  elevation: 7,
 
@@ -166,11 +271,11 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                                 children: [
                                   Row(children: const <Widget>[
                                     Text(
-                                      " ١١-١-٢٠٢",
+                                      " مشروع وفاق ",
                                       style: TextStyle(
-                                        fontSize: 16,
+                                        fontSize: 19,
                                         color: Color.fromARGB(255, 14, 10, 102),
-                                        fontWeight: FontWeight.normal,
+                                        fontWeight: FontWeight.w700,
                                       ),
                                     ),
                                     Expanded(
@@ -179,11 +284,11 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                                       ),
                                     ),
                                     Text(
-                                      "  مشروع عوالم ",
+                                      "٢١-٤-٢٠٢٢",
                                       style: TextStyle(
-                                        fontSize: 19,
+                                        fontSize: 16,
                                         color: Color.fromARGB(255, 14, 10, 102),
-                                        fontWeight: FontWeight.w700,
+                                        fontWeight: FontWeight.normal,
                                       ),
                                     ),
                                   ]),
@@ -192,96 +297,23 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                               Expanded(
                                 child: Row(
                                   children: <Widget>[
-                                    IconButton(
-                                        icon: Icon(
-                                          Icons.arrow_back_ios,
-                                          color: Color.fromARGB(
-                                              255, 170, 169, 179),
-                                        ),
-                                        onPressed: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      adminprojectDetailScreen()));
-                                        }),
-                                    Expanded(
-                                        child: SizedBox(
-                                      width: 100,
-                                    )),
+                                    const Icon(Icons.location_pin,
+                                        color:
+                                            Color.fromARGB(255, 14, 10, 102)),
+                                    const Text("     "),
                                     Text("كلية علوم الحاسب و المعلومات",
                                         style: const TextStyle(
                                           fontSize: 16,
                                           color:
                                               Color.fromARGB(255, 38, 70, 138),
                                         )),
-                                    const Text("     "),
-                                    const Icon(Icons.location_pin,
-                                        color:
-                                            Color.fromARGB(255, 14, 10, 102)),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    adminprojectDetailScreen()));
-                      }),
-                ),
-                SizedBox(
-                  height: 100,
-                  child: GestureDetector(
-                      child: Card(
-                        color: const Color.fromARGB(255, 255, 255, 255),
-                        //shadowColor: Color.fromARGB(255, 255, 255, 255),
-                        //  elevation: 7,
-
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                          child: Column(
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Column(
-                                children: [
-                                  Row(children: const <Widget>[
-                                    Text(
-                                      "٢١-١٢-٢٠٢٢",
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Color.fromARGB(255, 14, 10, 102),
-                                        fontWeight: FontWeight.normal,
-                                      ),
-                                    ),
                                     Expanded(
-                                      child: SizedBox(
-                                        width: 240,
-                                      ),
-                                    ),
-                                    Text(
-                                      " اخلاقيات زراعة الاسنان ",
-                                      style: TextStyle(
-                                        fontSize: 19,
-                                        color: Color.fromARGB(255, 14, 10, 102),
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                  ]),
-                                ],
-                              ),
-                              Expanded(
-                                child: Row(
-                                  children: <Widget>[
+                                        child: SizedBox(
+                                      width: 100,
+                                    )),
                                     IconButton(
                                         icon: Icon(
-                                          Icons.arrow_back_ios,
+                                          Icons.arrow_forward_ios_outlined,
                                           color: Color.fromARGB(
                                               255, 170, 169, 179),
                                         ),
@@ -292,20 +324,6 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                                                   builder: (context) =>
                                                       adminprojectDetailScreen()));
                                         }),
-                                    Expanded(
-                                        child: SizedBox(
-                                      width: 100,
-                                    )),
-                                    Text("كلية الاسنان",
-                                        style: const TextStyle(
-                                          fontSize: 16,
-                                          color:
-                                              Color.fromARGB(255, 38, 70, 138),
-                                        )),
-                                    const Text("     "),
-                                    const Icon(Icons.location_pin,
-                                        color:
-                                            Color.fromARGB(255, 14, 10, 102)),
                                   ],
                                 ),
                               ),
