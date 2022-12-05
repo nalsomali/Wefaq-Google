@@ -253,7 +253,7 @@ class _viewprofileState extends State<viewprofile> {
                             decoration: new BoxDecoration(
                                 borderRadius: BorderRadius.circular(80.0),
                                 gradient: new LinearGradient(colors: [
-                                  Color.fromARGB(255, 65, 134, 190),
+                                  Color.fromARGB(255, 72, 119, 194),
                                   Color.fromARGB(255, 79, 134, 196),
                                 ])),
                             padding: const EdgeInsets.all(0),

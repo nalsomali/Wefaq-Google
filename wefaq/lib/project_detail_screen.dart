@@ -270,16 +270,17 @@ class _projectDetailScreenState extends State<projectDetailScreen> {
                           Row(
                             children: [
                               Container(
-                                height: 32.0,
-                                width: 32.0,
-                                alignment: Alignment.center,
-                                margin: const EdgeInsets.only(right: 8.0),
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: const Icon(Icons.location_pin,
-                                    color: Color.fromARGB(255, 14, 10, 102)),
-                              ),
+                                  height: 32.0,
+                                  width: 32.0,
+                                  alignment: Alignment.center,
+                                  margin: const EdgeInsets.only(right: 8.0),
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: const Icon(
+                                    Icons.location_pin,
+                                    color: Color.fromARGB(255, 65, 134, 190),
+                                  )),
                               Text(
                                 "كلية علوم الحاسب و المعلومات",
                                 style: Theme.of(context).textTheme.titleSmall,
@@ -348,7 +349,7 @@ class _projectDetailScreenState extends State<projectDetailScreen> {
                                   });
                                 },
                                 backgroundColor:
-                                    Color.fromARGB(255, 14, 10, 102),
+                                    Color.fromARGB(255, 79, 134, 196),
                               ),
                               SizedBox(
                                 width: 8,
@@ -377,7 +378,7 @@ class _projectDetailScreenState extends State<projectDetailScreen> {
                                   });
                                 },
                                 backgroundColor:
-                                    Color.fromARGB(255, 14, 10, 102),
+                                    Color.fromARGB(255, 79, 134, 196),
                               ),
                               SizedBox(
                                 width: 8,
@@ -406,7 +407,7 @@ class _projectDetailScreenState extends State<projectDetailScreen> {
                                   });
                                 },
                                 backgroundColor:
-                                    Color.fromARGB(255, 14, 10, 102),
+                                    Color.fromARGB(255, 79, 134, 196),
                               ),
                             ],
                           ),
@@ -700,7 +701,7 @@ class _projectDetailScreenState extends State<projectDetailScreen> {
                                 context: context,
                                 title: "تم ارسال الطلب بالإلتحاق",
                                 confirmBtnColor:
-                                    Color.fromARGB(255, 14, 10, 102),
+                                    Color.fromARGB(255, 79, 134, 196),
                                 type: CoolAlertType.success,
                                 backgroundColor:
                                     Color.fromARGB(144, 176, 175, 175),
@@ -713,7 +714,8 @@ class _projectDetailScreenState extends State<projectDetailScreen> {
                             }
                           },
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 14, 10, 102),
+                              backgroundColor:
+                                  Color.fromARGB(255, 79, 134, 196),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(16),
                               )),

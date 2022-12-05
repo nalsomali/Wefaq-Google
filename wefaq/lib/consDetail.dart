@@ -121,7 +121,7 @@ class _viewprofileState extends State<viewotherprofile> {
                                               width: 110,
                                               decoration: BoxDecoration(
                                                 color: Color.fromARGB(
-                                                    255, 72, 119, 194),
+                                                    255, 79, 134, 196),
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),
