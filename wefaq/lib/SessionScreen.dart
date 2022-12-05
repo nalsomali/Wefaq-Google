@@ -21,11 +21,12 @@ class SessionScreensState extends State<SessionScreen> {
       children: [
         Expanded(
           child: Scaffold(
-            backgroundColor: Color.fromARGB(255, 241, 243, 252),
+            backgroundColor: Color.fromARGB(255, 255, 255, 255),
             appBar: AppBar(
+              automaticallyImplyLeading: false,
               shadowColor: Color.fromARGB(255, 215, 215, 215),
               elevation: 0.8,
-              backgroundColor: Color.fromARGB(255, 255, 255, 255),
+              backgroundColor: Color.fromARGB(255, 242, 241, 241),
               actions: <Widget>[],
               title: Text(' جلسات استشارية ',
                   style: TextStyle(

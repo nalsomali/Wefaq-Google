@@ -65,9 +65,12 @@ class _chatScreenState extends State<chatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          backgroundColor: Color.fromARGB(255, 255, 255, 255),
+          shadowColor: Color.fromARGB(255, 215, 215, 215),
+          elevation: 0.8,
+          backgroundColor: Color.fromARGB(255, 242, 241, 241),
           title: Text("المحادثات",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
