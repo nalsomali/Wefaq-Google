@@ -41,15 +41,7 @@ class _viewprofileState extends State<viewprofile> {
             style: TextStyle(
               color: Color.fromARGB(255, 16, 41, 92),
             )),
-        actions: <Widget>[
-          IconButton(
-              icon: Icon(
-                Icons.logout,
-                color: Color.fromARGB(255, 16, 41, 92),
-              ),
-              onPressed: () {}),
-        ],
-        backgroundColor: Color.fromARGB(255, 242, 241, 241),
+        backgroundColor: const Color.fromARGB(255, 242, 241, 241),
       ),
       bottomNavigationBar: CustomNavigationBar(
         currentHomeScreen: 5,
