@@ -63,6 +63,7 @@ class _UserRegistratin extends State<UserRegistratin> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                SizedBox(height: size.height * 0.07),
                 Container(
                   alignment: Alignment.centerRight,
                   padding: EdgeInsets.symmetric(horizontal: 35),
@@ -85,10 +86,10 @@ class _UserRegistratin extends State<UserRegistratin> {
                     controller: _firstnameController,
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return "required";
+                        return "مطلوب";
                       } else if (!RegExp(r'^[a-zA-Z]+$').hasMatch(value!) &&
                           !RegExp(r'^[أ-ي]+$').hasMatch(value!)) {
-                        return "Only English or Arabic letters";
+                        return "الحروف العربية او الانجليزية فقط ";
                       }
                     },
                     decoration: InputDecoration(
@@ -109,7 +110,7 @@ class _UserRegistratin extends State<UserRegistratin> {
                                 text: 'الاسم الاول',
                                 style: const TextStyle(
                                     fontSize: 19,
-                                    color: Color.fromARGB(199, 66, 23, 139)),
+                                    color: Color.fromARGB(255, 14, 10, 102)),
                               )
                             ],
                           ),
@@ -133,7 +134,7 @@ class _UserRegistratin extends State<UserRegistratin> {
                               text: 'اسم العائلة',
                               style: const TextStyle(
                                   fontSize: 19,
-                                  color: Color.fromARGB(199, 66, 23, 139)),
+                                  color: Color.fromARGB(255, 14, 10, 102)),
                               children: [
                                 TextSpan(
                                     text: ' *',
@@ -146,10 +147,10 @@ class _UserRegistratin extends State<UserRegistratin> {
                     controller: _lastnameController,
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return "required";
+                        return "مطلوب";
                       } else if (!RegExp(r'^[a-zA-Z]+$').hasMatch(value!) &&
                           !RegExp(r'^[أ-ي]+$').hasMatch(value!)) {
-                        return "Only English or Arabic letters";
+                          return "الحروف العربية او الانجليزية فقط ";
                       }
                     },
                   ),
@@ -162,8 +163,8 @@ class _UserRegistratin extends State<UserRegistratin> {
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     controller: emailcontroller,
                     validator: MultiValidator([
-                      RequiredValidator(errorText: "required"),
-                      EmailValidator(errorText: "not valid email"),
+                      RequiredValidator(errorText: "مطلوب"),
+                      EmailValidator(errorText: "البريد الالكتروني غير صالح"),
                     ]),
                     decoration: InputDecoration(
                         hintText: "example@email.com",
@@ -175,7 +176,7 @@ class _UserRegistratin extends State<UserRegistratin> {
                               text: 'البريد الالكتروني',
                               style: const TextStyle(
                                   fontSize: 19,
-                                  color: Color.fromARGB(199, 66, 23, 139)),
+                                  color: Color.fromARGB(255, 14, 10, 102)),
                               children: [
                                 TextSpan(
                                     text: ' *',
@@ -198,12 +199,12 @@ class _UserRegistratin extends State<UserRegistratin> {
                     controller: passcontroller,
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return "required";
+                        return "مطلوب";
                       }
                       if (!(value.characters.length >= 8) ||
-                          !(value.contains(ucasereg)) ||
+                          
                           !(value.contains(digit))) {
-                        return "password must contain: ";
+                        return "كلمة المرور يجب أن تحتوي على : ";
                       }
                     },
                     onChanged: (value) {
@@ -216,13 +217,7 @@ class _UserRegistratin extends State<UserRegistratin> {
                       }
 
                       ///  password = value;
-                      if (value.contains(ucasereg)) {
-                        setState(() {
-                          hasuppercase = true;
-                        });
-                      } else {
-                        hasuppercase = false;
-                      }
+                   
                       if (value.contains(digit)) {
                         setState(() {
                           hasdigit = true;
@@ -242,7 +237,7 @@ class _UserRegistratin extends State<UserRegistratin> {
                             text: 'كلمة المرور',
                             style: const TextStyle(
                                 fontSize: 19,
-                                color: Color.fromARGB(199, 66, 23, 139)),
+                                color: Color.fromARGB(255, 14, 10, 102)),
                             children: [
                               TextSpan(
                                   text: ' *',
@@ -281,7 +276,7 @@ class _UserRegistratin extends State<UserRegistratin> {
                     width: MediaQuery.of(context).size.width * 0.65,
                     child: Row(
                       children: [
-                        const Text('at least 8 characters'),
+                        const Text('٨ أحرف على الأقل'),
                         Spacer(),
                         has8char
                             ? const Icon(
@@ -302,7 +297,7 @@ class _UserRegistratin extends State<UserRegistratin> {
                     width: MediaQuery.of(context).size.width * 0.65,
                     child: Row(
                       children: [
-                        const Text('1 numeric character'),
+                        const Text('رقم واحد'),
                         Spacer(),
                         hasdigit
                             ? const Icon(
@@ -319,24 +314,7 @@ class _UserRegistratin extends State<UserRegistratin> {
                   width: MediaQuery.of(context).size.width * 0.65,
                   child: Divider(color: Color.fromARGB(255, 126, 123, 123)),
                 ),
-                SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.65,
-                    child: Row(
-                      children: [
-                        const Text('1 uppercase letter'),
-                        Spacer(),
-                        hasuppercase
-                            ? const Icon(
-                                Icons.check_circle,
-                                color: Colors.green,
-                              )
-                            : Icon(
-                                Icons.error,
-                                color: Colors.red,
-                              )
-                      ],
-                    )),
-                SizedBox(height: size.height * 0.02),
+                
                 Container(
                   alignment: Alignment.center,
                   margin: EdgeInsets.symmetric(horizontal: 40),
@@ -345,10 +323,10 @@ class _UserRegistratin extends State<UserRegistratin> {
                     controller: _confirmpasscontroller,
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return "required";
+                        return "مطلوب";
                       }
                       if (value != passcontroller.value.text) {
-                        return 'passwords do not match ! ';
+                        return 'كلمة المرور غير متطابقه ! ';
                       }
                     },
                     obscureText: showpass1,
@@ -465,6 +443,14 @@ class _UserRegistratin extends State<UserRegistratin> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                       Text(
+                      " هل لديك حساب ؟ ",
+                      style: TextStyle(
+                          // decoration: TextDecoration.underline,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(123, 11, 13, 18)),
+                    ),
                     GestureDetector(
                       onTap: () => {
                         Navigator.push(
@@ -481,14 +467,7 @@ class _UserRegistratin extends State<UserRegistratin> {
                             color: Color.fromARGB(255, 14, 10, 102)),
                       ),
                     ),
-                    Text(
-                      " هل لديك حساب ؟ ",
-                      style: TextStyle(
-                          // decoration: TextDecoration.underline,
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(123, 11, 13, 18)),
-                    ),
+                 
                   ],
                 )
                 // Container(

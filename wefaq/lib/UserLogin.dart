@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wefaq/AdminHomePage.dart';
+import 'package:wefaq/backgroundHome.dart';
 import 'package:wefaq/resetPassword.dart';
 //import 'package:wefaq/AdminHomePage.dart';
 import 'Homepage.dart';
@@ -59,7 +60,7 @@ class _UserLogin extends State<UserLogin> {
 
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 241, 246, 253),
-      body: Background(
+      body: BackgroundHome(
         child: Form(
           key: _FormKey,
           child: Column(
@@ -98,7 +99,7 @@ class _UserLogin extends State<UserLogin> {
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       labelStyle: TextStyle(
                         fontSize: 19,
-                        color: Color.fromARGB(199, 66, 23, 139),
+                        color: Color.fromARGB(255, 14, 10, 102),
                       )),
                   // validator: MultiValidator(
                   //     [RequiredValidator(errorText: 'required')]),
@@ -127,7 +128,7 @@ class _UserLogin extends State<UserLogin> {
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     labelStyle: TextStyle(
                       fontSize: 19,
-                      color: Color.fromARGB(199, 66, 23, 139),
+                      color: Color.fromARGB(255, 14, 10, 102),
                     ),
                     suffixIcon: GestureDetector(
                       onTap: () {
@@ -212,6 +213,14 @@ class _UserLogin extends State<UserLogin> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                   Text(
+                    " ليس لديك حساب ؟ ",
+                    style: TextStyle(
+                        // decoration: TextDecoration.underline,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(123, 11, 13, 18)),
+                  ),
                   GestureDetector(
                     onTap: () => {
                       Navigator.push(
@@ -228,14 +237,7 @@ class _UserLogin extends State<UserLogin> {
                           color: Color.fromARGB(255, 14, 10, 102)),
                     ),
                   ),
-                  Text(
-                    " ليس لديك حساب ؟ ",
-                    style: TextStyle(
-                        // decoration: TextDecoration.underline,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(123, 11, 13, 18)),
-                  ),
+                 
                 ],
               )
             ],

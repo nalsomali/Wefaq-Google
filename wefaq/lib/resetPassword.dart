@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:wefaq/UserLogin.dart';
 import 'package:wefaq/backgroundLogin.dart';
 
+import 'backgroundHome.dart';
+
 class ResetScreen extends StatefulWidget {
   const ResetScreen({Key? key}) : super(key: key);
   @override
@@ -37,7 +39,7 @@ class _ResetScreenState extends State<ResetScreen> {
           leading: IconButton(
               icon: Icon(
                 Icons.arrow_back_ios,
-                color: Color.fromARGB(199, 66, 23, 139),
+                color: Color.fromARGB(255, 14, 10, 102),
                 size: 30,
               ),
               onPressed: () {
@@ -50,7 +52,7 @@ class _ResetScreenState extends State<ResetScreen> {
           //       color: Colors.white,
           //     )),
         ),
-        body: Background(
+        body: BackgroundHome(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -81,7 +83,7 @@ class _ResetScreenState extends State<ResetScreen> {
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       labelStyle: TextStyle(
                         fontSize: 19,
-                        color: Color.fromARGB(199, 66, 23, 139),
+                        color: Color.fromARGB(255, 14, 10, 102),
                       )),
                 ),
               ),
@@ -108,8 +110,8 @@ class _ResetScreenState extends State<ResetScreen> {
                     decoration: new BoxDecoration(
                         borderRadius: BorderRadius.circular(80.0),
                         gradient: new LinearGradient(colors: [
-                          Color.fromARGB(144, 67, 7, 87),
-                          Color.fromARGB(221, 137, 171, 187)
+                          Color.fromARGB(255, 14, 10, 102),
+                            Color.fromARGB(255, 14, 10, 102),
                         ])),
                     padding: const EdgeInsets.all(0),
                     child: Text(

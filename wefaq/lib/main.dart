@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       locale: Locale("ar", "AE"),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          colorSchemeSeed: const Color.fromARGB(255, 215, 189, 226),
+          colorSchemeSeed: const Color.fromARGB(255, 14, 10, 102),
           // useMaterial3: true,
           brightness: Brightness.light),
       home: UserLogin(),
