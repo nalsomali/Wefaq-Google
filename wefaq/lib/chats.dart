@@ -123,13 +123,10 @@ class _chatScreenState extends State<chatScreen> {
                             size: 20,
                           ),
                           onPressed: () {
-                            // Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //         builder: (context) => ChatScreen(
-                            //               projectName:
-                            //                   ProjectTitleList[index],
-                            //             )));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => chatRoomGoogle()));
                           },
                         ),
                       ]),
@@ -153,12 +150,8 @@ class _chatScreenState extends State<chatScreen> {
                 ),
               ),
               onTap: () {
-                // Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //         builder: (context) => ChatScreen(
-                //               projectName: ProjectTitleList[index],
-                //             )));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => chatRoomGoogle()));
               },
             ),
           ),
@@ -203,13 +196,10 @@ class _chatScreenState extends State<chatScreen> {
                             size: 20,
                           ),
                           onPressed: () {
-                            // Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //         builder: (context) => ChatScreen(
-                            //               projectName:
-                            //                   ProjectTitleList[index],
-                            //             )));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => chatRoomGoogle()));
                           },
                         ),
                       ]),
@@ -233,12 +223,8 @@ class _chatScreenState extends State<chatScreen> {
                 ),
               ),
               onTap: () {
-                // Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //         builder: (context) => ChatScreen(
-                //               projectName: ProjectTitleList[index],
-                //             )));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => chatRoomGoogle()));
               },
             ),
           )

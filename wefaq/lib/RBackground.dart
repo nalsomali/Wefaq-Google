@@ -20,7 +20,8 @@ class RBackground extends StatelessWidget {
           Positioned(
             top: 0,
             right: 0,
-            child: Image.asset("assets/images/i.png", width: size.width),
+            child:
+                Image.asset("assets/images/RBackground.png", width: size.width),
           ),
           // Positioned(
           //   top: 0,

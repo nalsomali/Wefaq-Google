@@ -53,7 +53,7 @@ class _UserRegistratin extends State<UserRegistratin> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 244, 243, 255),
+      backgroundColor: const Color.fromARGB(255, 241, 246, 253),
       resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         // padding: const EdgeInsets.all(8.0),
