@@ -318,7 +318,7 @@ class _viewprofileState extends State<viewprofile> {
                                 "هل تريد تسجيل الخروج؟",
                                 style: const TextStyle(
                                   fontSize: 18,
-                                  color: Color.fromARGB(159, 64, 7, 87),
+                                  color: Color.fromARGB(159, 28, 27, 29),
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),

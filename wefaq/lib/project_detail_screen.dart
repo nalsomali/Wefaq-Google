@@ -7,10 +7,14 @@ import 'package:wefaq/ProjectsTapScreen.dart';
 // import 'package:wefaq/config/colors.dart';
 // import 'project_detail_appbar.dart';
 import 'package:cool_alert/cool_alert.dart';
+import 'package:wefaq/config/colors.dart';
 import 'package:wefaq/projectsScreen.dart';
 
 import 'package:http/http.dart' as http;
 import 'package:fluttertoast/fluttertoast.dart';
+
+import 'navBar.dart';
+import 'project_detail_appbar.dart';
 
 final _formKey = GlobalKey<FormState>();
 
@@ -158,36 +162,40 @@ class _projectDetailScreenState extends State<projectDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        bottomNavigationBar: CustomNavigationBar(
+          currentHomeScreen: 1,
+          updatePage: () {},
+        ),
         body: Scrollbar(
-      child: CustomScrollView(
-        slivers: <Widget>[
-          // const DetailAppBar(),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: CustomScrollView(
+            slivers: <Widget>[
+              const DetailAppBar(),
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        nameList,
-                        style: Theme.of(context).textTheme.titleLarge,
-                      ),
-                      const SizedBox(height: 8.0),
-                      const SizedBox(height: 16.0),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            height: 50.0,
-                            width: 50.0,
-                            alignment: Alignment.center,
-                            margin: const EdgeInsets.only(right: 8.0),
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            /* child: IconButton(
+                          Text(
+                            nameList,
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
+                          const SizedBox(height: 8.0),
+                          const SizedBox(height: 16.0),
+                          Row(
+                            children: [
+                              Container(
+                                height: 50.0,
+                                width: 50.0,
+                                alignment: Alignment.center,
+                                margin: const EdgeInsets.only(right: 8.0),
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                /* child: IconButton(
                               icon: (isPressed)
                                   ? const Icon(Icons.favorite,
                                       color: Color.fromARGB(172, 136, 98, 146))
@@ -205,404 +213,510 @@ class _projectDetailScreenState extends State<projectDetailScreen> {
                                 });
                               },
                             ),*/
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          // TextButton(
-                          //   onPressed: () {
-                          //     // if (ownerEmail == Email) {
-                          //     //   Navigator.push(
-                          //     //       context,
-                          //     //       MaterialPageRoute(
-                          //     //           builder: (context) => viewprofile(
-                          //     //               userEmail: FirebaseAuth.instance
-                          //     //                   .currentUser!.email!)));
-                          //     // } else {
-                          //     //   Navigator.push(
-                          //     //       context,
-                          //     //       MaterialPageRoute(
-                          //     //           builder: (context) => viewotherprofile(
-                          //     //                 userEmail: ownerEmail,
-                          //     //               )));
-                          //     // }
-                          //   },
-                          //   child: Container(
-                          //     height: 35.0,
-                          //     width: 35.0,
-                          //     margin: const EdgeInsets.only(right: 8.0),
-                          //     decoration: BoxDecoration(
-                          //       shape: BoxShape.circle,
-                          //       image: DecorationImage(
-                          //         image: NetworkImage(profile),
-                          //         fit: BoxFit.cover,
-                          //       ),
-                          //       boxShadow: [
-                          //         BoxShadow(
-                          //           offset: const Offset(0, 4),
-                          //           blurRadius: 4.0,
-                          //           color: Colors.black.withOpacity(0.25),
-                          //         ),
-                          //       ],
-                          //     ),
-                          //   ),
-                          // ),
-                          Text(
-                            "مشروع وفاق",
+                              ),
+                            ],
                           ),
                         ],
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            "كلية الاداب",
-                            style: Theme.of(context).textTheme.titleSmall,
+                          Row(
+                            children: [
+                              // TextButton(
+                              //   onPressed: () {
+                              //     // if (ownerEmail == Email) {
+                              //     //   Navigator.push(
+                              //     //       context,
+                              //     //       MaterialPageRoute(
+                              //     //           builder: (context) => viewprofile(
+                              //     //               userEmail: FirebaseAuth.instance
+                              //     //                   .currentUser!.email!)));
+                              //     // } else {
+                              //     //   Navigator.push(
+                              //     //       context,
+                              //     //       MaterialPageRoute(
+                              //     //           builder: (context) => viewotherprofile(
+                              //     //                 userEmail: ownerEmail,
+                              //     //               )));
+                              //     // }
+                              //   },
+                              //   child: Container(
+                              //     height: 35.0,
+                              //     width: 35.0,
+                              //     margin: const EdgeInsets.only(right: 8.0),
+                              //     decoration: BoxDecoration(
+                              //       shape: BoxShape.circle,
+                              //       image: DecorationImage(
+                              //         image: NetworkImage(profile),
+                              //         fit: BoxFit.cover,
+                              //       ),
+                              //       boxShadow: [
+                              //         BoxShadow(
+                              //           offset: const Offset(0, 4),
+                              //           blurRadius: 4.0,
+                              //           color: Colors.black.withOpacity(0.25),
+                              //         ),
+                              //       ],
+                              //     ),
+                              //   ),
+                              // ),
+                              Text(
+                                "مشروع وفاق",
+                                style: Theme.of(context).textTheme.titleLarge,
+                              ),
+                            ],
                           ),
-                          Container(
-                            height: 32.0,
-                            width: 32.0,
-                            alignment: Alignment.center,
-                            margin: const EdgeInsets.only(right: 8.0),
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: const Icon(Icons.location_pin,
-                                color: Color.fromARGB(255, 14, 10, 102)),
+                          Row(
+                            children: [
+                              Container(
+                                height: 32.0,
+                                width: 32.0,
+                                alignment: Alignment.center,
+                                margin: const EdgeInsets.only(right: 8.0),
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: const Icon(Icons.location_pin,
+                                    color: Color.fromARGB(255, 14, 10, 102)),
+                              ),
+                              Text(
+                                "كلية الاداب",
+                                style: Theme.of(context).textTheme.titleSmall,
+                              ),
+                            ],
                           ),
                         ],
                       ),
+                      const SizedBox(height: 16.0),
+                      const Divider(color: Colors.black, height: 1.0),
+                      const SizedBox(height: 16.0),
+
+                      Text(
+                        'الوصف',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+
+                      Text(
+                        "مشروع وفاق هو تطبيق على الهاتف يخدم جميع المهتمين بالتقنية لمعرفة كل ما هو جديد و ايجاد فريق عمل يتناسب معهم",
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyMedium!
+                            .copyWith(color: Colors.black),
+                      ),
+                      const SizedBox(height: 16.0),
+                      const Divider(color: Colors.black, height: 1.0),
+                      const SizedBox(height: 16.0),
+                      Text(
+                        'التصنيف',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      const SizedBox(height: 16.0),
+                      _buildIngredientItem(context, "  مشروع تقني"),
+                      const Divider(color: Colors.black, height: 1.0),
+                      const SizedBox(height: 16.0),
+                      Text(
+                        'نبحث عن',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      const SizedBox(height: 8.0),
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              ChoiceChip(
+                                elevation: 8.0,
+                                padding: EdgeInsets.all(2.0),
+                                label: Text(
+                                  'مبرمج',
+                                  style: TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 255, 255, 255)),
+                                ),
+                                avatar: CircleAvatar(
+                                    backgroundColor:
+                                        Color.fromARGB(143, 252, 252, 252),
+                                    child: Text(
+                                      '٣',
+                                      style: TextStyle(color: Colors.white),
+                                    )),
+                                selected: _isSelected1,
+                                selectedColor: Color.fromARGB(223, 60, 122, 84),
+                                onSelected: (bool selected) {
+                                  setState(() {
+                                    _isSelected1 = selected;
+                                  });
+                                },
+                                backgroundColor:
+                                    Color.fromARGB(255, 14, 10, 102),
+                              ),
+                              SizedBox(
+                                width: 8,
+                              ),
+                              ChoiceChip(
+                                elevation: 8.0,
+                                padding: EdgeInsets.all(2.0),
+                                avatar: CircleAvatar(
+                                    backgroundColor:
+                                        Color.fromARGB(143, 252, 252, 252),
+                                    child: Text(
+                                      '١',
+                                      style: TextStyle(color: Colors.white),
+                                    )),
+                                label: Text(
+                                  'محلل أعمال',
+                                  style: TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 255, 255, 255)),
+                                ),
+                                selected: _isSelected2,
+                                selectedColor: Color.fromARGB(223, 60, 122, 84),
+                                onSelected: (bool selected) {
+                                  setState(() {
+                                    _isSelected2 = selected;
+                                  });
+                                },
+                                backgroundColor:
+                                    Color.fromARGB(255, 14, 10, 102),
+                              ),
+                              SizedBox(
+                                width: 8,
+                              ),
+                              ChoiceChip(
+                                elevation: 8.0,
+                                padding: EdgeInsets.all(2.0),
+                                avatar: CircleAvatar(
+                                    backgroundColor:
+                                        Color.fromARGB(143, 252, 252, 252),
+                                    child: Text(
+                                      '٢',
+                                      style: TextStyle(color: Colors.white),
+                                    )),
+                                label: Text(
+                                  'مصمم',
+                                  style: TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 255, 255, 255)),
+                                ),
+                                selected: _isSelected3,
+                                selectedColor: Color.fromARGB(223, 60, 122, 84),
+                                onSelected: (bool nselected) {
+                                  setState(() {
+                                    _isSelected3 = nselected;
+                                  });
+                                },
+                                backgroundColor:
+                                    Color.fromARGB(255, 14, 10, 102),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      // Row(children: [
+                      //   Text(
+                      //     'Looking For',
+                      //     style: Theme.of(context).textTheme.titleMedium,
+                      //   ),
+                      //   Text(' *',
+                      //       style: TextStyle(
+                      //         color: Colors.red,
+                      //         fontSize: 20,
+                      //       ))
+                      // ]),
+                      // Text('Select the Role you want to join as',
+                      //     style: TextStyle(
+                      //         color: Color.fromARGB(170, 123, 62, 185),
+                      //         fontWeight: FontWeight.bold)),
+                      // Text(
+                      //     '- You can select multiple roles but if accepted, you will be only accepted in one role',
+                      //     style: TextStyle(
+                      //         color: Color.fromARGB(170, 9, 0, 17),
+                      //         fontWeight: FontWeight.w400)),
+                      // Column(
+                      //   children: [
+                      //     Row(
+                      //       children: [
+                      //         if (getRole(1) != "")
+                      //           ChoiceChip(
+                      //             elevation: 8.0,
+                      //             padding: EdgeInsets.all(2.0),
+                      //             label: Text(
+                      //               getRole(1),
+                      //               style: TextStyle(
+                      //                   color: Color.fromARGB(255, 255, 255, 255)),
+                      //             ),
+                      //             selected: _isSelected1,
+                      //             selectedColor: Color.fromARGB(133, 177, 227, 232),
+                      //             onSelected: (bool selected) {
+                      //               setState(() {
+                      //                 _isSelected1 = selected;
+                      //               });
+                      //             },
+                      //             backgroundColor:
+                      //                 Color.fromARGB(170, 123, 62, 185),
+                      //           ),
+                      //         SizedBox(
+                      //           width: 6,
+                      //         ),
+                      //         if (getRole(2) != "")
+                      //           ChoiceChip(
+                      //             elevation: 8.0,
+                      //             padding: EdgeInsets.all(2.0),
+                      //             label: Text(
+                      //               getRole(2),
+                      //               style: TextStyle(
+                      //                   color: Color.fromARGB(255, 255, 255, 255)),
+                      //             ),
+                      //             selected: _isSelected2,
+                      //             selectedColor: Color.fromARGB(133, 177, 227, 232),
+                      //             onSelected: (bool selected) {
+                      //               setState(() {
+                      //                 _isSelected2 = selected;
+                      //               });
+                      //             },
+                      //             backgroundColor:
+                      //                 Color.fromARGB(170, 123, 62, 185),
+                      //           ),
+                      //       SizedBox(
+                      //         width: 6,
+                      //       ),
+                      //       if (getRole(3) != "")
+                      //         ChoiceChip(
+                      //           elevation: 8.0,
+                      //           padding: EdgeInsets.all(2.0),
+                      //           label: Text(
+                      //             getRole(3),
+                      //             style: TextStyle(
+                      //                 color: Color.fromARGB(255, 255, 255, 255)),
+                      //           ),
+                      //           selected: _isSelected3,
+                      //           selectedColor: Color.fromARGB(133, 177, 227, 232),
+                      //           onSelected: (bool selected) {
+                      //             setState(() {
+                      //               _isSelected3 = selected;
+                      //             });
+                      //           },
+                      //           backgroundColor:
+                      //               Color.fromARGB(170, 123, 62, 185),
+                      //         ),
+                      //     ],
+                      //   ),
+                      // ],
+                      // ),
+                      const SizedBox(height: 16.0),
+                      // if (_isSelected1 == false &&
+                      //     _isSelected2 == false &&
+                      //     _isSelected3 == false)
+                      //   Text(' please select one role at least to join the project',
+                      //       style: TextStyle(
+                      //           fontSize: 14,
+                      //           color: Color.fromARGB(170, 185, 62, 62),
+                      //           fontWeight: FontWeight.w400)),
+                      // Container(
+                      //   alignment: Alignment.center,
+                      //   child: Form(
+                      //     // key: _formKey,
+                      //     child: TextFormField(
+                      //       autovalidateMode: AutovalidateMode.onUserInteraction,
+                      //       maxLength: 60,
+                      //       decoration: InputDecoration(
+                      //           hintText:
+                      //               "Your Note will be visible with your request",
+                      //           hintStyle: TextStyle(
+                      //               color: Color.fromARGB(255, 202, 198, 198)),
+                      //           floatingLabelBehavior: FloatingLabelBehavior.always,
+                      //           label: RichText(
+                      //             text: TextSpan(
+                      //               text: 'Note',
+                      //               style: const TextStyle(
+                      //                   fontSize: 20,
+                      //                   fontWeight: FontWeight.bold,
+                      //                   color: Color.fromARGB(230, 35, 33, 35)),
+                      //             ),
+                      //           )),
+                      //       controller: _ParticipantNoteController,
+                      //       validator: (value) {
+                      //         if (!RegExp(r'^[ , . a-z A-Z]+$').hasMatch(value!) &&
+                      //             !RegExp(r'^[ أ-ي]+$').hasMatch(value!) &&
+                      //             value.isNotEmpty) {
+                      //           return "Only English or Arabic letters";
+                      //         }
+                      //       },
+                      //     ),
+                      //   ),
+                      // ),
+                      const Divider(color: Colors.black, height: 1.0),
+                      const SizedBox(height: 16.0),
+                      Text(
+                        'المدة',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      const SizedBox(height: 8.0),
+                      Row(children: <Widget>[
+                        const Icon(
+                          Icons.timelapse_outlined,
+                          color: Color.fromARGB(255, 164, 162, 165),
+                          size: 21,
+                        ),
+                        Text(
+                          "   ٥ اسابيع",
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium!
+                              .copyWith(color: Colors.black),
+                        ),
+                      ]),
+                      // const SizedBox(height: 16.0),
+                      // const Divider(color: Colors.black, height: 1.0),
+                      // const SizedBox(height: 16.0),
+                      // Text(
+                      //   "Team Members ",
+                      //   style: Theme.of(context).textTheme.titleMedium,
+                      // ),
+                      // const SizedBox(height: 10.0),
+                      // Column(
+                      //   children: [
+                      //     Row(
+                      //       children: [
+                      //         Container(
+                      //           height: 35.0,
+                      //           width: 35.0,
+                      //           margin: const EdgeInsets.only(right: 8.0),
+                      //           decoration: BoxDecoration(
+                      //             shape: BoxShape.circle,
+                      //             image: const DecorationImage(
+                      //               image: AssetImage('assets/images/team.png'),
+                      //               fit: BoxFit.cover,
+                      //             ),
+                      //             boxShadow: [
+                      //               BoxShadow(
+                      //                 offset: const Offset(0, 4),
+                      //                 blurRadius: 4.0,
+                      //                 color: Colors.black.withOpacity(0.25),
+                      //               ),
+                      //             ],
+                      //           ),
+                      //         ),
+                      //       Expanded(
+                      //         child: Text(
+                      //           ParticipantNameList.join(","),
+                      //           style: Theme.of(context).textTheme.titleSmall,
+                      //         ),
+                      //       ),
+                      //       SizedBox(
+                      //         width: 130,
+                      //       ),
+                      //     ],
+                      //   ),
+                      // ],
+                      // ),
+                      const SizedBox(height: 37.0),
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: 56,
+                        margin: EdgeInsets.only(
+                          bottom: MediaQuery.of(context).padding.bottom,
+                          left: 24,
+                          right: 24,
+                        ),
+                        child: ElevatedButton(
+                          onPressed: () async {
+                            //disable joining your own projects
+                            // if (ownerEmail == Email) {
+                            //   // CantJoin();
+                            //   return null;
+                            // }
+                            var P;
+
+                            //send a notification to the one who posted the project
+
+                            //sucess message
+                            if (_isSelected1 == true ||
+                                _isSelected2 == true ||
+                                _isSelected3 == true) {
+                              // if (_formKey.currentState!.validate()) {
+                              CoolAlert.show(
+                                context: context,
+                                title: "Success!",
+                                confirmBtnColor:
+                                    Color.fromARGB(174, 111, 78, 161),
+                                onConfirmBtnTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              ProjectsTabs()));
+                                },
+                                type: CoolAlertType.success,
+                                backgroundColor:
+                                    Color.fromARGB(221, 212, 189, 227),
+                                text: "Your join request is sent successfuly",
+                              );
+                              // FirebaseFirestore.instance
+                              //     .collection('users')
+                              //     .doc(signedInUser.email)
+                              //     .get()
+                              //     .then((snapshot) async {
+                              //   String? token_Participant =
+                              //       await FirebaseMessaging.instance.getToken();
+                              //   FirebaseFirestore.instance
+                              //       .collection('AllJoinRequests')
+                              //       .doc(nameList + '-' + signedInUser.email!)
+                              //       .set({
+                              //     'project_title': nameList,
+                              //     'participant_email': signedInUser.email,
+                              //     'owner_email': ownerEmail,
+                              //     'participant_name': FirebaseAuth
+                              //         .instance.currentUser!.displayName,
+                              //     'participant_token': token_Participant,
+                              //     'Status': 'Pending',
+                              //     'joiningAs': selection(
+                              //         _isSelected1, _isSelected2, _isSelected3),
+                              //     'Participant_note':
+                              //         _ParticipantNoteController.text,
+                              //     'Participant_role': "",
+                              //     "Photo": snapshot.data()!['Profile'].toString()
+                              //   });
+                              // });
+                              _JoiningASController.clear();
+                              _ParticipantNoteController.clear();
+                              // }
+                            } else {
+                              CoolAlert.show(
+                                context: context,
+                                title: "تم ارسال الطلب بالإلتحاق",
+                                confirmBtnColor:
+                                    Color.fromARGB(255, 14, 10, 102),
+                                type: CoolAlertType.success,
+                                backgroundColor:
+                                    Color.fromARGB(144, 176, 175, 175),
+                                text:
+                                    "please select one role at least to join the project",
+                                confirmBtnText: 'اغلاق',
+                                onConfirmBtnTap: () {
+                                  Navigator.of(context).pop();
+                                },
+                              );
+                            }
+                          },
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 14, 10, 102),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              )),
+                          child: const Text(
+                            "سجل الان",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
-
-                  // Text(
-                  //   'Description',
-                  //   style: Theme.of(context).textTheme.titleMedium,
-                  // ),
-                  const SizedBox(height: 8.0),
-                  // Text(
-                  //   descList,
-                  //   style: Theme.of(context)
-                  //       .textTheme
-                  //       .bodyMedium!
-                  //       .copyWith(color: Colors.black),
-                  // ),
-                  // const SizedBox(height: 16.0),
-                  // const Divider(color: Colors.black, height: 1.0),
-                  // const SizedBox(height: 16.0),
-                  // Text(
-                  //   'Category',
-                  //   style: Theme.of(context).textTheme.titleMedium,
-                  // ),
-                  // const SizedBox(height: 16.0),
-                  // _buildIngredientItem(context, categoryList),
-                  // const Divider(color: Colors.black, height: 1.0),
-                  // const SizedBox(height: 16.0),
-                  // Row(children: [
-                  //   Text(
-                  //     'Looking For',
-                  //     style: Theme.of(context).textTheme.titleMedium,
-                  //   ),
-                  //   Text(' *',
-                  //       style: TextStyle(
-                  //         color: Colors.red,
-                  //         fontSize: 20,
-                  //       ))
-                  // ]),
-                  // Text('Select the Role you want to join as',
-                  //     style: TextStyle(
-                  //         color: Color.fromARGB(170, 123, 62, 185),
-                  //         fontWeight: FontWeight.bold)),
-                  // Text(
-                  //     '- You can select multiple roles but if accepted, you will be only accepted in one role',
-                  //     style: TextStyle(
-                  //         color: Color.fromARGB(170, 9, 0, 17),
-                  //         fontWeight: FontWeight.w400)),
-                  // Column(
-                  //   children: [
-                  //     Row(
-                  //       children: [
-                  //         if (getRole(1) != "")
-                  //           ChoiceChip(
-                  //             elevation: 8.0,
-                  //             padding: EdgeInsets.all(2.0),
-                  //             label: Text(
-                  //               getRole(1),
-                  //               style: TextStyle(
-                  //                   color: Color.fromARGB(255, 255, 255, 255)),
-                  //             ),
-                  //             selected: _isSelected1,
-                  //             selectedColor: Color.fromARGB(133, 177, 227, 232),
-                  //             onSelected: (bool selected) {
-                  //               setState(() {
-                  //                 _isSelected1 = selected;
-                  //               });
-                  //             },
-                  //             backgroundColor:
-                  //                 Color.fromARGB(170, 123, 62, 185),
-                  //           ),
-                  //         SizedBox(
-                  //           width: 6,
-                  //         ),
-                  //         if (getRole(2) != "")
-                  //           ChoiceChip(
-                  //             elevation: 8.0,
-                  //             padding: EdgeInsets.all(2.0),
-                  //             label: Text(
-                  //               getRole(2),
-                  //               style: TextStyle(
-                  //                   color: Color.fromARGB(255, 255, 255, 255)),
-                  //             ),
-                  //             selected: _isSelected2,
-                  //             selectedColor: Color.fromARGB(133, 177, 227, 232),
-                  //             onSelected: (bool selected) {
-                  //               setState(() {
-                  //                 _isSelected2 = selected;
-                  //               });
-                  //             },
-                  //             backgroundColor:
-                  //                 Color.fromARGB(170, 123, 62, 185),
-                  //           ),
-                  //       SizedBox(
-                  //         width: 6,
-                  //       ),
-                  //       if (getRole(3) != "")
-                  //         ChoiceChip(
-                  //           elevation: 8.0,
-                  //           padding: EdgeInsets.all(2.0),
-                  //           label: Text(
-                  //             getRole(3),
-                  //             style: TextStyle(
-                  //                 color: Color.fromARGB(255, 255, 255, 255)),
-                  //           ),
-                  //           selected: _isSelected3,
-                  //           selectedColor: Color.fromARGB(133, 177, 227, 232),
-                  //           onSelected: (bool selected) {
-                  //             setState(() {
-                  //               _isSelected3 = selected;
-                  //             });
-                  //           },
-                  //           backgroundColor:
-                  //               Color.fromARGB(170, 123, 62, 185),
-                  //         ),
-                  //     ],
-                  //   ),
-                  // ],
-                  // ),
-                  const SizedBox(height: 16.0),
-                  // if (_isSelected1 == false &&
-                  //     _isSelected2 == false &&
-                  //     _isSelected3 == false)
-                  //   Text(' please select one role at least to join the project',
-                  //       style: TextStyle(
-                  //           fontSize: 14,
-                  //           color: Color.fromARGB(170, 185, 62, 62),
-                  //           fontWeight: FontWeight.w400)),
-                  // Container(
-                  //   alignment: Alignment.center,
-                  //   child: Form(
-                  //     // key: _formKey,
-                  //     child: TextFormField(
-                  //       autovalidateMode: AutovalidateMode.onUserInteraction,
-                  //       maxLength: 60,
-                  //       decoration: InputDecoration(
-                  //           hintText:
-                  //               "Your Note will be visible with your request",
-                  //           hintStyle: TextStyle(
-                  //               color: Color.fromARGB(255, 202, 198, 198)),
-                  //           floatingLabelBehavior: FloatingLabelBehavior.always,
-                  //           label: RichText(
-                  //             text: TextSpan(
-                  //               text: 'Note',
-                  //               style: const TextStyle(
-                  //                   fontSize: 20,
-                  //                   fontWeight: FontWeight.bold,
-                  //                   color: Color.fromARGB(230, 35, 33, 35)),
-                  //             ),
-                  //           )),
-                  //       controller: _ParticipantNoteController,
-                  //       validator: (value) {
-                  //         if (!RegExp(r'^[ , . a-z A-Z]+$').hasMatch(value!) &&
-                  //             !RegExp(r'^[ أ-ي]+$').hasMatch(value!) &&
-                  //             value.isNotEmpty) {
-                  //           return "Only English or Arabic letters";
-                  //         }
-                  //       },
-                  //     ),
-                  //   ),
-                  // ),
-                  // const Divider(color: Colors.black, height: 1.0),
-                  // const SizedBox(height: 16.0),
-                  // Text(
-                  //   'Duration',
-                  //   style: Theme.of(context).textTheme.titleMedium,
-                  // ),
-                  // const SizedBox(height: 8.0),
-                  // Row(children: <Widget>[
-                  //   const Icon(
-                  //     Icons.timelapse_outlined,
-                  //     color: Color.fromARGB(172, 136, 98, 146),
-                  //     size: 21,
-                  //   ),
-                  //   Text(
-                  //     duration,
-                  //     style: Theme.of(context)
-                  //         .textTheme
-                  //         .bodyMedium!
-                  //         .copyWith(color: Colors.black),
-                  //   ),
-                  // ]),
-                  // const SizedBox(height: 16.0),
-                  // const Divider(color: Colors.black, height: 1.0),
-                  // const SizedBox(height: 16.0),
-                  // Text(
-                  //   "Team Members ",
-                  //   style: Theme.of(context).textTheme.titleMedium,
-                  // ),
-                  // const SizedBox(height: 10.0),
-                  // Column(
-                  //   children: [
-                  //     Row(
-                  //       children: [
-                  //         Container(
-                  //           height: 35.0,
-                  //           width: 35.0,
-                  //           margin: const EdgeInsets.only(right: 8.0),
-                  //           decoration: BoxDecoration(
-                  //             shape: BoxShape.circle,
-                  //             image: const DecorationImage(
-                  //               image: AssetImage('assets/images/team.png'),
-                  //               fit: BoxFit.cover,
-                  //             ),
-                  //             boxShadow: [
-                  //               BoxShadow(
-                  //                 offset: const Offset(0, 4),
-                  //                 blurRadius: 4.0,
-                  //                 color: Colors.black.withOpacity(0.25),
-                  //               ),
-                  //             ],
-                  //           ),
-                  //         ),
-                  //       Expanded(
-                  //         child: Text(
-                  //           ParticipantNameList.join(","),
-                  //           style: Theme.of(context).textTheme.titleSmall,
-                  //         ),
-                  //       ),
-                  //       SizedBox(
-                  //         width: 130,
-                  //       ),
-                  //     ],
-                  //   ),
-                  // ],
-                  // ),
-                  const SizedBox(height: 37.0),
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: 56,
-                    margin: EdgeInsets.only(
-                      bottom: MediaQuery.of(context).padding.bottom,
-                      left: 24,
-                      right: 24,
-                    ),
-                    child: ElevatedButton(
-                      onPressed: () async {
-                        //disable joining your own projects
-                        // if (ownerEmail == Email) {
-                        //   // CantJoin();
-                        //   return null;
-                        // }
-                        var P;
-
-                        //send a notification to the one who posted the project
-
-                        //sucess message
-                        if (_isSelected1 == true ||
-                            _isSelected2 == true ||
-                            _isSelected3 == true) {
-                          // if (_formKey.currentState!.validate()) {
-                          CoolAlert.show(
-                            context: context,
-                            title: "Success!",
-                            confirmBtnColor: Color.fromARGB(174, 111, 78, 161),
-                            onConfirmBtnTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ProjectsTabs()));
-                            },
-                            type: CoolAlertType.success,
-                            backgroundColor: Color.fromARGB(221, 212, 189, 227),
-                            text: "Your join request is sent successfuly",
-                          );
-                          // FirebaseFirestore.instance
-                          //     .collection('users')
-                          //     .doc(signedInUser.email)
-                          //     .get()
-                          //     .then((snapshot) async {
-                          //   String? token_Participant =
-                          //       await FirebaseMessaging.instance.getToken();
-                          //   FirebaseFirestore.instance
-                          //       .collection('AllJoinRequests')
-                          //       .doc(nameList + '-' + signedInUser.email!)
-                          //       .set({
-                          //     'project_title': nameList,
-                          //     'participant_email': signedInUser.email,
-                          //     'owner_email': ownerEmail,
-                          //     'participant_name': FirebaseAuth
-                          //         .instance.currentUser!.displayName,
-                          //     'participant_token': token_Participant,
-                          //     'Status': 'Pending',
-                          //     'joiningAs': selection(
-                          //         _isSelected1, _isSelected2, _isSelected3),
-                          //     'Participant_note':
-                          //         _ParticipantNoteController.text,
-                          //     'Participant_role': "",
-                          //     "Photo": snapshot.data()!['Profile'].toString()
-                          //   });
-                          // });
-                          _JoiningASController.clear();
-                          _ParticipantNoteController.clear();
-                          // }
-                        } else {
-                          CoolAlert.show(
-                            context: context,
-                            title: "No Role Selected",
-                            confirmBtnColor: Color.fromARGB(144, 64, 6, 87),
-                            type: CoolAlertType.error,
-                            backgroundColor: Color.fromARGB(221, 212, 189, 227),
-                            text:
-                                "please select one role at least to join the project",
-                            confirmBtnText: 'Try again',
-                            onConfirmBtnTap: () {
-                              Navigator.of(context).pop();
-                            },
-                          );
-                        }
-                      },
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromARGB(255, 14, 10, 102),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
-                          )),
-                      child: const Text(
-                        "سجل الان",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ),
+            ],
           ),
-        ],
-      ),
-    ));
+        ));
   }
 
   selection(bool _isSelected1, bool _isSelected2, bool _isSelected3) {
@@ -657,11 +771,11 @@ class _projectDetailScreenState extends State<projectDetailScreen> {
             margin: const EdgeInsets.only(right: 8.0),
             decoration: const BoxDecoration(
               shape: BoxShape.circle,
-              color: Color.fromARGB(255, 229, 214, 237),
+              color: Color.fromARGB(70, 149, 149, 153),
             ),
             child: const Icon(
               Icons.check,
-              color: Color.fromARGB(172, 113, 60, 127),
+              color: Color.fromARGB(172, 36, 36, 107),
             ),
           ),
           Text(

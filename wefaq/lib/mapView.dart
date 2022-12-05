@@ -128,7 +128,10 @@ class MapSampleState extends State<MapSample> {
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: Color.fromARGB(255, 242, 241, 241),
         onPressed: _goToCurrentLocation,
-        label: const Text('الموقع الحالي'),
+        label: const Text(
+          'الموقع الحالي',
+          style: TextStyle(color: Color.fromARGB(255, 14, 10, 102)),
+        ),
         icon: const Icon(Icons.location_searching,
             color: Color.fromARGB(255, 14, 10, 102)),
       ),
@@ -139,7 +142,7 @@ class MapSampleState extends State<MapSample> {
             child: TextFormField(
               controller: _startSearchFieldController,
               decoration: InputDecoration(
-                  hintText: 'Search',
+                  hintText: 'ابحث',
                   hintStyle: TextStyle(
                       fontSize: 16, color: Color.fromARGB(255, 202, 198, 198)),
                   border: OutlineInputBorder(
@@ -147,7 +150,7 @@ class MapSampleState extends State<MapSample> {
                   ),
                   suffixIcon: _startSearchFieldController.text.isEmpty
                       ? Icon(Icons.search,
-                          color: Color.fromARGB(221, 137, 171, 187))
+                          color: Color.fromARGB(255, 14, 10, 102))
                       : IconButton(
                           icon: Icon(Icons.search,
                               color: Color.fromARGB(221, 137, 171, 187)),
