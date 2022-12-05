@@ -53,13 +53,14 @@ class _PostAdviserState extends State<PostAdviser> {
                 maxLength: 20,
                 decoration: InputDecoration(
                   hintStyle: TextStyle(
-                      fontSize: 16, color: Color.fromARGB(255, 202, 198, 198)),
+                      fontSize: 16, color: Color.fromARGB(255, 255, 255, 255)),
                   label: RichText(
                     text: TextSpan(
                         text: 'اسم المستشار',
                         style: const TextStyle(
-                            fontSize: 18,
-                            color: Color.fromARGB(144, 64, 7, 87)),
+                          fontSize: 18,
+                          color: Color.fromARGB(255, 14, 10, 102),
+                        ),
                         children: const [
                           TextSpan(
                               text: ' *',
@@ -69,16 +70,18 @@ class _PostAdviserState extends State<PostAdviser> {
                         ]),
                   ),
                   labelStyle: TextStyle(
-                      fontSize: 18, color: Color.fromARGB(144, 64, 7, 87)),
+                    fontSize: 18,
+                    color: Color.fromARGB(255, 14, 10, 102),
+                  ),
                   border: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(144, 64, 7, 87),
+                      color: Color.fromARGB(255, 14, 10, 102),
                       width: 2.0,
                     ),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(144, 64, 7, 87),
+                      color: Color.fromARGB(255, 14, 10, 102),
                       width: 2.0,
                     ),
                   ),
@@ -93,13 +96,14 @@ class _PostAdviserState extends State<PostAdviser> {
             TextFormField(
                 decoration: InputDecoration(
                   hintStyle: TextStyle(
-                      fontSize: 16, color: Color.fromARGB(255, 202, 198, 198)),
+                      fontSize: 16, color: Color.fromARGB(255, 255, 255, 255)),
                   label: RichText(
                     text: TextSpan(
                         text: "رابط حجز الجلسات",
                         style: const TextStyle(
-                            fontSize: 18,
-                            color: Color.fromARGB(144, 64, 7, 87)),
+                          fontSize: 18,
+                          color: Color.fromARGB(255, 14, 10, 102),
+                        ),
                         children: const [
                           TextSpan(
                               text: ' *',
@@ -115,7 +119,7 @@ class _PostAdviserState extends State<PostAdviser> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(144, 64, 7, 87),
+                      color: Color.fromARGB(255, 14, 10, 102),
                       width: 2.0,
                     ),
                   ),
@@ -132,13 +136,14 @@ class _PostAdviserState extends State<PostAdviser> {
                 maxLines: 3,
                 decoration: InputDecoration(
                   hintStyle: TextStyle(
-                      fontSize: 16, color: Color.fromARGB(255, 202, 198, 198)),
+                      fontSize: 16, color: Color.fromARGB(255, 255, 255, 255)),
                   label: RichText(
                     text: TextSpan(
                         text: " تفاصيل المستشار",
                         style: const TextStyle(
-                            fontSize: 18,
-                            color: Color.fromARGB(144, 64, 7, 87)),
+                          fontSize: 18,
+                          color: Color.fromARGB(255, 14, 10, 102),
+                        ),
                         children: const [
                           TextSpan(
                               text: ' *',
@@ -152,7 +157,7 @@ class _PostAdviserState extends State<PostAdviser> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(144, 64, 7, 87),
+                      color: Color.fromARGB(255, 14, 10, 102),
                       width: 2.0,
                     ),
                   ),
@@ -171,7 +176,7 @@ class _PostAdviserState extends State<PostAdviser> {
               height: 50.0,
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(144, 64, 7, 87),
+                    backgroundColor: Color.fromARGB(255, 14, 10, 102),
                   ),
                   child: Text('اضافة',
                       style: TextStyle(color: Colors.white, fontSize: 16.0)),
@@ -191,7 +196,7 @@ class _PostAdviserState extends State<PostAdviser> {
                       CoolAlert.show(
                         context: context,
                         title: "نجاح!",
-                        confirmBtnColor: Color.fromARGB(144, 64, 7, 87),
+                        confirmBtnColor: Color.fromARGB(255, 14, 10, 102),
                         confirmBtnText: "تم",
                         onConfirmBtnTap: () {
                           Navigator.push(
@@ -201,8 +206,8 @@ class _PostAdviserState extends State<PostAdviser> {
                                       adminProjectsListViewPage()));
                         },
                         type: CoolAlertType.success,
-                        backgroundColor: Color.fromARGB(221, 212, 189, 227),
-                        text: "تمت اضافة المستشار بنجاح",
+                        backgroundColor: Color.fromARGB(221, 255, 255, 255),
+                        text: "تم اضافة المستشار بنجاح",
                       );
                     }
                   }),

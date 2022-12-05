@@ -80,13 +80,13 @@ class _PostProjectState extends State<PostProject> {
                 maxLength: 20,
                 decoration: InputDecoration(
                   hintStyle: TextStyle(
-                      fontSize: 16, color: Color.fromARGB(255, 202, 198, 198)),
+                      fontSize: 16, color: Color.fromARGB(255, 255, 255, 255)),
                   label: RichText(
                     text: TextSpan(
                         text: 'عنوان المشروع',
                         style: const TextStyle(
                             fontSize: 18,
-                            color: Color.fromARGB(144, 64, 7, 87)),
+                            color: Color.fromARGB(255, 14, 10, 102)),
                         children: const [
                           TextSpan(
                               text: ' *',
@@ -96,16 +96,16 @@ class _PostProjectState extends State<PostProject> {
                         ]),
                   ),
                   labelStyle: TextStyle(
-                      fontSize: 18, color: Color.fromARGB(144, 64, 7, 87)),
+                      fontSize: 18, color: Color.fromARGB(255, 14, 10, 102)),
                   border: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(144, 64, 7, 87),
+                      color: Color.fromARGB(255, 14, 10, 102),
                       width: 2.0,
                     ),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(144, 64, 7, 87),
+                      color: Color.fromARGB(255, 14, 10, 102),
                       width: 2.0,
                     ),
                   ),
@@ -122,13 +122,13 @@ class _PostProjectState extends State<PostProject> {
                 decoration: InputDecoration(
                     hintStyle: TextStyle(
                         fontSize: 16,
-                        color: Color.fromARGB(255, 202, 198, 198)),
+                        color: Color.fromARGB(255, 255, 255, 255)),
                     label: RichText(
                       text: TextSpan(
                           text: 'موقع المشروع',
                           style: const TextStyle(
                               fontSize: 18,
-                              color: Color.fromARGB(144, 64, 7, 87)),
+                              color: Color.fromARGB(255, 14, 10, 102)),
                           children: const [
                             TextSpan(
                                 text: ' *',
@@ -142,7 +142,7 @@ class _PostProjectState extends State<PostProject> {
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color.fromARGB(144, 64, 7, 87),
+                        color: Color.fromARGB(255, 14, 10, 102),
                         width: 2.0,
                       ),
                     ),
@@ -216,13 +216,13 @@ class _PostProjectState extends State<PostProject> {
                 maxLength: 60,
                 decoration: InputDecoration(
                   hintStyle: TextStyle(
-                      fontSize: 16, color: Color.fromARGB(255, 202, 198, 198)),
+                      fontSize: 16, color: Color.fromARGB(255, 255, 255, 255)),
                   label: RichText(
                     text: TextSpan(
                         text: 'تبحث عن',
                         style: const TextStyle(
                             fontSize: 18,
-                            color: Color.fromARGB(144, 64, 7, 87)),
+                            color: Color.fromARGB(255, 14, 10, 102)),
                         children: const [
                           TextSpan(
                               text: ' *',
@@ -238,7 +238,7 @@ class _PostProjectState extends State<PostProject> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(144, 64, 7, 87),
+                      color: Color.fromARGB(255, 14, 10, 102),
                       width: 2.0,
                     ),
                   ),
@@ -255,13 +255,13 @@ class _PostProjectState extends State<PostProject> {
                 maxLines: 3,
                 decoration: InputDecoration(
                   hintStyle: TextStyle(
-                      fontSize: 16, color: Color.fromARGB(255, 202, 198, 198)),
+                      fontSize: 16, color: Color.fromARGB(255, 255, 255, 255)),
                   label: RichText(
                     text: TextSpan(
                         text: 'تفاصيل المشروع',
                         style: const TextStyle(
                             fontSize: 18,
-                            color: Color.fromARGB(144, 64, 7, 87)),
+                            color: Color.fromARGB(255, 14, 10, 102)),
                         children: const [
                           TextSpan(
                               text: ' *',
@@ -275,7 +275,7 @@ class _PostProjectState extends State<PostProject> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(144, 64, 7, 87),
+                      color: Color.fromARGB(255, 14, 10, 102),
                       width: 2.0,
                     ),
                   ),
@@ -293,13 +293,13 @@ class _PostProjectState extends State<PostProject> {
                 maxLength: 20,
                 decoration: InputDecoration(
                   hintStyle: TextStyle(
-                      fontSize: 16, color: Color.fromARGB(255, 202, 198, 198)),
+                      fontSize: 16, color: Color.fromARGB(255, 255, 255, 255)),
                   label: RichText(
                     text: TextSpan(
                         text: 'مدة المشروع',
                         style: const TextStyle(
                             fontSize: 18,
-                            color: Color.fromARGB(144, 64, 7, 87)),
+                            color: Color.fromARGB(255, 14, 10, 102)),
                         children: const [
                           TextSpan(
                               text: ' *',
@@ -315,7 +315,7 @@ class _PostProjectState extends State<PostProject> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(144, 64, 7, 87),
+                      color: Color.fromARGB(255, 14, 10, 102),
                       width: 2.0,
                     ),
                   ),
@@ -332,7 +332,7 @@ class _PostProjectState extends State<PostProject> {
               height: 50.0,
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(144, 64, 7, 87),
+                    backgroundColor: Color.fromARGB(255, 14, 10, 102),
                   ),
                   child: Text('اضافة',
                       style: TextStyle(color: Colors.white, fontSize: 16.0)),
@@ -355,7 +355,7 @@ class _PostProjectState extends State<PostProject> {
                       CoolAlert.show(
                         context: context,
                         title: "نجاح!",
-                        confirmBtnColor: Color.fromARGB(144, 64, 7, 87),
+                        confirmBtnColor: Color.fromARGB(255, 14, 10, 102),
                         confirmBtnText: "تم",
                         onConfirmBtnTap: () {
                           Navigator.push(
@@ -365,8 +365,8 @@ class _PostProjectState extends State<PostProject> {
                                       adminProjectsListViewPage()));
                         },
                         type: CoolAlertType.success,
-                        backgroundColor: Color.fromARGB(221, 212, 189, 227),
-                        text: "تمت اضافة المشروع بنجاح",
+                        backgroundColor: Color.fromARGB(221, 255, 255, 255),
+                        text: "تم اضافة المشروع بنجاح",
                       );
                     }
                   }),
