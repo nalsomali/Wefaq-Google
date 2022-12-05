@@ -64,8 +64,8 @@ class _PostProjectState extends State<PostProject> {
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
           title: Text('اضافة مشروع',
               style: TextStyle(
-                fontWeight: FontWeight.normal,
-                color: Color.fromARGB(255, 14, 10, 102),
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(206, 0, 0, 0),
               ))),
       bottomNavigationBar: AdminCustomNavigationBar(
         currentHomeScreen: 1,
