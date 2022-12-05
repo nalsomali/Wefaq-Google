@@ -21,13 +21,13 @@ class FavScreenState extends State<FavScreen> {
       children: [
         Expanded(
           child: Scaffold(
-            backgroundColor: Color.fromARGB(255, 241, 243, 252),
+            backgroundColor: Color.fromARGB(255, 255, 255, 255),
             appBar: AppBar(
               shadowColor: Color.fromARGB(255, 215, 215, 215),
               elevation: 0.8,
               backgroundColor: Color.fromARGB(255, 255, 255, 255),
               actions: <Widget>[],
-              title: Text(' مفضلاتي ',
+              title: Text(' المفضلة',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(206, 0, 0, 0),

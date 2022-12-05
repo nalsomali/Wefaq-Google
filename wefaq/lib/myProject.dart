@@ -46,7 +46,7 @@ class ListViewPageState extends State<userProjects> {
                     textAlign: TextAlign.center,
                   ),
                   automaticallyImplyLeading: false,
-                  backgroundColor: Color.fromARGB(255, 242, 241, 241),
+                  backgroundColor: Color.fromARGB(255, 255, 255, 255),
                   actions: <Widget>[
                     IconButton(
                         icon: Icon(
@@ -54,10 +54,7 @@ class ListViewPageState extends State<userProjects> {
                           color: Color.fromARGB(255, 0, 0, 0),
                         ),
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => viewprofile()));
+                          Navigator.pop(context);
                         }),
                   ],
                 ),
@@ -121,7 +118,7 @@ class ListViewPageState extends State<userProjects> {
                                           icon: Icon(
                                             Icons.arrow_forward_ios,
                                             color: Color.fromARGB(
-                                                255, 170, 169, 179),
+                                                255, 255, 255, 255),
                                           ),
                                           onPressed: () {}),
                                     ],
