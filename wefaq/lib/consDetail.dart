@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:wefaq/SessionScreen.dart';
 import 'package:wefaq/myProject.dart';
 import 'package:wefaq/navBar.dart';
@@ -114,18 +115,12 @@ class _viewprofileState extends State<viewotherprofile> {
                                     Column(
                                       children: <Widget>[
                                         GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        userProjects()),
-                                              );
-                                            },
+                                            onTap: () =>
+                                                launch("https://calendly.com"),
                                             child: Container(
                                               alignment: Alignment.center,
                                               height: 30,
-                                              width: 120,
+                                              width: 110,
                                               decoration: BoxDecoration(
                                                 color: Color.fromARGB(
                                                     255, 72, 119, 194),

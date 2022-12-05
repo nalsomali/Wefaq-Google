@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:wefaq/UserLogin.dart';
 import 'myProject.dart';
 import 'navBar.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 // import 'package:wefaq/myProjects.dart';
 
 class viewprofile extends StatefulWidget {
