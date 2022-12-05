@@ -43,58 +43,218 @@ class SessionScreensState extends State<SessionScreen> {
               SizedBox(
                 height: 10,
               ),
-              SizedBox(
-                height: 100,
-                child: GestureDetector(
-                  child: Card(
-                    margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                    shadowColor: Color.fromARGB(145, 202, 202, 202),
-                    elevation: 8,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                      child: Column(
-                        children: <Widget>[
 
-                          const ListTile(
-                            leading: CircleAvatar(
-                              radius: 30.0,
-                              backgroundImage:
-                                  AssetImage('assets/images/hassan.jpeg'),
-                            ),
-                            title: 
-  text: TextSpan(
-    children: [
-      TextSpan(
-        text: "Click ",
-      ),
-      WidgetSpan(
-        child: Icon(Icons.add, size: 14),
-      ),
-      TextSpan(
-        text: " to add",
-      ),
-    ],
-  ),
-
-                            subtitle: Text(" دكتوراة هندسة برمجيات ",
-                                style: const TextStyle(
-                                  fontSize: 16,
-                                  color: Color.fromARGB(255, 38, 70, 138),
-                                )),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                        ],
-                      ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                color: const Color.fromARGB(255, 255, 255, 255),
+                shadowColor: Color.fromARGB(145, 202, 202, 202),
+                elevation: 8,
+                child: ListTile(
+                  leading: CircleAvatar(
+                    radius: 30.0,
+                    backgroundImage: AssetImage('assets/images/hassan.jpeg'),
+                  ),
+                  title: Text(
+                    "  م.حسان المالكي  ",
+                    style: const TextStyle(
+                      fontSize: 19,
+                      color: Color.fromARGB(255, 14, 10, 102),
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
+                  subtitle: Text(" دكتوراة هندسة برمجيات ",
+                      style: const TextStyle(
+                        fontSize: 16,
+                        color: Color.fromARGB(255, 38, 70, 138),
+                      )),
+                  trailing: Icon(Icons.arrow_forward_ios),
+                  isThreeLine: true,
                 ),
               ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                color: const Color.fromARGB(255, 255, 255, 255),
+                shadowColor: Color.fromARGB(145, 202, 202, 202),
+                elevation: 8,
+                child: ListTile(
+                  leading: CircleAvatar(
+                    radius: 30.0,
+                    backgroundImage: AssetImage('assets/images/hassan.jpeg'),
+                  ),
+                  title: Text(
+                    "  د.عبدالعزيز العريج  ",
+                    style: const TextStyle(
+                      fontSize: 19,
+                      color: Color.fromARGB(255, 14, 10, 102),
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  subtitle: Text(" دكتوراة هندسة برمجيات ",
+                      style: const TextStyle(
+                        fontSize: 16,
+                        color: Color.fromARGB(255, 38, 70, 138),
+                      )),
+                  trailing: Icon(Icons.arrow_forward_ios),
+                  isThreeLine: true,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                color: const Color.fromARGB(255, 255, 255, 255),
+                shadowColor: Color.fromARGB(145, 202, 202, 202),
+                elevation: 8,
+                child: ListTile(
+                  leading: CircleAvatar(
+                    radius: 30.0,
+                    backgroundImage: AssetImage('assets/images/hassan.jpeg'),
+                  ),
+                  title: Text(
+                    "  د.عبير النجار ",
+                    style: const TextStyle(
+                      fontSize: 19,
+                      color: Color.fromARGB(255, 14, 10, 102),
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  subtitle: Text(" دكتوراة فيزياد نووية ",
+                      style: const TextStyle(
+                        fontSize: 16,
+                        color: Color.fromARGB(255, 38, 70, 138),
+                      )),
+                  trailing: Icon(Icons.arrow_forward_ios),
+                  isThreeLine: true,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                color: const Color.fromARGB(255, 255, 255, 255),
+                shadowColor: Color.fromARGB(145, 202, 202, 202),
+                elevation: 8,
+                child: ListTile(
+                  leading: CircleAvatar(
+                    radius: 30.0,
+                    backgroundImage: AssetImage('assets/images/hassan.jpeg'),
+                  ),
+                  title: Text(
+                    "  م.امل عيسى  ",
+                    style: const TextStyle(
+                      fontSize: 19,
+                      color: Color.fromARGB(255, 14, 10, 102),
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  subtitle: Text(" دكتوراة هندسة برمجيات ",
+                      style: const TextStyle(
+                        fontSize: 16,
+                        color: Color.fromARGB(255, 38, 70, 138),
+                      )),
+                  trailing: Icon(Icons.arrow_forward_ios),
+                  isThreeLine: true,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                color: const Color.fromARGB(255, 255, 255, 255),
+                shadowColor: Color.fromARGB(145, 202, 202, 202),
+                elevation: 8,
+                child: ListTile(
+                  leading: CircleAvatar(
+                    radius: 30.0,
+                    backgroundImage: AssetImage('assets/images/majed.jpeg'),
+                  ),
+                  title: Text(
+                    "  د.ماجد السلمي ",
+                    style: const TextStyle(
+                      fontSize: 19,
+                      color: Color.fromARGB(255, 14, 10, 102),
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  subtitle: Text(" دكتوراة هندسة برمجيات ",
+                      style: const TextStyle(
+                        fontSize: 16,
+                        color: Color.fromARGB(255, 38, 70, 138),
+                      )),
+                  trailing: Icon(Icons.arrow_forward_ios),
+                  isThreeLine: true,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                color: const Color.fromARGB(255, 255, 255, 255),
+                shadowColor: Color.fromARGB(145, 202, 202, 202),
+                elevation: 8,
+                child: ListTile(
+                  leading: CircleAvatar(
+                    radius: 30.0,
+                    backgroundImage: AssetImage('assets/images/hassan.jpeg'),
+                  ),
+                  title: Text(
+                    "  د. ناهض الحربي ",
+                    style: const TextStyle(
+                      fontSize: 19,
+                      color: Color.fromARGB(255, 14, 10, 102),
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  subtitle: Text(" دكتوراة هندسة برمجيات ",
+                      style: const TextStyle(
+                        fontSize: 16,
+                        color: Color.fromARGB(255, 38, 70, 138),
+                      )),
+                  trailing: Icon(Icons.arrow_forward_ios),
+                  isThreeLine: true,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                color: const Color.fromARGB(255, 255, 255, 255),
+                shadowColor: Color.fromARGB(145, 202, 202, 202),
+                elevation: 8,
+                child: ListTile(
+                  leading: CircleAvatar(
+                    radius: 30.0,
+                    backgroundImage: AssetImage('assets/images/hassan.jpeg'),
+                  ),
+                  title: Text(
+                    "  م.لؤي لبني ",
+                    style: const TextStyle(
+                      fontSize: 19,
+                      color: Color.fromARGB(255, 14, 10, 102),
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  subtitle: Text(" دكتوراة هندسة برمجيات ",
+                      style: const TextStyle(
+                        fontSize: 16,
+                        color: Color.fromARGB(255, 38, 70, 138),
+                      )),
+                  trailing: Icon(Icons.arrow_forward_ios),
+                  isThreeLine: true,
+                ),
+              ),
+
               SizedBox(
                 height: 3,
               ),
