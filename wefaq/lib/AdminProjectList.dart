@@ -66,6 +66,9 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                         color: const Color.fromARGB(255, 255, 255, 255),
                         shadowColor: Color.fromARGB(145, 202, 202, 202),
                         elevation: 8,
+                        //shadowColor: Color.fromARGB(255, 255, 255, 255),
+                        //  elevation: 7,
+
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                           child: Column(
@@ -77,7 +80,20 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                                 children: [
                                   Row(children: const <Widget>[
                                     Text(
-                                      "  دراسة اثار الاضطراب الاجتماعي ",
+                                      " مشروع تطوير الويب ",
+                                      style: TextStyle(
+                                        fontSize: 19,
+                                        color: Color.fromARGB(255, 14, 10, 102),
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: SizedBox(
+                                        width: 240,
+                                      ),
+                                    ),
+                                    Text(
+                                      "٢١-٤-٢٠٢٢",
                                       style: TextStyle(
                                         fontSize: 16,
                                         color: Color.fromARGB(255, 14, 10, 102),
@@ -94,7 +110,7 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                                         color:
                                             Color.fromARGB(255, 14, 10, 102)),
                                     const Text("     "),
-                                    Text("كلية علوم الحاسب و المعلومات ",
+                                    Text("كلية علوم الحاسب و المعلومات",
                                         style: const TextStyle(
                                           fontSize: 16,
                                           color:
@@ -117,25 +133,7 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                                                   builder: (context) =>
                                                       adminprojectDetailScreen()));
                                         }),
-                                    Text("كلية الاداب",
-                                        style: const TextStyle(
-                                          fontSize: 16,
-                                          color:
-                                              Color.fromARGB(255, 38, 70, 138),
-                                        )),
-                                    const Text("     "),
-                                    const Icon(Icons.location_pin,
-                                        color:
-                                            Color.fromARGB(255, 14, 10, 102)),
                                   ],
-                                ),
-                              ),
-                              Text(
-                                "١١-١٢-٢٠١٩",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: Color.fromARGB(255, 14, 10, 102),
-                                  fontWeight: FontWeight.normal,
                                 ),
                               ),
                             ],

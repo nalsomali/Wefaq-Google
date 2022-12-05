@@ -190,8 +190,9 @@ class _PostAdviserState extends State<PostAdviser> {
                       //sucess message
                       CoolAlert.show(
                         context: context,
-                        title: "!نجاح",
+                        title: "نجاح!",
                         confirmBtnColor: Color.fromARGB(144, 64, 7, 87),
+                        confirmBtnText: "تم",
                         onConfirmBtnTap: () {
                           Navigator.push(
                               context,

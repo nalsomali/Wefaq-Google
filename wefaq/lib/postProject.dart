@@ -354,8 +354,9 @@ class _PostProjectState extends State<PostProject> {
                       //sucess message
                       CoolAlert.show(
                         context: context,
-                        title: "!نجاح",
+                        title: "نجاح!",
                         confirmBtnColor: Color.fromARGB(144, 64, 7, 87),
+                        confirmBtnText: "تم",
                         onConfirmBtnTap: () {
                           Navigator.push(
                               context,

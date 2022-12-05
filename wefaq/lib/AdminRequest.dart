@@ -29,16 +29,6 @@ class _RequestListProject extends State<RequestListViewPageProject> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back_ios,
-            color: Color.fromARGB(255, 14, 10, 102),
-          ),
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => adminHomeScreen()));
-          },
-        ),
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         title: const Text('طلبات الانضمام',
             style: TextStyle(
@@ -47,11 +37,15 @@ class _RequestListProject extends State<RequestListViewPageProject> {
             )),
         actions: <Widget>[
           IconButton(
-              icon: const Icon(
-                Icons.logout,
-                color: Color.fromARGB(255, 255, 255, 255),
-              ),
-              onPressed: () {}),
+            icon: const Icon(
+              Icons.arrow_forward_ios,
+              color: Color.fromARGB(255, 14, 10, 102),
+            ),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => adminHomeScreen()));
+            },
+          ),
         ],
       ),
       bottomNavigationBar: AdminCustomNavigationBar(
@@ -78,11 +72,6 @@ class _RequestListProject extends State<RequestListViewPageProject> {
                       Column(
                         children: [
                           Row(children: const <Widget>[
-                            Expanded(
-                              child: SizedBox(
-                                width: 240,
-                              ),
-                            ),
                             Text(
                               "  دراسة اثار الاضطراب الاجتماعي ",
                               style: TextStyle(
@@ -97,26 +86,23 @@ class _RequestListProject extends State<RequestListViewPageProject> {
                       Expanded(
                         child: Row(
                           children: <Widget>[
-                            IconButton(
-                                icon: const Icon(
-                                  Icons.arrow_back_ios,
-                                  color: Color.fromARGB(255, 170, 169, 179),
-                                ),
-                                onPressed: () {
-                                  showDialogFunc(context);
-                                }),
-                            const Expanded(
-                                child: SizedBox(
-                              width: 100,
-                            )),
+                            const Icon(Icons.person,
+                                color: Color.fromARGB(255, 14, 10, 102)),
+                            const Text("     "),
                             const Text("عبد الله محمد",
                                 style: TextStyle(
                                   fontSize: 16,
                                   color: Color.fromARGB(255, 38, 70, 138),
                                 )),
-                            const Text("     "),
-                            const Icon(Icons.person,
-                                color: Color.fromARGB(255, 14, 10, 102)),
+                            const Expanded(child: SizedBox()),
+                            IconButton(
+                                icon: const Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: Color.fromARGB(255, 170, 169, 179),
+                                ),
+                                onPressed: () {
+                                  showDialogFunc(context);
+                                }),
                           ],
                         ),
                       ),
@@ -146,11 +132,6 @@ class _RequestListProject extends State<RequestListViewPageProject> {
                       Column(
                         children: [
                           Row(children: const <Widget>[
-                            Expanded(
-                              child: SizedBox(
-                                width: 240,
-                              ),
-                            ),
                             Text(
                               "  مشروع عوالم ",
                               style: TextStyle(
@@ -165,26 +146,23 @@ class _RequestListProject extends State<RequestListViewPageProject> {
                       Expanded(
                         child: Row(
                           children: <Widget>[
-                            IconButton(
-                                icon: const Icon(
-                                  Icons.arrow_back_ios,
-                                  color: Color.fromARGB(255, 170, 169, 179),
-                                ),
-                                onPressed: () {
-                                  showDialogFunc(context);
-                                }),
-                            const Expanded(
-                                child: SizedBox(
-                              width: 100,
-                            )),
+                            const Icon(Icons.person,
+                                color: Color.fromARGB(255, 14, 10, 102)),
+                            const Text("     "),
                             const Text("سارة فهد",
                                 style: TextStyle(
                                   fontSize: 16,
                                   color: Color.fromARGB(255, 38, 70, 138),
                                 )),
-                            const Text("     "),
-                            const Icon(Icons.person,
-                                color: Color.fromARGB(255, 14, 10, 102)),
+                            const Expanded(child: SizedBox()),
+                            IconButton(
+                                icon: const Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: Color.fromARGB(255, 170, 169, 179),
+                                ),
+                                onPressed: () {
+                                  showDialogFunc(context);
+                                }),
                           ],
                         ),
                       ),
@@ -258,60 +236,13 @@ showDialogFunc(context) {
                 Row(
                   children: <Widget>[
                     const Text("     "),
-                    ElevatedButton(
-                      onPressed: () {
-                        CoolAlert.show(
-                            context: context,
-                            title: "!نجاح",
-                            confirmBtnColor:
-                                const Color.fromARGB(144, 64, 6, 87),
-                            type: CoolAlertType.success,
-                            backgroundColor:
-                                const Color.fromARGB(221, 212, 189, 227),
-                            text: " تم رفض المتقدم بنجاح ",
-                            confirmBtnText: 'تم',
-                            onConfirmBtnTap: () {
-                              // if (ProjectTitleList.length == 1) {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          RequestListViewPageProject()));
-                            });
-                      },
-                      style: ElevatedButton.styleFrom(
-                        surfaceTintColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(80.0)),
-                        padding: const EdgeInsets.all(0),
-                      ),
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 40.0,
-                        width: 100,
-                        decoration: new BoxDecoration(
-                            borderRadius: BorderRadius.circular(9.0),
-                            gradient: const LinearGradient(colors: [
-                              Color.fromARGB(144, 210, 2, 2),
-                              Color.fromARGB(144, 210, 2, 2)
-                            ])),
-                        padding: const EdgeInsets.all(0),
-                        child: const Text(
-                          "رفض",
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                              color: Color.fromARGB(255, 255, 255, 255)),
-                        ),
-                      ),
-                    ),
                     Container(
                       margin: const EdgeInsets.only(left: 50),
                       child: ElevatedButton(
                         onPressed: () {
                           CoolAlert.show(
                               context: context,
-                              title: "!نجاح",
+                              title: "نجاح!",
                               confirmBtnColor:
                                   const Color.fromARGB(144, 64, 6, 87),
                               type: CoolAlertType.success,
@@ -351,6 +282,54 @@ showDialogFunc(context) {
                                 fontWeight: FontWeight.w600,
                                 color: Color.fromARGB(255, 255, 255, 255)),
                           ),
+                        ),
+                      ),
+                    ),
+                    const Text("     "),
+                    ElevatedButton(
+                      onPressed: () {
+                        CoolAlert.show(
+                            context: context,
+                            title: "نجاح!",
+                            confirmBtnColor:
+                                const Color.fromARGB(144, 64, 6, 87),
+                            type: CoolAlertType.success,
+                            backgroundColor:
+                                const Color.fromARGB(221, 212, 189, 227),
+                            text: " تم رفض المتقدم بنجاح ",
+                            confirmBtnText: 'تم',
+                            onConfirmBtnTap: () {
+                              // if (ProjectTitleList.length == 1) {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          RequestListViewPageProject()));
+                            });
+                      },
+                      style: ElevatedButton.styleFrom(
+                        surfaceTintColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(80.0)),
+                        padding: const EdgeInsets.all(0),
+                      ),
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 40.0,
+                        width: 100,
+                        decoration: new BoxDecoration(
+                            borderRadius: BorderRadius.circular(9.0),
+                            gradient: const LinearGradient(colors: [
+                              Color.fromARGB(144, 210, 2, 2),
+                              Color.fromARGB(144, 210, 2, 2)
+                            ])),
+                        padding: const EdgeInsets.all(0),
+                        child: const Text(
+                          "رفض",
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                       ),
                     ),
