@@ -1,4 +1,3 @@
-
 import 'dart:async';
 import 'package:flutter/material.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
@@ -31,7 +30,7 @@ class _UserRegistratin extends State<UserRegistratin> {
   String get FirstName => _firstnameController.text.trim();
   String get LastName => _lastnameController.text.trim();
   final _FormKey = GlobalKey<FormState>();
-  
+
   bool showpass = true;
   bool showpass1 = true;
   bool has8char = false;
@@ -100,22 +99,20 @@ class _UserRegistratin extends State<UserRegistratin> {
                         label: RichText(
                           text: TextSpan(
                             children: [
-
-                                TextSpan(
-                                    text: ' * ',
-                                    style: TextStyle(
-                                      color: Colors.red,
-                                      fontSize: 20,
-                                    )),
-                                     TextSpan(
-                                        text: 'الاسم الاول',
-                              style: const TextStyle(
-                                  fontSize: 19,
-                                  color: Color.fromARGB(199, 66, 23, 139)),
-                            )  
+                              TextSpan(
+                                  text: ' * ',
+                                  style: TextStyle(
+                                    color: Colors.red,
+                                    fontSize: 20,
+                                  )),
+                              TextSpan(
+                                text: 'الاسم الاول',
+                                style: const TextStyle(
+                                    fontSize: 19,
+                                    color: Color.fromARGB(199, 66, 23, 139)),
+                              )
                             ],
-                          
-                              ),
+                          ),
                         )),
                   ),
                 ),
@@ -398,8 +395,6 @@ class _UserRegistratin extends State<UserRegistratin> {
                     onPressed: () async {
                       if (_FormKey.currentState!.validate()) {
                         try {
-                    
-
                           print("Account Created Successfully");
 
                           print("user is stored Successfully");
@@ -450,14 +445,14 @@ class _UserRegistratin extends State<UserRegistratin> {
                       decoration: new BoxDecoration(
                           borderRadius: BorderRadius.circular(80.0),
                           gradient: new LinearGradient(colors: [
-                            Color.fromARGB(144, 67, 7, 87),
-                            Color.fromARGB(221, 137, 171, 187)
+                            Color.fromARGB(255, 14, 10, 102),
+                            Color.fromARGB(255, 14, 10, 102),
                           ])),
                       padding: const EdgeInsets.all(0),
                       child: Text(
                         "تسجيل",
                         style: TextStyle(
-                            fontSize: 14,
+                            fontSize: 16,
                             fontWeight: FontWeight.bold,
                             color: Color.fromARGB(255, 255, 255, 255)),
                       ),
@@ -467,36 +462,35 @@ class _UserRegistratin extends State<UserRegistratin> {
                 SizedBox(
                   height: 10,
                 ),
-                 Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-               
-                  GestureDetector(
-                    onTap: () => {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => UserLogin()))
-                    },
-                    child: Text(
-                      "تسجيل الدخول",
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      onTap: () => {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => UserLogin()))
+                      },
+                      child: Text(
+                        "تسجيل الدخول",
+                        style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(255, 14, 10, 102)),
+                      ),
+                    ),
+                    Text(
+                      " هل لديك حساب ؟ ",
                       style: TextStyle(
-                          decoration: TextDecoration.underline,
+                          // decoration: TextDecoration.underline,
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 14, 10, 102)),
+                          color: Color.fromARGB(123, 11, 13, 18)),
                     ),
-                  ),
-                     Text(
-                    " هل لديك حساب ؟ ",
-                    style: TextStyle(
-                        // decoration: TextDecoration.underline,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(123, 11, 13, 18)),
-                  ),
-                ],
-              )
+                  ],
+                )
                 // Container(
                 //   margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
                 //   child: GestureDetector(
@@ -521,7 +515,4 @@ class _UserRegistratin extends State<UserRegistratin> {
       ),
     );
   }
-
- 
-   
 }

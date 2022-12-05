@@ -66,17 +66,14 @@ class _chatScreenState extends State<chatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            automaticallyImplyLeading: false,
-            backgroundColor: Color.fromARGB(255, 255, 255, 255),
-            title: Text("المحادثات",
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  color: Color.fromARGB(255, 14, 10, 102),
-                )),
-            leading: Icon(
-              Icons.logout,
-              color: Color.fromARGB(255, 14, 10, 102),
-            )),
+          automaticallyImplyLeading: false,
+          backgroundColor: Color.fromARGB(255, 255, 255, 255),
+          title: Text("المحادثات",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 0, 0, 0),
+              )),
+        ),
         bottomNavigationBar: CustomNavigationBar(
           currentHomeScreen: 4,
           updatePage: () {},
@@ -93,31 +90,6 @@ class _chatScreenState extends State<chatScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Row(children: <Widget>[
-                        IconButton(
-                          icon: const Icon(
-                            Icons.arrow_back_ios,
-                            color: Color.fromARGB(255, 14, 10, 102),
-                            size: 20,
-                          ),
-                          onPressed: () {
-                            // Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //         builder: (context) => ChatScreen(
-                            //               projectName:
-                            //                   ProjectTitleList[index],
-                            //             )));
-                          },
-                        ),
-                        Expanded(child: SizedBox()),
-                        Text(
-                          " مشروع وفاق",
-                          style: const TextStyle(
-                            fontSize: 18,
-                            color: Color.fromARGB(159, 22, 35, 63),
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
                         Container(
                           padding: EdgeInsets.all(10.0),
                           width: 50,
@@ -132,17 +104,42 @@ class _chatScreenState extends State<chatScreen> {
                             ),
                           ),
                         ),
+                        Text(
+                          "بحث دراسة اثار الاضطراب الاجتماعي",
+                          style: const TextStyle(
+                            fontSize: 18,
+                            color: Color.fromARGB(255, 14, 10, 102),
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Expanded(child: SizedBox()),
+                        IconButton(
+                          icon: const Icon(
+                            Icons.arrow_forward_ios,
+                            color: Color.fromARGB(255, 14, 10, 102),
+                            size: 20,
+                          ),
+                          onPressed: () {
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => ChatScreen(
+                            //               projectName:
+                            //                   ProjectTitleList[index],
+                            //             )));
+                          },
+                        ),
                       ]),
                       if (ProjectTitleList.length != 0)
                         Row(children: [
                           SizedBox(
-                            width: 240,
+                            width: 10,
                           ),
                           Text(
-                            "!" + "الهنوف: انا سعيده بانضمامي للفريق ",
+                            "عبدالله: سعيد بإنضمامي للفريق البحثي، بإذن الله نطلعه بأفضل صوره  ",
                             style: const TextStyle(
                               overflow: TextOverflow.ellipsis,
-                              fontSize: 12,
+                              fontSize: 14,
                               color: Colors.grey,
                               fontWeight: FontWeight.w500,
                             ),
@@ -173,31 +170,6 @@ class _chatScreenState extends State<chatScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Row(children: <Widget>[
-                        IconButton(
-                          icon: const Icon(
-                            Icons.arrow_back_ios,
-                            color: Color.fromARGB(255, 14, 10, 102),
-                            size: 20,
-                          ),
-                          onPressed: () {
-                            // Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //         builder: (context) => ChatScreen(
-                            //               projectName:
-                            //                   ProjectTitleList[index],
-                            //             )));
-                          },
-                        ),
-                        Expanded(child: SizedBox()),
-                        Text(
-                          "بحث دراسة اثار الاضطراب الاجتماعي",
-                          style: const TextStyle(
-                            fontSize: 18,
-                            color: Color.fromARGB(159, 22, 35, 63),
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
                         Container(
                           padding: EdgeInsets.all(10.0),
                           width: 50,
@@ -212,17 +184,42 @@ class _chatScreenState extends State<chatScreen> {
                             ),
                           ),
                         ),
+                        Text(
+                          "مشروع عوالم",
+                          style: const TextStyle(
+                            fontSize: 18,
+                            color: Color.fromARGB(255, 14, 10, 102),
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Expanded(child: SizedBox()),
+                        IconButton(
+                          icon: const Icon(
+                            Icons.arrow_forward_ios,
+                            color: Color.fromARGB(255, 14, 10, 102),
+                            size: 20,
+                          ),
+                          onPressed: () {
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => ChatScreen(
+                            //               projectName:
+                            //                   ProjectTitleList[index],
+                            //             )));
+                          },
+                        ),
                       ]),
                       if (ProjectTitleList.length != 0)
                         Row(children: [
                           SizedBox(
-                            width: 350,
+                            width: 10,
                           ),
                           Text(
-                            "!" + "عبدالله: أهلًا ",
+                            "الهنوف: السلام عليكم ورحمة الله وبركاته  ",
                             style: const TextStyle(
                               overflow: TextOverflow.ellipsis,
-                              fontSize: 12,
+                              fontSize: 14,
                               color: Colors.grey,
                               fontWeight: FontWeight.w500,
                             ),

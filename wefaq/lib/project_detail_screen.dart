@@ -15,13 +15,8 @@ import 'package:fluttertoast/fluttertoast.dart';
 final _formKey = GlobalKey<FormState>();
 
 class projectDetailScreen extends StatefulWidget {
-  String projecName;
-
-  projectDetailScreen({required this.projecName});
-
   @override
-  State<projectDetailScreen> createState() =>
-      _projectDetailScreenState(projecName);
+  State<projectDetailScreen> createState() => _projectDetailScreenState();
 }
 
 class _projectDetailScreenState extends State<projectDetailScreen> {
@@ -30,9 +25,6 @@ class _projectDetailScreenState extends State<projectDetailScreen> {
     //getProfilePhoto();
     super.initState();
   }
-
-  String projecName;
-  _projectDetailScreenState(this.projecName);
 
   final TextEditingController _JoiningASController = TextEditingController();
   final TextEditingController _ParticipantNoteController =

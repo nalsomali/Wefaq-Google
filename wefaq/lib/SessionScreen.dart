@@ -58,27 +58,26 @@ class SessionScreensState extends State<SessionScreen> {
                       padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                       child: Column(
                         children: <Widget>[
-
                           const ListTile(
                             leading: CircleAvatar(
                               radius: 30.0,
                               backgroundImage:
                                   AssetImage('assets/images/hassan.jpeg'),
                             ),
-                            title: 
-  text: TextSpan(
-    children: [
-      TextSpan(
-        text: "Click ",
-      ),
-      WidgetSpan(
-        child: Icon(Icons.add, size: 14),
-      ),
-      TextSpan(
-        text: " to add",
-      ),
-    ],
-  ),
+                            title: Text("data"),
+                            // text: TextSpan(
+                            //   children: [
+                            //     TextSpan(
+                            //       text: "Click ",
+                            //     ),
+                            //     WidgetSpan(
+                            //       child: Icon(Icons.add, size: 14),
+                            //     ),
+                            //     TextSpan(
+                            //       text: " to add",
+                            //     ),
+                            //   ],
+                            // ),
 
                             subtitle: Text(" دكتوراة هندسة برمجيات ",
                                 style: const TextStyle(

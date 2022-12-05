@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:wefaq/resetPassword.dart';
 //import 'package:wefaq/AdminHomePage.dart';
@@ -36,7 +35,7 @@ class _UserLogin extends State<UserLogin> {
 
   @override
   void initState() {
-  //  get();
+    //  get();
     super.initState();
   }
 
@@ -66,7 +65,6 @@ class _UserLogin extends State<UserLogin> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               SizedBox(height: size.height * 0.02),
-            
               SizedBox(height: size.height * 0.2),
               Container(
                 alignment: Alignment.centerRight,
@@ -83,7 +81,7 @@ class _UserLogin extends State<UserLogin> {
               SizedBox(height: size.height * 0.02),
               Container(
                 alignment: Alignment.centerRight,
-               // alignment: Alignment.center,
+                // alignment: Alignment.center,
                 margin: EdgeInsets.symmetric(horizontal: 40),
                 child: TextFormField(
                   autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -92,7 +90,6 @@ class _UserLogin extends State<UserLogin> {
                   },
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
-                    
                       labelText: "البريد الالكتروني",
                       hintText: "example@email.com",
                       hintStyle:
@@ -171,10 +168,8 @@ class _UserLogin extends State<UserLogin> {
                 margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
                 child: ElevatedButton(
                   onPressed: () async {
-                   Navigator.push(context,
+                    Navigator.push(context,
                         MaterialPageRoute(builder: (context) => HomeScreen()));
-       
-                       
                   },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
@@ -189,14 +184,14 @@ class _UserLogin extends State<UserLogin> {
                     decoration: new BoxDecoration(
                         borderRadius: BorderRadius.circular(80.0),
                         gradient: new LinearGradient(colors: [
-                          Color.fromARGB(144, 67, 7, 87),
-                          Color.fromARGB(221, 137, 171, 187)
+                          Color.fromARGB(255, 14, 10, 102),
+                          Color.fromARGB(255, 14, 10, 102),
                         ])),
                     padding: const EdgeInsets.all(0),
                     child: Text(
                       "تسجيل الدخول",
                       style: TextStyle(
-                          fontSize: 14,
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: Color.fromARGB(255, 255, 255, 255)),
                     ),
@@ -207,7 +202,6 @@ class _UserLogin extends State<UserLogin> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                
                   GestureDetector(
                     onTap: () => {
                       Navigator.push(
@@ -224,7 +218,7 @@ class _UserLogin extends State<UserLogin> {
                           color: Color.fromARGB(255, 14, 10, 102)),
                     ),
                   ),
-                    Text(
+                  Text(
                     " ليس لديك حساب ؟ ",
                     style: TextStyle(
                         // decoration: TextDecoration.underline,
@@ -240,9 +234,4 @@ class _UserLogin extends State<UserLogin> {
       ),
     );
   }
-
- 
-
-  
-
 }
