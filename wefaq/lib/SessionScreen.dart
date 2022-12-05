@@ -64,7 +64,7 @@ class SessionScreensState extends State<SessionScreen> {
                         color: Color.fromARGB(255, 14, 10, 102),
                         fontWeight: FontWeight.w700,
                       )),
-                  subtitle: Text(" دكتوراة هندسة برمجيات ",
+                  subtitle: Text(" بكالوريوس هندسة برمجيات ",
                       style: const TextStyle(
                         fontSize: 16,
                         color: Color.fromARGB(255, 38, 70, 138),
@@ -72,7 +72,7 @@ class SessionScreensState extends State<SessionScreen> {
                   trailing: IconButton(
                       icon: Icon(
                         Icons.arrow_forward_ios,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: Color.fromARGB(255, 151, 151, 151),
                       ),
                       onPressed: () {
                         Navigator.push(
@@ -97,14 +97,14 @@ class SessionScreensState extends State<SessionScreen> {
                     backgroundImage: AssetImage('assets/images/abdualaziz.jpg'),
                   ),
                   title: Text(
-                    "  د.عبدالعزيز العريج  ",
+                    "  م.عبدالعزيز العريج  ",
                     style: const TextStyle(
                       fontSize: 19,
                       color: Color.fromARGB(255, 14, 10, 102),
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  subtitle: Text(" دكتوراة هندسة برمجيات ",
+                  subtitle: Text(" رئيس مجلس ادارة جمعية المبرمجين ",
                       style: const TextStyle(
                         fontSize: 16,
                         color: Color.fromARGB(255, 38, 70, 138),
@@ -112,7 +112,7 @@ class SessionScreensState extends State<SessionScreen> {
                   trailing: IconButton(
                       icon: Icon(
                         Icons.arrow_forward_ios,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: Color.fromARGB(255, 151, 151, 151),
                       ),
                       onPressed: () {
                         Navigator.push(
@@ -145,7 +145,7 @@ class SessionScreensState extends State<SessionScreen> {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  subtitle: Text(" دكتوراة فيزياد نووية ",
+                  subtitle: Text(" دكتوراة فيزياء نووية ",
                       style: const TextStyle(
                         fontSize: 16,
                         color: Color.fromARGB(255, 38, 70, 138),
@@ -153,7 +153,7 @@ class SessionScreensState extends State<SessionScreen> {
                   trailing: IconButton(
                       icon: Icon(
                         Icons.arrow_forward_ios,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: Color.fromARGB(255, 151, 151, 151),
                       ),
                       onPressed: () {
                         Navigator.push(
@@ -185,7 +185,7 @@ class SessionScreensState extends State<SessionScreen> {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  subtitle: Text(" دكتوراة هندسة برمجيات ",
+                  subtitle: Text(" خبيرة ذكاء اصطناعي ",
                       style: const TextStyle(
                         fontSize: 16,
                         color: Color.fromARGB(255, 38, 70, 138),
@@ -193,7 +193,7 @@ class SessionScreensState extends State<SessionScreen> {
                   trailing: IconButton(
                       icon: Icon(
                         Icons.arrow_forward_ios,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: Color.fromARGB(255, 151, 151, 151),
                       ),
                       onPressed: () {
                         Navigator.push(
@@ -225,7 +225,7 @@ class SessionScreensState extends State<SessionScreen> {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  subtitle: Text(" دكتوراة هندسة برمجيات ",
+                  subtitle: Text(" دكتوراة علوم حاسب ",
                       style: const TextStyle(
                         fontSize: 16,
                         color: Color.fromARGB(255, 38, 70, 138),
@@ -233,7 +233,7 @@ class SessionScreensState extends State<SessionScreen> {
                   trailing: IconButton(
                       icon: Icon(
                         Icons.arrow_forward_ios,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: Color.fromARGB(255, 151, 151, 151),
                       ),
                       onPressed: () {
                         Navigator.push(
@@ -265,7 +265,7 @@ class SessionScreensState extends State<SessionScreen> {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  subtitle: Text(" دكتوراة هندسة برمجيات ",
+                  subtitle: Text(" مستشار اداري تقني ",
                       style: const TextStyle(
                         fontSize: 16,
                         color: Color.fromARGB(255, 38, 70, 138),
@@ -273,7 +273,7 @@ class SessionScreensState extends State<SessionScreen> {
                   trailing: IconButton(
                       icon: Icon(
                         Icons.arrow_forward_ios,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: Color.fromARGB(255, 151, 151, 151),
                       ),
                       onPressed: () {
                         Navigator.push(
@@ -306,7 +306,7 @@ class SessionScreensState extends State<SessionScreen> {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  subtitle: Text(" دكتوراة هندسة برمجيات ",
+                  subtitle: Text(" بكالوريوس هندسة برمجيات ",
                       style: const TextStyle(
                         fontSize: 16,
                         color: Color.fromARGB(255, 38, 70, 138),

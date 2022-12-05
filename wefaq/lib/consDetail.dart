@@ -120,17 +120,17 @@ class _viewprofileState extends State<viewotherprofile> {
                                               width: 120,
                                               decoration: BoxDecoration(
                                                 color: Color.fromARGB(
-                                                    201, 231, 229, 229),
+                                                    255, 72, 119, 194),
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),
                                               child: Text(
                                                 "حجز جلسة",
                                                 style: TextStyle(
-                                                  fontWeight: FontWeight.bold,
+                                                  //  fontWeight: FontWeight.bold,
                                                   color: Color.fromARGB(
-                                                      255, 63, 83, 147),
-                                                  fontSize: 18,
+                                                      255, 255, 255, 255),
+                                                  fontSize: 17,
                                                 ),
                                               ),
                                             ))
@@ -235,7 +235,7 @@ class _viewprofileState extends State<viewotherprofile> {
                             size: 33,
                           ),
                         ),
-                        ListTile(
+                        /* ListTile(
                           title: Text(" "),
                           subtitle: ElevatedButton(
                             child: Text('حجز جلسة'),
@@ -248,7 +248,7 @@ class _viewprofileState extends State<viewotherprofile> {
                                     fontSize: 18,
                                     fontWeight: FontWeight.normal)),
                           ),
-                        ),
+                        ),*/
                       ],
                     ),
                   ),
