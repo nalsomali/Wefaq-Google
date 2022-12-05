@@ -99,6 +99,10 @@ class _UserRegistratin extends State<UserRegistratin> {
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         label: RichText(
                           text: TextSpan(
+                              text: 'الاسم الاول',
+                                style: const TextStyle(
+                                    fontSize: 19,
+                                    color: Color.fromARGB(255, 14, 10, 102)),
                             children: [
                               TextSpan(
                                   text: ' * ',
@@ -107,12 +111,10 @@ class _UserRegistratin extends State<UserRegistratin> {
                                     fontSize: 20,
                                   )),
                               TextSpan(
-                                text: 'الاسم الاول',
-                                style: const TextStyle(
-                                    fontSize: 19,
-                                    color: Color.fromARGB(255, 14, 10, 102)),
+                              
                               )
                             ],
+                            
                           ),
                         )),
                   ),
@@ -340,7 +342,7 @@ class _UserRegistratin extends State<UserRegistratin> {
                             text: 'تأكيد كلمة المرور',
                             style: const TextStyle(
                                 fontSize: 19,
-                                color: Color.fromARGB(199, 66, 23, 139)),
+                                color: Color.fromARGB(255, 14, 10, 102)),
                             children: [
                               TextSpan(
                                   text: ' *',
