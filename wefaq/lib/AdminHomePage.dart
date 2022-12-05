@@ -19,7 +19,7 @@ class HomeScreenState extends State<adminHomeScreen> {
           currentHomeScreen: 2,
           updatePage: () {},
         ),
-        backgroundColor: Color.fromARGB(255, 245, 244, 255),
+        backgroundColor: Color.fromARGB(255, 241, 246, 253),
         body: adminBackgroundHome(
             child: Stack(
           children: <Widget>[
@@ -36,30 +36,38 @@ class HomeScreenState extends State<adminHomeScreen> {
                       ),
                       Expanded(
                         child: GridView.count(
-                          crossAxisCount: 1,
-                          childAspectRatio: 3,
-                          crossAxisSpacing: 10,
-                          mainAxisSpacing: 50,
+                          crossAxisCount: 2,
+                          childAspectRatio: 1,
+                          crossAxisSpacing: 20,
+                          mainAxisSpacing: 20,
                           children: <Widget>[
                             CategoryCard(
-                                title: "المشاريع",
-                                imgSrc: "01.png",
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              adminProjectsListViewPage()));
-                                }),
-                            CategoryCard(
                                 title: "طلبات الإنضمام",
-                                imgSrc: "02.png",
+                                icon: Icon(
+                                  Icons.person_add_alt_outlined,
+                                  size: 45,
+                                  color: Color.fromARGB(255, 18, 15, 84),
+                                ),
                                 onTap: () {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
                                               RequestListViewPageProject()));
+                                }),
+                            CategoryCard(
+                                title: "البحوث و المشاريع",
+                                icon: Icon(
+                                  Icons.lightbulb_outlined,
+                                  size: 45,
+                                  color: Color.fromARGB(255, 18, 15, 84),
+                                ),
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              adminProjectsListViewPage()));
                                 }),
                           ],
                         ),
@@ -76,13 +84,13 @@ class HomeScreenState extends State<adminHomeScreen> {
 
 class CategoryCard extends StatelessWidget {
   final String title;
-  final String imgSrc;
+  final Icon icon;
 
   final Function() onTap;
 
   const CategoryCard({
+    required this.icon,
     required this.title,
-    required this.imgSrc,
     required this.onTap,
   });
 
@@ -103,9 +111,6 @@ class CategoryCard extends StatelessWidget {
               color: Color.fromARGB(218, 161, 158, 162),
             ),
           ],
-          image: new DecorationImage(
-            image: new AssetImage("images/$imgSrc"),
-          ),
         ),
         child: Material(
           color: Color.fromARGB(0, 167, 22, 22),
@@ -116,11 +121,12 @@ class CategoryCard extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Spacer(),
+                  icon,
                   Spacer(),
                   Text("$title",
                       style: TextStyle(
                           fontSize: 16,
-                          color: Color.fromARGB(255, 61, 132, 163),
+                          color: Color.fromARGB(255, 18, 15, 84),
                           fontWeight: FontWeight.w600)),
                 ],
               ),

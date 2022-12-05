@@ -20,7 +20,7 @@ class adminBackgroundHome extends StatelessWidget {
         children: <Widget>[
           Positioned(
             child: Image.asset(
-              "images/backgoundAdmin.png.png",
+              "assets/images/igoogle.png",
             ),
           ),
           child
