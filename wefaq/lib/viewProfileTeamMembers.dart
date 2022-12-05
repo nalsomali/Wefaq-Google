@@ -1,11 +1,9 @@
-import 'dart:ffi';
-
-import 'package:cool_alert/cool_alert.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:get/route_manager.dart';
 import 'package:wefaq/UserLogin.dart';
+import 'package:wefaq/rateTeammates.dart';
 import 'myProject.dart';
 import 'navBar.dart';
 // import 'package:wefaq/myProjects.dart';
@@ -37,23 +35,24 @@ class _viewProfileTeamMembersState extends State<viewProfileTeamMembers> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 238, 237, 240),
-      // appBar: AppBar(
-      //   automaticallyImplyLeading: false,
-      //   title: Text('Profile', style: TextStyle(color: Colors.white)),
-      //   actions: <Widget>[
-      //     IconButton(
-      //         icon: Icon(
-      //           Icons.logout,
-      //           color: Color.fromARGB(255, 255, 255, 255),
-      //         ),
-      //         onPressed: () {
-      //           showDialogFunc2(context);
-      //         }),
-      //   ],
-      //   backgroundColor: Color.fromARGB(255, 145, 124, 178),
-      // ),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Text(' ', style: TextStyle(color: Colors.white)),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(
+                Icons.arrow_forward_ios,
+                color: Color.fromARGB(255, 48, 66, 109),
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => rateTeammates()));
+              }),
+        ],
+        backgroundColor: Color.fromARGB(255, 192, 201, 221),
+      ),
       bottomNavigationBar: CustomNavigationBar(
-        currentHomeScreen: 5,
+        currentHomeScreen: 4,
         updatePage: () {},
       ),
       body: SingleChildScrollView(

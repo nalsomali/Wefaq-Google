@@ -3,24 +3,20 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:get/route_manager.dart';
+import 'package:wefaq/Groupchat.dart';
 import 'package:wefaq/HomePage.dart';
 import 'package:wefaq/UserLogin.dart';
-import 'package:wefaq/groupchat.dart';
 import 'package:wefaq/viewProfileTeamMembers.dart';
 
+import 'navBar.dart';
+
 class rateTeammates extends StatefulWidget {
-  String projectName;
-  rateTeammates({
-    required this.projectName,
-  });
   @override
-  _rateTeammates createState() => _rateTeammates(projectName);
+  _rateTeammates createState() => _rateTeammates();
 }
 
 class _rateTeammates extends State<rateTeammates> {
-  String projectName;
-  _rateTeammates(this.projectName);
-
   var usersNames = [];
   var usersEmails = [];
 
@@ -34,24 +30,36 @@ class _rateTeammates extends State<rateTeammates> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      bottomNavigationBar: CustomNavigationBar(
+        currentHomeScreen: 4,
+        updatePage: () {},
+      ),
       appBar: AppBar(
-        leading: IconButton(
-            icon: Icon(
-              Icons.arrow_forward_ios,
-              color: Color.fromARGB(255, 85, 85, 85),
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            }),
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        automaticallyImplyLeading: false,
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(
+                Icons.arrow_forward_ios,
+                color: Color.fromARGB(255, 48, 66, 109),
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => chatRoomGoogle()));
+              }),
+        ],
+        backgroundColor: Color.fromARGB(255, 242, 241, 241),
         title: Row(
           children: [
             //Image.network('assets/images/logo.png', height: 70),
             SizedBox(width: 5),
-            Text(
-              "قيّم زملائك",
-              style: TextStyle(color: Colors.white),
-            ),
+            Center(
+              child: Text(
+                "قيّم زملائك",
+                style:
+                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              ),
+            )
           ],
         ),
       ),
@@ -60,6 +68,7 @@ class _rateTeammates extends State<rateTeammates> {
         SizedBox(
           height: 10,
         ),
+
         Card(
           margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
           shape: RoundedRectangleBorder(
@@ -71,7 +80,8 @@ class _rateTeammates extends State<rateTeammates> {
           child: ListTile(
             leading: CircleAvatar(
               radius: 30.0,
-              backgroundImage: AssetImage('assets/images/hassan.jpeg'),
+              backgroundImage: NetworkImage(
+                  'https://firebasestorage.googleapis.com/v0/b/wefaq-5f47b.appspot.com/o/images%2Fprivate%2Fvar%2Fmobile%2FContainers%2FData%2FApplication%2FC908E9E7-E3D6-48F8-BD9C-5D0BEDCD799D%2Ftmp%2Fimage_picker_8D66EA46-E0D8-49D0-9ABC-F60A3E6DEF4B-720-00000072D1339A8C.png?alt=media&token=01f9fc26-3478-4833-8532-9ed16012a716'),
             ),
             title: Text("  الهنوف العواد ",
                 style: const TextStyle(
@@ -85,6 +95,12 @@ class _rateTeammates extends State<rateTeammates> {
                   color: Color.fromARGB(255, 38, 70, 138),
                 )),
             trailing: Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => viewProfileTeamMembers()));
+            },
             isThreeLine: true,
           ),
         ),

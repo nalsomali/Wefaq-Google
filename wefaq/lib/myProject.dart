@@ -32,6 +32,7 @@ class ListViewPageState extends State<userProjects> {
       children: [
         Expanded(
             child: Scaffold(
+                backgroundColor: Colors.white,
                 bottomNavigationBar: CustomNavigationBar(
                   currentHomeScreen: 5,
                   updatePage: () {},
