@@ -38,16 +38,10 @@ class _viewprofileState extends State<viewprofile> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 237, 238, 240),
       appBar: AppBar(
-        leading: IconButton(
-            icon: Icon(
-              Icons.logout,
-              color: Color.fromARGB(255, 16, 41, 92),
-            ),
-            onPressed: () {}),
         automaticallyImplyLeading: false,
         title: Text('الملف الشخصي',
             style: TextStyle(
-              color: Color.fromARGB(255, 16, 41, 92),
+              color: Color.fromARGB(255, 0, 0, 0),
             )),
         backgroundColor: const Color.fromARGB(255, 242, 241, 241),
       ),

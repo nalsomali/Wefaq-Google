@@ -20,7 +20,7 @@ class _viewprofileState extends State<viewotherprofile> {
       appBar: AppBar(
         leading: IconButton(
             icon: Icon(
-              Icons.arrow_forward_ios,
+              Icons.arrow_back_ios,
               color: Color.fromARGB(255, 0, 0, 0),
             ),
             onPressed: () {
@@ -38,7 +38,7 @@ class _viewprofileState extends State<viewotherprofile> {
             )),
       ),
       bottomNavigationBar: CustomNavigationBar(
-        currentHomeScreen: 0,
+        currentHomeScreen: 3,
         updatePage: () {},
       ),
       body: SingleChildScrollView(

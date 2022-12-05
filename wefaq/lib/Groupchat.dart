@@ -191,6 +191,21 @@ class ChatScreenState extends State<chatRoomGoogle> {
           title: Row(
             children: [
               Expanded(
+                  child: Container(
+                // margin: EdgeInsets.only(right: 0),
+                child: IconButton(
+                    icon: const Icon(
+                      Icons.arrow_back_ios,
+                      color: Color.fromARGB(255, 14, 10, 102),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => chatScreen()));
+                    }),
+              )),
+              Expanded(
                   child: Image.asset('assets/images/teamg.png', height: 40)),
               SizedBox(width: 10),
               Text(
@@ -213,21 +228,6 @@ class ChatScreenState extends State<chatRoomGoogle> {
                               builder: (context) => rateTeammates()));
                     }),
               ),
-              Expanded(
-                  child: Container(
-                // margin: EdgeInsets.only(right: 0),
-                child: IconButton(
-                    icon: const Icon(
-                      Icons.arrow_forward_ios,
-                      color: Color.fromARGB(255, 14, 10, 102),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => chatScreen()));
-                    }),
-              ))
             ],
           ),
         ),

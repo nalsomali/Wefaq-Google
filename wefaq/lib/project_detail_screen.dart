@@ -281,7 +281,7 @@ class _projectDetailScreenState extends State<projectDetailScreen> {
                                     color: Color.fromARGB(255, 14, 10, 102)),
                               ),
                               Text(
-                                "كلية الاداب",
+                                "كلية علوم الحاسب و المعلومات",
                                 style: Theme.of(context).textTheme.titleSmall,
                               ),
                             ],
@@ -642,8 +642,7 @@ class _projectDetailScreenState extends State<projectDetailScreen> {
                                 type: CoolAlertType.success,
                                 backgroundColor:
                                     Color.fromARGB(144, 176, 175, 175),
-                                text:
-                                    "please select one role at least to join the project",
+                                text: "",
                                 confirmBtnText: 'اغلاق',
                                 onConfirmBtnTap: () {
                                   Navigator.of(context).pop();
@@ -705,8 +704,7 @@ class _projectDetailScreenState extends State<projectDetailScreen> {
                                 type: CoolAlertType.success,
                                 backgroundColor:
                                     Color.fromARGB(144, 176, 175, 175),
-                                text:
-                                    "please select one role at least to join the project",
+                                text: " ",
                                 confirmBtnText: 'اغلاق',
                                 onConfirmBtnTap: () {
                                   Navigator.of(context).pop();

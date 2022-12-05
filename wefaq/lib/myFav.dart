@@ -24,6 +24,15 @@ class SessionScreensState extends State<FavScreen> {
           child: Scaffold(
             backgroundColor: Color.fromARGB(255, 255, 255, 255),
             appBar: AppBar(
+              leading: IconButton(
+                  icon: Icon(
+                    Icons.arrow_back_ios,
+                    color: Color.fromARGB(255, 48, 66, 109),
+                  ),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                  }),
               automaticallyImplyLeading: false,
               shadowColor: Color.fromARGB(255, 215, 215, 215),
               elevation: 0.8,
