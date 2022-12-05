@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_new
+
 import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
@@ -126,7 +128,7 @@ class MapSampleState extends State<MapSample> {
   Widget build(BuildContext context) {
     return new Scaffold(
       floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: Color.fromARGB(255, 242, 241, 241),
+        backgroundColor: const Color.fromARGB(255, 242, 241, 241),
         onPressed: _goToCurrentLocation,
         label: const Text(
           'الموقع الحالي',
@@ -138,21 +140,21 @@ class MapSampleState extends State<MapSample> {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 2, left: 1, right: 1),
+            margin: const EdgeInsets.only(top: 2, left: 1, right: 1),
             child: TextFormField(
               controller: _startSearchFieldController,
               decoration: InputDecoration(
                   hintText: 'ابحث',
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                       fontSize: 16, color: Color.fromARGB(255, 202, 198, 198)),
-                  border: OutlineInputBorder(
+                  border: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.black87, width: 2.0),
                   ),
                   suffixIcon: _startSearchFieldController.text.isEmpty
-                      ? Icon(Icons.search,
+                      ? const Icon(Icons.search,
                           color: Color.fromARGB(255, 14, 10, 102))
                       : IconButton(
-                          icon: Icon(Icons.search,
+                          icon: const Icon(Icons.search,
                               color: Color.fromARGB(221, 137, 171, 187)),
                           onPressed: () {
                             changeLocation();
@@ -182,7 +184,7 @@ class MapSampleState extends State<MapSample> {
                 itemCount: predictions.length,
                 itemBuilder: (context, index) {
                   return ListTile(
-                    leading: CircleAvatar(
+                    leading: const CircleAvatar(
                       backgroundColor: Color.fromARGB(221, 137, 171, 187),
                       child: Icon(
                         Icons.pin_drop,
@@ -218,10 +220,10 @@ class MapSampleState extends State<MapSample> {
                 ),
               ].toSet(),
               mapType: MapType.normal,
-              markers: markers.toSet(),
               onMapCreated: (GoogleMapController controller) {
                 _controller.complete(controller);
               },
+              markers: markers.toSet(),
               initialCameraPosition:
                   CameraPosition(target: currentLatLng, zoom: 14),
               myLocationEnabled: true,
