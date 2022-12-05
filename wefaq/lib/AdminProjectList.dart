@@ -30,20 +30,18 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                 updatePage: () {},
               ),
               appBar: AppBar(
+                leading: IconButton(
+                    icon: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Color.fromARGB(255, 14, 10, 102),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => adminHomeScreen()));
+                    }),
                 backgroundColor: Color.fromARGB(255, 255, 255, 255),
-                actions: <Widget>[
-                  IconButton(
-                      icon: Icon(
-                        Icons.arrow_forward_ios,
-                        color: Color.fromARGB(255, 14, 10, 102),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => adminHomeScreen()));
-                      }),
-                ],
                 title: Text('المشاريع',
                     style: TextStyle(
                       fontWeight: FontWeight.normal,

@@ -36,19 +36,17 @@ class _viewProfileTeamMembersState extends State<viewProfileTeamMembers> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 238, 237, 240),
       appBar: AppBar(
+        leading: IconButton(
+            icon: Icon(
+              Icons.arrow_forward_ios,
+              color: Color.fromARGB(255, 48, 66, 109),
+            ),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => rateTeammates()));
+            }),
         automaticallyImplyLeading: false,
         title: Text(' ', style: TextStyle(color: Colors.white)),
-        actions: <Widget>[
-          IconButton(
-              icon: Icon(
-                Icons.arrow_forward_ios,
-                color: Color.fromARGB(255, 48, 66, 109),
-              ),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => rateTeammates()));
-              }),
-        ],
         backgroundColor: Color.fromARGB(255, 192, 201, 221),
       ),
       bottomNavigationBar: CustomNavigationBar(

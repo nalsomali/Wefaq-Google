@@ -1,6 +1,7 @@
 import 'package:cool_alert/cool_alert.dart';
 import 'package:flutter/material.dart';
 import 'package:wefaq/AdminNavBar.dart';
+import 'GroupChatAdmin.dart';
 import 'navBar.dart';
 
 class AdminChatScreen extends StatefulWidget {
@@ -75,7 +76,13 @@ class _chatScreenState extends State<AdminChatScreen> {
                             color: Color.fromARGB(255, 14, 10, 102),
                             size: 20,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        chatRoomGoogleAdmin()));
+                          },
                         ),
                       ]),
                       Row(children: const [
@@ -98,7 +105,12 @@ class _chatScreenState extends State<AdminChatScreen> {
                   ),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => chatRoomGoogleAdmin()));
+              },
             ),
           ),
           SizedBox(
@@ -141,7 +153,13 @@ class _chatScreenState extends State<AdminChatScreen> {
                             color: Color.fromARGB(255, 14, 10, 102),
                             size: 20,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        chatRoomGoogleAdmin()));
+                          },
                         ),
                       ]),
                       Row(children: const [
@@ -162,7 +180,12 @@ class _chatScreenState extends State<AdminChatScreen> {
                   ),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => chatRoomGoogleAdmin()));
+              },
             ),
           )
         ]));

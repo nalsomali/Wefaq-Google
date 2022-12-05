@@ -36,18 +36,16 @@ class _rateTeammates extends State<rateTeammates> {
         updatePage: () {},
       ),
       appBar: AppBar(
+        leading: IconButton(
+            icon: Icon(
+              Icons.arrow_forward_ios,
+              color: Color.fromARGB(255, 48, 66, 109),
+            ),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => chatRoomGoogle()));
+            }),
         automaticallyImplyLeading: false,
-        actions: <Widget>[
-          IconButton(
-              icon: Icon(
-                Icons.arrow_forward_ios,
-                color: Color.fromARGB(255, 48, 66, 109),
-              ),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => chatRoomGoogle()));
-              }),
-        ],
         backgroundColor: Color.fromARGB(255, 242, 241, 241),
         title: Row(
           children: [

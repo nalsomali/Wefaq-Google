@@ -29,14 +29,7 @@ class _RequestListProject extends State<RequestListViewPageProject> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-        title: const Text('طلبات الانضمام',
-            style: TextStyle(
-              fontWeight: FontWeight.normal,
-              color: Color.fromARGB(255, 14, 10, 102),
-            )),
-        actions: <Widget>[
-          IconButton(
+        leading: IconButton(
             icon: const Icon(
               Icons.arrow_forward_ios,
               color: Color.fromARGB(255, 14, 10, 102),
@@ -44,9 +37,13 @@ class _RequestListProject extends State<RequestListViewPageProject> {
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => adminHomeScreen()));
-            },
-          ),
-        ],
+            }),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        title: const Text('طلبات الانضمام',
+            style: TextStyle(
+              fontWeight: FontWeight.normal,
+              color: Color.fromARGB(255, 14, 10, 102),
+            )),
       ),
       bottomNavigationBar: AdminCustomNavigationBar(
         currentHomeScreen: 2,

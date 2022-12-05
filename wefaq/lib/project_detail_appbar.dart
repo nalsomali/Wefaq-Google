@@ -53,38 +53,36 @@ class DetailAppBar extends StatelessWidget {
         ),
       ),
       leadingWidth: 80.0,
-      actions: <Widget>[
-        Container(
-          margin: const EdgeInsets.only(left: 24.0),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(56.0),
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
-              child: Container(
-                height: 56.0,
-                width: 56.0,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  //   color: Colors.white.withOpacity(0.30),
-                ),
-                child: IconButton(
-                    icon: Icon(
-                      Icons.arrow_forward_ios,
-                      color: Color.fromARGB(255, 4, 43, 102),
-                      size: 30,
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ProjectsTabs()));
-                    }),
+      leading: Container(
+        margin: const EdgeInsets.only(left: 24.0),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(56.0),
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
+            child: Container(
+              height: 56.0,
+              width: 56.0,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                //   color: Colors.white.withOpacity(0.30),
               ),
+              child: IconButton(
+                  icon: Icon(
+                    Icons.arrow_forward_ios,
+                    color: Color.fromARGB(255, 4, 43, 102),
+                    size: 30,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ProjectsTabs()));
+                  }),
             ),
           ),
         ),
-      ],
+      ),
     );
   }
 }

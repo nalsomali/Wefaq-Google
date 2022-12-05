@@ -38,6 +38,14 @@ class ListViewPageState extends State<userProjects> {
                   updatePage: () {},
                 ),
                 appBar: AppBar(
+                  leading: IconButton(
+                      icon: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      }),
                   title: Text(
                     'المشاركات',
                     style: TextStyle(
@@ -48,16 +56,6 @@ class ListViewPageState extends State<userProjects> {
                   ),
                   automaticallyImplyLeading: false,
                   backgroundColor: Color.fromARGB(255, 255, 255, 255),
-                  actions: <Widget>[
-                    IconButton(
-                        icon: Icon(
-                          Icons.arrow_forward_ios,
-                          color: Color.fromARGB(255, 0, 0, 0),
-                        ),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        }),
-                  ],
                 ),
                 // Main List View With Builder
                 body: ListView(children: [

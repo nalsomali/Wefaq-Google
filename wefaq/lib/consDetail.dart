@@ -18,21 +18,19 @@ class _viewprofileState extends State<viewotherprofile> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 242, 241, 241),
       appBar: AppBar(
+        leading: IconButton(
+            icon: Icon(
+              Icons.arrow_forward_ios,
+              color: Color.fromARGB(255, 0, 0, 0),
+            ),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SessionScreen()));
+            }),
         automaticallyImplyLeading: false,
         shadowColor: Color.fromARGB(255, 215, 215, 215),
         elevation: 0.8,
         backgroundColor: Color.fromARGB(255, 242, 241, 241),
-        actions: <Widget>[
-          IconButton(
-              icon: Icon(
-                Icons.arrow_forward_ios,
-                color: Color.fromARGB(255, 0, 0, 0),
-              ),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SessionScreen()));
-              }),
-        ],
         title: Text(' حساب المستشار ',
             style: TextStyle(
               fontWeight: FontWeight.bold,

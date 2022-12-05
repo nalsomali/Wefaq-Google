@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:google_place/google_place.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
+import 'package:wefaq/AdminChats.dart';
 import 'package:wefaq/chats.dart';
 import 'package:wefaq/rateTeammates.dart';
 import 'package:http/http.dart' as http;
@@ -19,12 +20,12 @@ String FileText = 'test';
 late String userEmail;
 var tokens = [];
 
-class chatRoomGoogle extends StatefulWidget {
+class chatRoomGoogleAdmin extends StatefulWidget {
   @override
   ChatScreenState createState() => ChatScreenState();
 }
 
-class ChatScreenState extends State<chatRoomGoogle> {
+class ChatScreenState extends State<chatRoomGoogleAdmin> {
   @override
   void initState() {
     super.initState();
@@ -199,22 +200,8 @@ class ChatScreenState extends State<chatRoomGoogle> {
                   color: Color.fromARGB(255, 14, 10, 102),
                 ),
               ),
+              Expanded(child: SizedBox()),
               Container(
-                margin: EdgeInsets.only(right: 180),
-                child: IconButton(
-                    icon: const Icon(
-                      Icons.star_border_purple500_outlined,
-                      color: Color.fromARGB(255, 14, 10, 102),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => rateTeammates()));
-                    }),
-              ),
-              Expanded(
-                  child: Container(
                 // margin: EdgeInsets.only(right: 0),
                 child: IconButton(
                     icon: const Icon(
@@ -225,9 +212,9 @@ class ChatScreenState extends State<chatRoomGoogle> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => chatScreen()));
+                              builder: (context) => AdminChatScreen()));
                     }),
-              ))
+              )
             ],
           ),
         ),
