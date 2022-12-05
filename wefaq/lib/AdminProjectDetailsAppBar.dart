@@ -67,8 +67,8 @@ class adminDetailAppBar extends StatelessWidget {
               ),
               child: IconButton(
                   icon: Icon(
-                    Icons.arrow_forward_ios,
-                    color: Color.fromARGB(255, 112, 71, 168),
+                    Icons.arrow_back_ios,
+                    color: Color.fromARGB(255, 14, 10, 102),
                     size: 30,
                   ),
                   onPressed: () {

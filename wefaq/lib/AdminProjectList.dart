@@ -25,6 +25,7 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
       children: [
         Expanded(
           child: Scaffold(
+              backgroundColor: Color.fromARGB(255, 255, 255, 255),
               bottomNavigationBar: AdminCustomNavigationBar(
                 currentHomeScreen: 2,
                 updatePage: () {},
@@ -32,7 +33,7 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
               appBar: AppBar(
                 leading: IconButton(
                     icon: Icon(
-                      Icons.arrow_forward_ios,
+                      Icons.arrow_back_ios,
                       color: Color.fromARGB(255, 14, 10, 102),
                     ),
                     onPressed: () {
