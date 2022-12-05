@@ -28,6 +28,7 @@ class _RequestListProject extends State<RequestListViewPageProject> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
         leading: IconButton(
             icon: const Icon(
@@ -42,7 +43,7 @@ class _RequestListProject extends State<RequestListViewPageProject> {
         title: const Text('طلبات الانضمام',
             style: TextStyle(
               fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(206, 0, 0, 0),
+              color: Color.fromARGB(206, 0, 0, 0),
             )),
       ),
       bottomNavigationBar: AdminCustomNavigationBar(
@@ -220,7 +221,7 @@ showDialogFunc(context) {
                         "هل تود قبول أم رفض الطلب ؟",
                         style: TextStyle(
                           fontSize: 20,
-                          color: Color.fromARGB(159, 30, 27, 31),
+                          color: Color.fromARGB(159, 0, 0, 0),
                           fontWeight: FontWeight.bold,
                         ),
                       ),

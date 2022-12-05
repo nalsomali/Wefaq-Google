@@ -22,6 +22,7 @@ class _chatScreenState extends State<AdminChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         appBar: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: const Color.fromARGB(255, 255, 255, 255),

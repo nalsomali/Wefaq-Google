@@ -59,6 +59,7 @@ class _PostProjectState extends State<PostProject> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
