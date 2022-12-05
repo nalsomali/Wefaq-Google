@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wefaq/SessionScreen.dart';
+import 'package:wefaq/myProject.dart';
 import 'package:wefaq/navBar.dart';
 
 class viewotherprofile extends StatefulWidget {
@@ -113,7 +114,14 @@ class _viewprofileState extends State<viewotherprofile> {
                                     Column(
                                       children: <Widget>[
                                         GestureDetector(
-                                            onTap: () {},
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        userProjects()),
+                                              );
+                                            },
                                             child: Container(
                                               alignment: Alignment.center,
                                               height: 30,
@@ -235,6 +243,7 @@ class _viewprofileState extends State<viewotherprofile> {
                             size: 33,
                           ),
                         ),
+
                         /* ListTile(
                           title: Text(" "),
                           subtitle: ElevatedButton(
