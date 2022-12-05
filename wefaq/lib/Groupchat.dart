@@ -115,29 +115,6 @@ class ChatScreenState extends State<chatRoomGoogle> {
       Navigator.of(context).pop();
   }
 
-  // Future Camera() async {
-  //   XFile? image = await _picker.pickImage(source: ImageSource.camera);
-  //   setState(() {
-  //     imageFile = File(image!.path);
-  //   });
-  //   fileUrl = uploadImageToFirebase(imageFile!).toString();
-  //   Navigator.of(context).pop();
-  // }
-
-  // Future selectSingleImage() async {
-  //   print("Getting Image from Gallery.");
-  //   XFile? result = await _picker.pickImage(source: ImageSource.gallery);
-  //   if (result != null) {
-  //     print(result);
-  //     setState(() {
-  //       imageFile = File(result!.path);
-  //     });
-  //     Navigator.of(context).pop();
-  //     fileUrl = uploadImageToFirebase(imageFile!).toString();
-  //     Navigator.of(context).pop();
-  //   } else
-  //     Navigator.of(context).pop();
-  // }
   options(BuildContext context) {
     var messageText;
 
@@ -621,6 +598,60 @@ class ChatScreenState extends State<chatRoomGoogle> {
               //       ],
               //     ),
               //   )
+              SizedBox(
+                height: 100,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  border: Border(
+                    top: BorderSide(
+                      color: Color.fromARGB(255, 79, 134, 196),
+                      width: 2,
+                    ),
+                  ),
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: TextFormField(
+                        maxLines: null,
+                        onChanged: (value) {},
+                        decoration: InputDecoration(
+                          suffixIcon: TextButton(
+                              onPressed: () async {},
+                              child: CircleAvatar(
+                                // backgroundColor: MyTheme.kAccentColor,
+                                child: Icon(
+                                  Icons.send,
+                                  color: Colors.white,
+                                ),
+                                backgroundColor:
+                                    Color.fromARGB(108, 56, 82, 111),
+                              )),
+                          // : Row(children: [
+                          //     IconButton(
+                          //         onPressed: () {},
+                          //         icon: Icon(startRecord
+                          //             ? Icons.stop_circle
+                          //             : Icons.mic)),
+                          //     IconButton(
+                          //       onPressed: () => options(context),
+                          //       icon: Icon(Icons.attach_file_outlined),
+                          //     ),
+                          //   ]),
+                          contentPadding: EdgeInsets.symmetric(
+                            vertical: 10,
+                            horizontal: 20,
+                          ),
+                          hintText: 'اكتب رسالتك هنا..،',
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              )
             ])));
   }
 }
