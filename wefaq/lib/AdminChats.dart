@@ -182,7 +182,7 @@ showDialogFunc(context) {
     },
 
     type: CoolAlertType.confirm,
-    backgroundColor: const Color.fromARGB(221, 212, 189, 227),
+    backgroundColor: Color.fromARGB(255, 255, 255, 255),
     text: "Are you sure you want to log out?",
   );
 }
