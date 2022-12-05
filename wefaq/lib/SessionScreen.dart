@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wefaq/HomePage.dart';
+import 'package:wefaq/consDetail.dart';
 import 'package:wefaq/navBar.dart';
 
 class SessionScreen extends StatefulWidget {
@@ -41,7 +42,9 @@ class SessionScreensState extends State<SessionScreen> {
             // Main List View With Builder
             body: ListView(children: [
               // Card Which Holds Layout Of ListView Item
-
+              SizedBox(
+                height: 10,
+              ),
               Card(
                 margin: EdgeInsets.symmetric(vertical: 6, horizontal: 11),
                 shape: RoundedRectangleBorder(
@@ -96,7 +99,17 @@ class SessionScreensState extends State<SessionScreen> {
                         fontSize: 16,
                         color: Color.fromARGB(255, 38, 70, 138),
                       )),
-                  trailing: Icon(Icons.arrow_forward_ios),
+                  trailing: IconButton(
+                      icon: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => viewotherprofile()));
+                      }),
                   isThreeLine: true,
                 ),
               ),

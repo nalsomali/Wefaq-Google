@@ -1,546 +1,263 @@
-import 'dart:convert';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:wefaq/ProjectsTapScreen.dart';
-// import 'package:wefaq/config/colors.dart';
-import 'project_detail_appbar.dart';
-import 'package:cool_alert/cool_alert.dart';
-import 'package:wefaq/projectsScreen.dart';
+import 'package:wefaq/SessionScreen.dart';
+import 'package:wefaq/navBar.dart';
 
-import 'package:http/http.dart' as http;
-import 'package:fluttertoast/fluttertoast.dart';
-
-final _formKey = GlobalKey<FormState>();
-
-class projectDetailScreen extends StatefulWidget {
-  String projecName;
-
-  projectDetailScreen({required this.projecName});
-
+class viewotherprofile extends StatefulWidget {
   @override
-  State<projectDetailScreen> createState() =>
-      _projectDetailScreenState(projecName);
+  State<viewotherprofile> createState() => _viewprofileState();
 }
 
-class _projectDetailScreenState extends State<projectDetailScreen> {
+class _viewprofileState extends State<viewotherprofile> {
+  List<String> selectedOptionList = [];
+
   @override
-  void initState() {
-    //getProfilePhoto();
-    super.initState();
-  }
-
-  String projecName;
-  _projectDetailScreenState(this.projecName);
-
-  final TextEditingController _JoiningASController = TextEditingController();
-  final TextEditingController _ParticipantNoteController =
-      TextEditingController();
-  // Title list
-  String nameList = "";
-
-  // Description list
-  String descList = "";
-
-  // location list
-  String locList = "";
-
-  //Looking for list
-  String lookingForList = "";
-
-  String Duration = "";
-
-  //category list
-  String categoryList = "";
-
-  //project owners emails
-  String ownerEmail = "";
-
-  String token = " ";
-  String duration = "";
-  String fName = "";
-  String Lname = "";
-  String profile = "";
-  List<String> participantNames = [];
-
-  var ProjectTitleList = [];
-
-  var ParticipantEmailList = [];
-  bool _isSelected1 = false;
-  bool _isSelected2 = false;
-  bool _isSelected3 = false;
-
-  bool isPressed = false;
-  List<String> splited = [];
-
-  var ParticipantNameList = [];
-  Status() => ProjectsListViewPage();
-
-  List DisplayProjectOnce() {
-    final removeDuplicates = [
-      ...{...ProjectTitleList}
-    ];
-    return removeDuplicates;
-  }
-
-  // final _firestore = FirebaseFirestore.instance;
-  // late User signedInUser;
-
-  //get all projects
-  // Future getProjects() async {
-  //   await for (var snapshot in _firestore
-  //       .collection('AllProjects')
-  //       .where('name', isEqualTo: projecName)
-  //       .snapshots())
-  //     for (var project in snapshot.docs) {
-  //       setState(() {
-  //         nameList = project['name'].toString();
-  //         descList = project['description'].toString();
-  //         locList = project['location'].toString();
-  //         lookingForList = project['lookingFor'].toString();
-  //         categoryList = project['category'].toString();
-  //         token = project['token'].toString();
-  //         ownerEmail = project['email'].toString();
-  //         fName = project['fname'].toString();
-  //         Lname = project['lname'].toString();
-  //         duration = project["duration"].toString();
-  //         splited = lookingForList.split(",");
-  //         profile = project["Profile"].toString();
-  //       });
-  //     }
-  // }
-
-/*
-  Future getProfilePhoto() async {
-    var fillterd = _firestore
-        .collection('users')
-        .where("Email", isEqualTo: ownerEmail)
-        .snapshots();
-    await for (var snapshot in fillterd)
-      for (var user in snapshot.docs) {
-        setState(() {
-          profile = user["Profile"].toString();
-        });
-      }
-  }
-*/
-  // Future getRequests() async {
-  //   if (signedInUser.email != null) {
-  //     var fillterd = _firestore
-  //         .collection('AllJoinRequests')
-  //         .where('owner_email', isEqualTo: Email)
-  //         .where('Status', isEqualTo: 'Accepted')
-  //         .where('project_title', isEqualTo: projecName)
-  //         .snapshots();
-  //     await for (var snapshot in fillterd)
-  //       for (var Request in snapshot.docs) {
-  //         setState(() {
-  //           ParticipantNameList.add(Request['participant_name']);
-  //         });
-  //       }
-  //   }
-  // }
-
-  // final auth = FirebaseAuth.instance;
-  // String? Email;
-  // void getCurrentUser() {
-  //   try {
-  //     final user = auth.currentUser;
-  //     if (user != null) {
-  //       signedInUser = user;
-  //       Email = signedInUser.email;
-  //       print(signedInUser.email);
-  //     }
-  //   } catch (e) {
-  //     print(e);
-  //   }
-  // }
-
-  String getRole(int index) {
-    if (index < splited.length) return splited[index];
-
-    return "";
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Scrollbar(
-      child: CustomScrollView(
-        slivers: <Widget>[
-          const DetailAppBar(),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        nameList,
-                        style: Theme.of(context).textTheme.titleLarge,
-                      ),
-                      const SizedBox(height: 8.0),
-                      const SizedBox(height: 16.0),
-                      Row(
-                        children: [
-                          Container(
-                            height: 50.0,
-                            width: 50.0,
-                            alignment: Alignment.center,
-                            margin: const EdgeInsets.only(right: 8.0),
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            /* child: IconButton(
-                              icon: (isPressed)
-                                  ? const Icon(Icons.favorite,
-                                      color: Color.fromARGB(172, 136, 98, 146))
-                                  : const Icon(Icons.favorite_border,
-                                      color: Color.fromARGB(172, 136, 98, 146)),
-                              onPressed: () {
-                                setState(() {
-                                  if (isPressed) {
-                                    isPressed = false;
-                                    ShowToastRemove();
-                                  } else {
-                                    isPressed = true;
-                                    ShowToastAdd();
-                                  }
-                                });
-                              },
-                            ),*/
-                          ),
-                        ],
-                      ),
-                    ],
+      backgroundColor: Color.fromARGB(255, 242, 241, 241),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        shadowColor: Color.fromARGB(255, 215, 215, 215),
+        elevation: 0.8,
+        backgroundColor: Color.fromARGB(255, 242, 241, 241),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(
+                Icons.arrow_forward_ios,
+                color: Color.fromARGB(255, 0, 0, 0),
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SessionScreen()));
+              }),
+        ],
+        title: Text(' حساب المستشار ',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Color.fromARGB(206, 0, 0, 0),
+            )),
+      ),
+      bottomNavigationBar: CustomNavigationBar(
+        currentHomeScreen: 0,
+        updatePage: () {},
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          child: Stack(
+            children: <Widget>[
+              SizedBox(
+                height: 130,
+                width: double.infinity,
+                child: Image(
+                  image: AssetImage(
+                    "assets/images/cons.png",
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          TextButton(
-                            onPressed: () {
-                              // if (ownerEmail == Email) {
-                              //   Navigator.push(
-                              //       context,
-                              //       MaterialPageRoute(
-                              //           builder: (context) => viewprofile(
-                              //               userEmail: FirebaseAuth.instance
-                              //                   .currentUser!.email!)));
-                              // } else {
-                              //   Navigator.push(
-                              //       context,
-                              //       MaterialPageRoute(
-                              //           builder: (context) => viewotherprofile(
-                              //                 userEmail: ownerEmail,
-                              //               )));
-                              // }
-                            },
-                            child: Container(
-                              height: 35.0,
-                              width: 35.0,
-                              margin: const EdgeInsets.only(right: 8.0),
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                  image: NetworkImage(profile),
-                                  fit: BoxFit.cover,
-                                ),
-                                boxShadow: [
-                                  BoxShadow(
-                                    offset: const Offset(0, 4),
-                                    blurRadius: 4.0,
-                                    color: Colors.black.withOpacity(0.25),
-                                  ),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Column(
+                children: <Widget>[
+                  Stack(
+                    children: <Widget>[
+                      Container(
+                        padding: EdgeInsets.all(15),
+                        margin: EdgeInsets.only(top: 120),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Container(
+                              margin: EdgeInsets.only(left: 9),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Row(children: <Widget>[
+                                    SizedBox(
+                                      width: 60,
+                                    ),
+                                    Text("      م." + "حسان " + " المالكي",
+                                        style: TextStyle(fontSize: 18)),
+                                    Expanded(
+                                      child: SizedBox(
+                                        width: 20,
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(right: 0),
+                                      height: 56.0,
+                                      width: 56.0,
+                                      child: IconButton(
+                                          icon: Icon(
+                                            Icons.favorite,
+                                            color: Color.fromARGB(
+                                                255, 186, 48, 48),
+                                            size: 30,
+                                          ),
+                                          onPressed: () {}),
+                                    ),
+                                  ]),
+                                  Row(children: <Widget>[
+                                    Expanded(
+                                        child: Column(children: <Widget>[
+                                      Text("  خبير تجربة مستخدم",
+                                          style: TextStyle(fontSize: 14)),
+                                      ListTile(
+                                        contentPadding: EdgeInsets.all(0),
+
+                                        //You can add Subtitle here
+                                      ),
+                                    ])),
+                                    Column(
+                                      children: <Widget>[
+                                        GestureDetector(
+                                            onTap: () {},
+                                            child: Container(
+                                              alignment: Alignment.center,
+                                              height: 30,
+                                              width: 120,
+                                              decoration: BoxDecoration(
+                                                color: Color.fromARGB(
+                                                    201, 231, 229, 229),
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
+                                              ),
+                                              child: Text(
+                                                "حجز جلسة",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Color.fromARGB(
+                                                      255, 63, 83, 147),
+                                                  fontSize: 18,
+                                                ),
+                                              ),
+                                            ))
+                                      ],
+                                    ),
+                                  ])
                                 ],
                               ),
                             ),
-                          ),
-                          Text(
-                            fName + " " + Lname,
-                            style: Theme.of(context).textTheme.titleSmall,
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                      Row(
-                        children: [
-                          Container(
-                            height: 32.0,
-                            width: 32.0,
-                            alignment: Alignment.center,
-                            margin: const EdgeInsets.only(right: 8.0),
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
+                      Container(
+                        width: 80,
+                        height: 80,
+                        margin: EdgeInsets.only(left: 15, top: 140),
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              offset: Offset(0, 0),
+                              blurRadius: 10,
+                              color: Colors.black.withOpacity(0.15),
                             ),
-                            child: const Icon(Icons.location_pin,
-                                color: Color.fromARGB(172, 136, 98, 146)),
+                          ],
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                            image: AssetImage('assets/images/hassan.jpeg'),
+                            fit: BoxFit.cover,
                           ),
-                          Text(
-                            locList,
-                            style: Theme.of(context).textTheme.titleSmall,
-                          ),
-                        ],
+                        ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 16.0),
-                  const Divider(color: Colors.black, height: 1.0),
-                  const SizedBox(height: 16.0),
-                  Text(
-                    'Description',
-                    style: Theme.of(context).textTheme.titleMedium,
+                  SizedBox(
+                    height: 20,
                   ),
-                  const SizedBox(height: 8.0),
-                  Text(
-                    descList,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium!
-                        .copyWith(color: Colors.black),
-                  ),
-                  const SizedBox(height: 16.0),
-                  const Divider(color: Colors.black, height: 1.0),
-                  const SizedBox(height: 16.0),
-                  Text(
-                    'Category',
-                    style: Theme.of(context).textTheme.titleMedium,
-                  ),
-                  const SizedBox(height: 16.0),
-                  const Divider(color: Colors.black, height: 1.0),
-                  const SizedBox(height: 16.0),
-                  Row(children: [
-                    Text(
-                      'Looking For',
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                    Text(' *',
-                        style: TextStyle(
-                          color: Colors.red,
-                          fontSize: 20,
-                        ))
-                  ]),
-                  Text('Select the Role you want to join as',
-                      style: TextStyle(
-                          color: Color.fromARGB(170, 123, 62, 185),
-                          fontWeight: FontWeight.bold)),
-                  Text(
-                      '- You can select multiple roles but if accepted, you will be only accepted in one role',
-                      style: TextStyle(
-                          color: Color.fromARGB(170, 9, 0, 17),
-                          fontWeight: FontWeight.w400)),
-                  Column(
-                    children: [
-                      Row(
-                        children: [
-                          if (getRole(1) != "")
-                            ChoiceChip(
-                              elevation: 8.0,
-                              padding: EdgeInsets.all(2.0),
-                              label: Text(
-                                getRole(1),
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255)),
-                              ),
-                              selected: _isSelected1,
-                              selectedColor: Color.fromARGB(133, 177, 227, 232),
-                              onSelected: (bool selected) {
-                                setState(() {
-                                  _isSelected1 = selected;
-                                });
-                              },
-                              backgroundColor:
-                                  Color.fromARGB(170, 123, 62, 185),
-                            ),
-                          SizedBox(
-                            width: 6,
-                          ),
-                          if (getRole(2) != "")
-                            ChoiceChip(
-                              elevation: 8.0,
-                              padding: EdgeInsets.all(2.0),
-                              label: Text(
-                                getRole(2),
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255)),
-                              ),
-                              selected: _isSelected2,
-                              selectedColor: Color.fromARGB(133, 177, 227, 232),
-                              onSelected: (bool selected) {
-                                setState(() {
-                                  _isSelected2 = selected;
-                                });
-                              },
-                              backgroundColor:
-                                  Color.fromARGB(170, 123, 62, 185),
-                            ),
-                          SizedBox(
-                            width: 6,
-                          ),
-                          if (getRole(3) != "")
-                            ChoiceChip(
-                              elevation: 8.0,
-                              padding: EdgeInsets.all(2.0),
-                              label: Text(
-                                getRole(3),
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255)),
-                              ),
-                              selected: _isSelected3,
-                              selectedColor: Color.fromARGB(133, 177, 227, 232),
-                              onSelected: (bool selected) {
-                                setState(() {
-                                  _isSelected3 = selected;
-                                });
-                              },
-                              backgroundColor:
-                                  Color.fromARGB(170, 123, 62, 185),
-                            ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 16.0),
-                  if (_isSelected1 == false &&
-                      _isSelected2 == false &&
-                      _isSelected3 == false)
-                    Text(' please select one role at least to join the project',
-                        style: TextStyle(
-                            fontSize: 14,
-                            color: Color.fromARGB(170, 185, 62, 62),
-                            fontWeight: FontWeight.w400)),
                   Container(
-                    alignment: Alignment.center,
-                    child: Form(
-                      // key: _formKey,
-                      child: TextFormField(
-                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                        maxLength: 60,
-                        decoration: InputDecoration(
-                            hintText:
-                                "Your Note will be visible with your request",
-                            hintStyle: TextStyle(
-                                color: Color.fromARGB(255, 202, 198, 198)),
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            label: RichText(
-                              text: TextSpan(
-                                text: 'Note',
-                                style: const TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromARGB(230, 35, 33, 35)),
-                              ),
-                            )),
-                        controller: _ParticipantNoteController,
-                        validator: (value) {
-                          if (!RegExp(r'^[ , . a-z A-Z]+$').hasMatch(value!) &&
-                              !RegExp(r'^[ أ-ي]+$').hasMatch(value!) &&
-                              value.isNotEmpty) {
-                            return "Only English or Arabic letters";
-                          }
-                        },
-                      ),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5),
                     ),
-                  ),
-                  const Divider(color: Colors.black, height: 1.0),
-                  const SizedBox(height: 16.0),
-                  Text(
-                    'Duration',
-                    style: Theme.of(context).textTheme.titleMedium,
-                  ),
-                  const SizedBox(height: 8.0),
-                  Row(children: <Widget>[
-                    const Icon(
-                      Icons.timelapse_outlined,
-                      color: Color.fromARGB(172, 136, 98, 146),
-                      size: 21,
-                    ),
-                    Text(
-                      duration,
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyMedium!
-                          .copyWith(color: Colors.black),
-                    ),
-                  ]),
-                  const SizedBox(height: 16.0),
-                  const Divider(color: Colors.black, height: 1.0),
-                  const SizedBox(height: 16.0),
-                  Text(
-                    "Team Members ",
-                    style: Theme.of(context).textTheme.titleMedium,
-                  ),
-                  const SizedBox(height: 10.0),
-                  Column(
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            height: 35.0,
-                            width: 35.0,
-                            margin: const EdgeInsets.only(right: 8.0),
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: const DecorationImage(
-                                image: AssetImage('assets/images/team.png'),
-                                fit: BoxFit.cover,
-                              ),
-                              boxShadow: [
-                                BoxShadow(
-                                  offset: const Offset(0, 4),
-                                  blurRadius: 4.0,
-                                  color: Colors.black.withOpacity(0.25),
-                                ),
-                              ],
-                            ),
+                    child: Column(
+                      children: <Widget>[
+                        ListTile(
+                          title: Text("نبذة",
+                              style: const TextStyle(
+                                fontSize: 18,
+                                color: Color.fromARGB(255, 47, 47, 47),
+                                // fontWeight: FontWeight.w600,
+                              )),
+                          subtitle: Text(
+                              " مستشار تقني متخصص في مجال تطوير التطبيقات  ",
+                              style: const TextStyle(
+                                fontSize: 16,
+                                color: Color.fromARGB(255, 121, 121, 121),
+                              )),
+                          leading: Icon(Icons.format_align_center),
+                        ),
+                        Divider(
+                            height: 2,
+                            color: Color.fromARGB(66, 108, 108, 108)),
+                        ListTile(
+                          title: Text("تعليم",
+                              style: const TextStyle(
+                                fontSize: 18,
+                                color: Color.fromARGB(255, 47, 47, 47),
+                                // fontWeight: FontWeight.w600,
+                              )),
+                          subtitle: Text(" بكالوريوس هندسة برمجيات   ",
+                              style: const TextStyle(
+                                fontSize: 16,
+                                color: Color.fromARGB(255, 121, 121, 121),
+                              )),
+                          leading: Icon(Icons.calendar_view_day),
+                        ),
+                        Divider(
+                            height: 2,
+                            color: Color.fromARGB(66, 108, 108, 108)),
+                        ListTile(
+                          title: Text("مجالات الخبرة",
+                              style: const TextStyle(
+                                fontSize: 18,
+                                color: Color.fromARGB(255, 47, 47, 47),
+                                // fontWeight: FontWeight.w600,
+                              )),
+                          subtitle: Text(" -Flutter\n -Java  ",
+                              style: const TextStyle(
+                                fontSize: 16,
+                                color: Color.fromARGB(255, 121, 121, 121),
+                              )),
+                          leading: Icon(Icons.schema_rounded),
+                        ),
+                        Divider(
+                            height: 2,
+                            color: Color.fromARGB(66, 108, 108, 108)),
+                        ListTile(
+                          title: Text("الجوائز والشهادات"),
+                          subtitle: Text(
+                              "الحصول على افضل مشروع تقني في مسابقة التحول الرقمي \n لعام ٢٠٢٢، افضل مشوع تخرج في قطاع الصحة"),
+                          leading: Icon(
+                            Icons.workspace_premium,
+                            size: 33,
                           ),
-                          Expanded(
-                            child: Text(
-                              ParticipantNameList.join(","),
-                              style: Theme.of(context).textTheme.titleSmall,
-                            ),
+                        ),
+                        ListTile(
+                          title: Text(" "),
+                          subtitle: ElevatedButton(
+                            child: Text('حجز جلسة'),
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                                primary: Color.fromARGB(255, 72, 119, 194),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 8, vertical: 7),
+                                textStyle: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.normal)),
                           ),
-                          SizedBox(
-                            width: 130,
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 37.0),
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: 56,
-                    margin: EdgeInsets.only(
-                      bottom: MediaQuery.of(context).padding.bottom,
-                      left: 24,
-                      right: 24,
-                    ),
-                    child: ElevatedButton(
-                      onPressed: () async {
-                        var P;
-                      },
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromARGB(204, 109, 46, 154),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
-                          )),
-                      child: const Text(
-                        "JOIN NOW",
-                        style: TextStyle(color: Colors.white),
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
               ),
-            ),
+            ],
           ),
-        ],
+        ),
       ),
-    ));
+    );
   }
 }
