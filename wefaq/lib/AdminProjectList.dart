@@ -42,7 +42,7 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                               builder: (context) => adminHomeScreen()));
                     }),
                 backgroundColor: Color.fromARGB(255, 255, 255, 255),
-                title: Text('المشاريع',
+                title: Text('البحوث والمشاريع',
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
                       color: Color.fromARGB(255, 14, 10, 102),
