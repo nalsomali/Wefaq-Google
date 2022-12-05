@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wefaq/Homepage.dart';
 import 'package:wefaq/SessionScreen.dart';
+import 'package:wefaq/UserLogin.dart';
 import 'AdminHomePage.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
           colorSchemeSeed: const Color.fromARGB(255, 215, 189, 226),
           // useMaterial3: true,
           brightness: Brightness.light),
-      home: SessionScreen(),
+      home: UserLogin(),
     );
   }
 }
