@@ -28,6 +28,18 @@ class _ListViewPageState extends State<ProjectsListViewPage> {
   var lat;
   var lng;
 
+  // setDistance() {
+  //   for (var i = 0; i < latList.length; i++) {
+  //     setState(() {
+  //       FirebaseFirestore.instance
+  //           .collection('AllProjects')
+  //           .doc(nameList[i].toString() + "-" + ownerEmail[i].toString())
+  //           .set({'dis': calculateDistance(latList[i], lngList[i], lat, lng)},
+  //               SetOptions(merge: true));
+  //     });
+  //   }
+  // }
+
   @override
   Widget build(BuildContext context) {
     // MediaQuery to get Device Width
@@ -36,15 +48,15 @@ class _ListViewPageState extends State<ProjectsListViewPage> {
       children: [
         Expanded(
           child: Scaffold(
-            backgroundColor: Color.fromARGB(255, 255, 255, 255),
             floatingActionButton: PopupMenuButton(
               tooltip: "Filter by",
-              icon: const CircleAvatar(
-                backgroundColor: Color.fromARGB(255, 219, 219, 219),
+              icon: CircleAvatar(
+                radius: 27,
+                backgroundColor: Color.fromARGB(255, 255, 255, 255),
                 child: Icon(
                   Icons.filter_list,
                   color: Color.fromARGB(255, 14, 10, 102),
-                  size: 40,
+                  size: 37,
                 ),
               ),
               itemBuilder: (BuildContext context) => <PopupMenuEntry>[
@@ -88,14 +100,8 @@ class _ListViewPageState extends State<ProjectsListViewPage> {
                 height: 100,
                 child: GestureDetector(
                     child: Card(
-                      margin: EdgeInsets.symmetric(vertical: 1, horizontal: 11),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
                       color: const Color.fromARGB(255, 255, 255, 255),
-                      shadowColor: Color.fromARGB(145, 202, 202, 202),
-                      elevation:
-                          8, //shadowColor: Color.fromARGB(255, 255, 255, 255),
+                      //shadowColor: Color.fromARGB(255, 255, 255, 255),
                       //  elevation: 7,
 
                       child: Padding(
@@ -175,19 +181,13 @@ class _ListViewPageState extends State<ProjectsListViewPage> {
                     }),
               ),
               SizedBox(
-                height: 6,
-              ),
-              SizedBox(
                 height: 100,
                 child: GestureDetector(
                     child: Card(
-                      margin: EdgeInsets.symmetric(vertical: 1, horizontal: 11),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
                       color: const Color.fromARGB(255, 255, 255, 255),
-                      shadowColor: Color.fromARGB(145, 202, 202, 202),
-                      elevation: 8,
+                      //shadowColor: Color.fromARGB(255, 255, 255, 255),
+                      //  elevation: 7,
+
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                         child: Column(
@@ -265,20 +265,11 @@ class _ListViewPageState extends State<ProjectsListViewPage> {
                     }),
               ),
               SizedBox(
-                height: 6,
-              ),
-              SizedBox(
                 height: 100,
                 child: GestureDetector(
                     child: Card(
-                      margin: EdgeInsets.symmetric(vertical: 1, horizontal: 11),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
                       color: const Color.fromARGB(255, 255, 255, 255),
-                      shadowColor: Color.fromARGB(145, 202, 202, 202),
-                      elevation:
-                          8, //shadowColor: Color.fromARGB(255, 255, 255, 255),
+                      //shadowColor: Color.fromARGB(255, 255, 255, 255),
                       //  elevation: 7,
 
                       child: Padding(
@@ -358,19 +349,10 @@ class _ListViewPageState extends State<ProjectsListViewPage> {
                     }),
               ),
               SizedBox(
-                height: 6,
-              ),
-              SizedBox(
                 height: 100,
                 child: GestureDetector(
                     child: Card(
-                      margin: EdgeInsets.symmetric(vertical: 1, horizontal: 11),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
                       color: const Color.fromARGB(255, 255, 255, 255),
-                      shadowColor: Color.fromARGB(145, 202, 202, 202),
-                      elevation: 8,
                       //shadowColor: Color.fromARGB(255, 255, 255, 255),
                       //  elevation: 7,
 
