@@ -77,12 +77,12 @@ class BottomBarMiddleButton extends StatelessWidget {
                     'اضافة مشروع',
                     style: TextStyle(
                         fontSize: 20,
-                        color: Color.fromARGB(144, 64, 7, 87),
+                        color: Color.fromARGB(255, 18, 15, 84),
                         fontWeight: FontWeight.bold),
                   ),
                   gradient: LinearGradient(colors: const [
-                    Color.fromARGB(144, 64, 7, 87),
-                    Color.fromARGB(221, 137, 171, 187),
+                    Color.fromARGB(255, 8, 0, 156),
+                    Color.fromARGB(255, 151, 174, 207),
                   ]),
                   onTap: () {
                     FullScreenMenu.hide();
@@ -95,12 +95,12 @@ class BottomBarMiddleButton extends StatelessWidget {
                     'اضافة مستشار',
                     style: TextStyle(
                         fontSize: 20,
-                        color: Color.fromARGB(144, 64, 7, 87),
+                        color: Color.fromARGB(255, 18, 15, 84),
                         fontWeight: FontWeight.bold),
                   ),
                   gradient: LinearGradient(colors: const [
-                    Color.fromARGB(144, 64, 7, 87),
-                    Color.fromARGB(221, 137, 171, 187),
+                    Color.fromARGB(255, 8, 0, 156),
+                    Color.fromARGB(255, 151, 174, 207),
                   ]),
                   onTap: () {
                     FullScreenMenu.hide();
@@ -116,7 +116,7 @@ class BottomBarMiddleButton extends StatelessWidget {
           shape: MaterialStateProperty.all(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(50))),
           backgroundColor:
-              MaterialStateProperty.all(Color.fromARGB(115, 100, 6, 138)),
+              MaterialStateProperty.all(Color.fromARGB(255, 151, 174, 207)),
           shadowColor: MaterialStateProperty.all(
               Theme.of(context).colorScheme.onSurface),
         ),
@@ -127,13 +127,13 @@ class BottomBarMiddleButton extends StatelessWidget {
           decoration: BoxDecoration(
               shape: BoxShape.circle,
               gradient: RadialGradient(colors: [
-                Color.fromARGB(255, 73, 7, 134).withOpacity(0.4),
-                Color.fromARGB(251, 141, 180, 182)
+                Color.fromARGB(255, 8, 0, 156),
+                Color.fromARGB(255, 151, 174, 207),
               ], center: Alignment.topLeft, radius: 1)),
           child: Icon(
             CupertinoIcons.plus,
             color: (currentHomeScreen == 1)
-                ? Color.fromARGB(255, 64, 11, 73)
+                ? Color.fromARGB(255, 14, 10, 102)
                 : Colors.white,
           ).p(8),
         ),
@@ -181,8 +181,8 @@ class BottomBarButton extends StatelessWidget {
             child: Icon(
               icon,
               color: index == currentPage
-                  ? Theme.of(context).colorScheme.onSurface
-                  : Color.fromARGB(255, 135, 106, 152),
+                  ? Color.fromARGB(255, 14, 10, 102)
+                  : Color.fromARGB(255, 134, 134, 136),
             ),
           )),
     );

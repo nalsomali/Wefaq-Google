@@ -634,24 +634,39 @@ class _projectDetailScreenState extends State<projectDetailScreen> {
                             if (_isSelected1 == true ||
                                 _isSelected2 == true ||
                                 _isSelected3 == true) {
-                              // if (_formKey.currentState!.validate()) {
                               CoolAlert.show(
                                 context: context,
-                                title: "Success!",
+                                title: "تم ارسال الطلب بالإلتحاق",
                                 confirmBtnColor:
-                                    Color.fromARGB(174, 111, 78, 161),
-                                onConfirmBtnTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              ProjectsTabs()));
-                                },
+                                    Color.fromARGB(255, 14, 10, 102),
                                 type: CoolAlertType.success,
                                 backgroundColor:
-                                    Color.fromARGB(221, 212, 189, 227),
-                                text: "Your join request is sent successfuly",
+                                    Color.fromARGB(144, 176, 175, 175),
+                                text:
+                                    "please select one role at least to join the project",
+                                confirmBtnText: 'اغلاق',
+                                onConfirmBtnTap: () {
+                                  Navigator.of(context).pop();
+                                },
                               );
+                              // if (_formKey.currentState!.validate()) {
+                              // CoolAlert.show(
+                              //   context: context,
+                              //   title: "Success!",
+                              //   confirmBtnColor:
+                              //       Color.fromARGB(174, 111, 78, 161),
+                              //   onConfirmBtnTap: () {
+                              //     Navigator.push(
+                              //         context,
+                              //         MaterialPageRoute(
+                              //             builder: (context) =>
+                              //                 ProjectsTabs()));
+                              //   },
+                              //   type: CoolAlertType.success,
+                              //   backgroundColor:
+                              //       Color.fromARGB(221, 212, 189, 227),
+                              //   text: "Your join request is sent successfuly",
+                              // );
                               // FirebaseFirestore.instance
                               //     .collection('users')
                               //     .doc(signedInUser.email)
