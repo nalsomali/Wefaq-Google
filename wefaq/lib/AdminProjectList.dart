@@ -77,20 +77,7 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                                 children: [
                                   Row(children: const <Widget>[
                                     Text(
-                                      "  مشروع عوالم",
-                                      style: TextStyle(
-                                        fontSize: 19,
-                                        color: Color.fromARGB(255, 14, 10, 102),
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: SizedBox(
-                                        width: 240,
-                                      ),
-                                    ),
-                                    Text(
-                                      "٨-٨-٢٠٢٢ ",
+                                      "  دراسة اثار الاضطراب الاجتماعي ",
                                       style: TextStyle(
                                         fontSize: 16,
                                         color: Color.fromARGB(255, 14, 10, 102),
@@ -130,7 +117,25 @@ class _ListViewPageState extends State<adminProjectsListViewPage> {
                                                   builder: (context) =>
                                                       adminprojectDetailScreen()));
                                         }),
+                                    Text("كلية الاداب",
+                                        style: const TextStyle(
+                                          fontSize: 16,
+                                          color:
+                                              Color.fromARGB(255, 38, 70, 138),
+                                        )),
+                                    const Text("     "),
+                                    const Icon(Icons.location_pin,
+                                        color:
+                                            Color.fromARGB(255, 14, 10, 102)),
                                   ],
+                                ),
+                              ),
+                              Text(
+                                "١١-١٢-٢٠١٩",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Color.fromARGB(255, 14, 10, 102),
+                                  fontWeight: FontWeight.normal,
                                 ),
                               ),
                             ],

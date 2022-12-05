@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wefaq/AdminHomePage.dart';
 import 'package:wefaq/resetPassword.dart';
 //import 'package:wefaq/AdminHomePage.dart';
 import 'Homepage.dart';
@@ -153,7 +154,7 @@ class _UserLogin extends State<UserLogin> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => ResetScreen()))
                   },
-                  child: Text(
+                  child: const Text(
                     "هل نسيت كلمةالمرور؟",
                     style: TextStyle(
                         decoration: TextDecoration.underline,
@@ -168,8 +169,17 @@ class _UserLogin extends State<UserLogin> {
                 margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
                 child: ElevatedButton(
                   onPressed: () async {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                    if (email == "wefaq@gmail.com") {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => adminHomeScreen()));
+                    } else {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HomeScreen()));
+                    }
                   },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(

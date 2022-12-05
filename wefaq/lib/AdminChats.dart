@@ -22,17 +22,14 @@ class _chatScreenState extends State<AdminChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            automaticallyImplyLeading: false,
-            backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-            title: const Text("المحادثات",
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  color: Color.fromARGB(255, 14, 10, 102),
-                )),
-            leading: const Icon(
-              Icons.logout,
-              color: Color.fromARGB(255, 14, 10, 102),
-            )),
+          automaticallyImplyLeading: false,
+          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+          title: const Text("المحادثات",
+              style: TextStyle(
+                fontWeight: FontWeight.normal,
+                color: Color.fromARGB(255, 14, 10, 102),
+              )),
+        ),
         bottomNavigationBar: AdminCustomNavigationBar(
           currentHomeScreen: 0,
           updatePage: () {},
@@ -49,23 +46,6 @@ class _chatScreenState extends State<AdminChatScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Row(children: <Widget>[
-                        IconButton(
-                          icon: const Icon(
-                            Icons.arrow_back_ios,
-                            color: Color.fromARGB(255, 14, 10, 102),
-                            size: 20,
-                          ),
-                          onPressed: () {},
-                        ),
-                        const Expanded(child: SizedBox()),
-                        const Text(
-                          " مشروع وفاق",
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Color.fromARGB(159, 22, 35, 63),
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
                         Container(
                           padding: const EdgeInsets.all(10.0),
                           width: 50,
@@ -80,14 +60,31 @@ class _chatScreenState extends State<AdminChatScreen> {
                             ),
                           ),
                         ),
+                        const Text(
+                          " مشروع وفاق",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Color.fromARGB(159, 22, 35, 63),
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        const Expanded(child: SizedBox()),
+                        IconButton(
+                          icon: const Icon(
+                            Icons.arrow_forward_ios,
+                            color: Color.fromARGB(255, 14, 10, 102),
+                            size: 20,
+                          ),
+                          onPressed: () {},
+                        ),
                       ]),
                       Row(children: const [
                         SizedBox(
-                          width: 150,
+                          width: 60,
                         ),
                         Expanded(
                           child: Text(
-                            "!الهنوف: انا سعيده بانضمامي للفريق  ",
+                            "الهنوف: انا سعيده بانضمامي للفريق  ",
                             style: TextStyle(
                               overflow: TextOverflow.ellipsis,
                               fontSize: 12,
@@ -115,23 +112,6 @@ class _chatScreenState extends State<AdminChatScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Row(children: <Widget>[
-                        IconButton(
-                          icon: const Icon(
-                            Icons.arrow_back_ios,
-                            color: Color.fromARGB(255, 14, 10, 102),
-                            size: 20,
-                          ),
-                          onPressed: () {},
-                        ),
-                        const Expanded(child: SizedBox()),
-                        const Text(
-                          " مشروع دلني",
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Color.fromARGB(159, 22, 35, 63),
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
                         Container(
                           padding: const EdgeInsets.all(10.0),
                           width: 50,
@@ -146,10 +126,27 @@ class _chatScreenState extends State<AdminChatScreen> {
                             ),
                           ),
                         ),
+                        const Text(
+                          " مشروع دلني",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Color.fromARGB(159, 22, 35, 63),
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        const Expanded(child: SizedBox()),
+                        IconButton(
+                          icon: const Icon(
+                            Icons.arrow_forward_ios,
+                            color: Color.fromARGB(255, 14, 10, 102),
+                            size: 20,
+                          ),
+                          onPressed: () {},
+                        ),
                       ]),
                       Row(children: const [
                         SizedBox(
-                          width: 270,
+                          width: 60,
                         ),
                         Text(
                           "عبدالله: أهلًا ",
