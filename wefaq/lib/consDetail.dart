@@ -24,8 +24,7 @@ class _viewprofileState extends State<viewotherprofile> {
               color: Color.fromARGB(255, 0, 0, 0),
             ),
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SessionScreen()));
+              Navigator.pop(context);
             }),
         automaticallyImplyLeading: false,
         shadowColor: Color.fromARGB(255, 215, 215, 215),

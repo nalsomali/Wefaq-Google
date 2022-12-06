@@ -48,6 +48,7 @@ class _ListViewPageState extends State<ProjectsListViewPage> {
       children: [
         Expanded(
           child: Scaffold(
+            backgroundColor: Color.fromARGB(255, 255, 255, 255),
             floatingActionButton: PopupMenuButton(
               tooltip: "Filter by",
               icon: CircleAvatar(
