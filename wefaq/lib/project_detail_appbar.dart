@@ -22,7 +22,7 @@ class DetailAppBar extends StatelessWidget {
       stretch: true,
       flexibleSpace: FlexibleSpaceBar(
         background: Image.asset(
-          'assets/images/r.png',
+          'assets/images/r.jpg',
           fit: BoxFit.cover,
         ),
         stretchModes: const [
