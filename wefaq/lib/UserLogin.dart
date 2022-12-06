@@ -66,7 +66,7 @@ class _UserLogin extends State<UserLogin> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: size.height * 0.04),
+              SizedBox(height: size.height * 0.16),
               
               Container(
                 alignment: Alignment.centerRight,
