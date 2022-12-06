@@ -2,6 +2,7 @@ import 'package:cool_alert/cool_alert.dart';
 import 'package:flutter/material.dart';
 import 'package:wefaq/AdminNavBar.dart';
 import 'GroupChatAdmin.dart';
+import 'UserLogin.dart';
 import 'navBar.dart';
 
 class AdminChatScreen extends StatefulWidget {
@@ -31,6 +32,16 @@ class _chatScreenState extends State<AdminChatScreen> {
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(206, 0, 0, 0),
               )),
+               actions: <Widget>[
+            IconButton(
+                icon: Icon(
+                  Icons.logout,
+                  color: Color.fromARGB(255, 14, 10, 102),
+                ),
+                onPressed: () {
+                  showDialogFunc2(context);
+                }),
+          ],
         ),
         bottomNavigationBar: AdminCustomNavigationBar(
           currentHomeScreen: 0,
@@ -193,20 +204,24 @@ class _chatScreenState extends State<AdminChatScreen> {
   }
 }
 
-showDialogFunc(context) {
-  CoolAlert.show(
-    context: context,
-    title: "",
-    confirmBtnColor: const Color.fromARGB(144, 210, 2, 2),
 
-    confirmBtnText: 'log out ',
-    //cancelBtnText: 'Delete' ,
-    onConfirmBtnTap: () {
-      _signOut();
-    },
+showDialogFunc2(context) {
+            CoolAlert.show(
+                              context: context,
+                              title: "تأكيد",
+                              confirmBtnColor: Color.fromARGB(144, 237, 42, 42),
+                              cancelBtnText: "الغاء",
 
-    type: CoolAlertType.confirm,
-    backgroundColor: Color.fromARGB(255, 255, 255, 255),
-    text: "Are you sure you want to log out?",
-  );
-}
+                              //cancelBtnTextStyle: TextStyle(color: Color.fromARGB(255, 62, 208, 14)),
+                              confirmBtnText: 'تسجيل الخروج ',
+                              onConfirmBtnTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => UserLogin()));
+                              },
+                              type: CoolAlertType.confirm,
+                              backgroundColor:
+                                  Color.fromARGB(144, 224, 222, 222),
+                              text: "هل تريد تسجيل الخروج؟",
+                            );}
