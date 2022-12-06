@@ -20,7 +20,7 @@ class adminDetailAppBar extends StatelessWidget {
       stretch: true,
       flexibleSpace: FlexibleSpaceBar(
         background: Image.asset(
-          'images/r.png',
+          'images/r.jpg',
           fit: BoxFit.cover,
         ),
         stretchModes: const [

@@ -28,7 +28,7 @@ class DetailAppBarState extends State<adminAppBar> {
       stretch: true,
       flexibleSpace: FlexibleSpaceBar(
         background: Image.asset(
-          'images/r.png',
+          'images/r.jpg',
           fit: BoxFit.cover,
         ),
         stretchModes: const [

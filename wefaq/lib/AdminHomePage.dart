@@ -46,7 +46,7 @@ class HomeScreenState extends State<adminHomeScreen> {
                                 icon: Icon(
                                   Icons.person_add_alt_outlined,
                                   size: 45,
-                                  color: Color.fromARGB(255, 18, 15, 84),
+                                  color: Color.fromARGB(255, 14, 10, 102),
                                 ),
                                 onTap: () {
                                   Navigator.push(
@@ -60,7 +60,7 @@ class HomeScreenState extends State<adminHomeScreen> {
                                 icon: Icon(
                                   Icons.lightbulb_outlined,
                                   size: 45,
-                                  color: Color.fromARGB(255, 18, 15, 84),
+                                  color: Color.fromARGB(255, 14, 10, 102),
                                 ),
                                 onTap: () {
                                   Navigator.push(

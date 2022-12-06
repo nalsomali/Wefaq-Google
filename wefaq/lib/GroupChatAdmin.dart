@@ -325,7 +325,7 @@ class ChatScreenState extends State<chatRoomGoogleAdmin> {
               //                             //     shape: BoxShape.circle,
               //                             //     image: const DecorationImage(
               //                             //       image: AssetImage(
-              //                             //           'assets/images/PlaceHolder.png'),
+              //                             //           'assets/images/PlaceHolder.jpg'),
               //                             //       fit: BoxFit.cover,
               //                             //     ),
               //                             //     boxShadow: [
