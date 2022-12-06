@@ -74,13 +74,13 @@ class _rateTeammates extends State<rateTeammates> {
             title: Text("  الهنوف العواد ",
                 style: const TextStyle(
                   fontSize: 19,
-                  color: Color.fromARGB(255, 14, 10, 102),
+                  color: Color.fromARGB(255, 0, 0, 0),
                   fontWeight: FontWeight.w700,
                 )),
             subtitle: Text(" مبرمج ",
                 style: const TextStyle(
                   fontSize: 16,
-                  color: Color.fromARGB(255, 38, 70, 138),
+                  color: Color.fromARGB(255, 0, 0, 0),
                 )),
             trailing: Icon(Icons.arrow_forward_ios),
             onTap: () {

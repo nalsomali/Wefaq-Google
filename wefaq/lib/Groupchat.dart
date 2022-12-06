@@ -205,8 +205,8 @@ class ChatScreenState extends State<chatRoomGoogle> {
                               builder: (context) => chatScreen()));
                     }),
               )),
-              Expanded(
-                  child: Image.asset('assets/images/teamg.png', height: 40)),
+              //Expanded(
+              //    child: Image.asset('assets/images/teamg.png', height: 40)),
               SizedBox(width: 10),
               Text(
                 "مشروع وفاق",

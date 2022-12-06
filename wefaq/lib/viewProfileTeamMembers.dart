@@ -34,7 +34,7 @@ class _viewProfileTeamMembersState extends State<viewProfileTeamMembers> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 238, 237, 240),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
         leading: IconButton(
             icon: Icon(
@@ -47,7 +47,7 @@ class _viewProfileTeamMembersState extends State<viewProfileTeamMembers> {
             }),
         automaticallyImplyLeading: false,
         title: Text(' ', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color.fromARGB(255, 192, 201, 221),
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
       ),
       bottomNavigationBar: CustomNavigationBar(
         currentHomeScreen: 4,
